@@ -1,0 +1,258 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ti",
+				"title"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"ur",
+				"url"
+			],
+			[
+				"ses",
+				"session"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "application/controllers/notif.php",
+			"settings":
+			{
+				"buffer_size": 964,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/dev/xampp/htdocs/greatnrip",
+		"/D/dev/xampp/htdocs/greatnrip/application",
+		"/D/dev/xampp/htdocs/greatnrip/application/controllers",
+		"/D/dev/xampp/htdocs/greatnrip/application/controllers/adminpanel"
+	],
+	"file_history":
+	[
+		"/D/dev/xampp/htdocs/greatnrip/application/config/routes.php",
+		"/D/dev/xampp/htdocs/greatnrip/application/config/database.php",
+		"/D/dev/xampp/htdocs/greatnrip/application/config/config.php",
+		"/D/dev/xampp/htdocs/greatnrip/application/config/autoload.php",
+		"/D/dev/xampp/htdocs/greatnesia/application/views/tulisanadd_view.php",
+		"/D/dev/xampp/htdocs/greatnesia/application/models/Kontribusimodel.php",
+		"/D/dev/xampp/htdocs/greatnesia/application/controllers/Kontribusi.php",
+		"/D/dev/xampp/htdocs/greatnesia/application/views/header.php",
+		"/D/dev/xampp/htdocs/greatnesia/application/config/config.php",
+		"/D/dev/xampp/htdocs/greatnesia/application/controllers/._Welcome.php",
+		"/Users/fauzan/Documents/Dev/loker-greatnesia/application/models/admin/Kategorimodel.php",
+		"/Users/fauzan/Documents/Dev/loker-greatnesia/application/controllers/secret/Kategori.php",
+		"/Users/fauzan/Documents/Dev/loker-greatnesia/application/views/secret/kategori_view.php",
+		"/Users/fauzan/Documents/Dev/AdminLTE-2.3.0/pages/UI/general.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnesia/application/views/tulisanadd.php",
+		"/Users/fauzan/Documents/Dev/AdminLTE-2.3.0/pages/UI/buttons.html",
+		"/Users/fauzan/Documents/Dev/AdminLTE-2.3.0/pages/examples/invoice.html",
+		"/Users/fauzan/Documents/Dev/AdminLTE-2.3.0/index2.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnesia/application/models/Usermodel.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnesia/application/views/header.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnesia/application/controllers/Dashboard.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnesia/application/controllers/Login.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnesia/application/views/dashboard_view.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnesia/application/views/footer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnesia/application/views/daftar_view.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnesia/application/views/login_view.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnesia/application/config/config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnesia/application/config/database.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnesia/application/views/dsukses_view.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnesia/application/config/autoload.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"');\n",
+			"bootstrap.min.js"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "application/controllers/notif.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 964,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "greatnrip.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 197.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
