@@ -6,8 +6,8 @@
 		<i class="icon-time"></i>
 		Poin			
 		<div style="float: right;">
-			<a href="<?php echo site_url('poin/history'); ?>"><i class="icon-search"></i></a>
-			<a href="<?php echo site_url('poin/history'); ?>">Riwayat Penukaran Poin</a>
+			<a href="<?php echo site_url('poin'); ?>"><i class="icon-list"></i></a>
+			<a href="<?php echo site_url('poin'); ?>">Tukar Poin</a>
 		</div>		
 	</h1>
 	
@@ -35,8 +35,8 @@
 	<div class="span9">
 		<div class="widget">
 			<div class="widget-header">
-				<i class="icon-list"></i>
-				<h3>Tukar Poin</h3>
+				<i class="icon-search"></i>
+				<h3>Riwayat Penukaran Poin</h3>
 			</div> <!-- /widget-header -->
 
 			<div class="widget-content">

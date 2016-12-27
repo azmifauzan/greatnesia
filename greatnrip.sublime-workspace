@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"strto",
+				"strtotime"
+			],
+			[
+				"User",
+				"User_model"
+			],
+			[
+				"req",
+				"required"
+			],
+			[
+				"img",
+				"imgbefore"
+			],
+			[
+				"getArt",
+				"getArtikelDetilFromId"
+			],
+			[
 				"ti",
 				"title"
 			],
@@ -23,14 +43,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "application/controllers/notif.php",
-			"settings":
-			{
-				"buffer_size": 964,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -64,13 +76,44 @@
 	},
 	"expanded_folders":
 	[
-		"/D/dev/xampp/htdocs/greatnrip",
-		"/D/dev/xampp/htdocs/greatnrip/application",
-		"/D/dev/xampp/htdocs/greatnrip/application/controllers",
-		"/D/dev/xampp/htdocs/greatnrip/application/controllers/adminpanel"
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/models/admin",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/views/admin",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/views/admin/user"
 	],
 	"file_history":
 	[
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/README.md",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/config/config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/controllers/adminpanel/Poin.php",
+		"/Applications/XAMPP/xamppfiles/etc/httpd.conf",
+		"/Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/models/admin/Poinmodel.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/views/admin/poin_view.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/views/admin/artikel_view.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/views/poinhistory_view.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/views/poin_view.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/models/Poinmodel.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/controllers/Poin.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/models/Usermodel.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/controllers/adminpanel/User.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/views/admin/user/edit.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/controllers/adminpanel/Barangpoin.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/models/admin/User_model.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/views/admin/user/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/views/admin/user/add.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/views/admin/barangpoin/barang_poin_form.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/views/admin/barangpoin/index_view.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/models/admin/Barangpoinmodel.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/views/admin/header.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/models/Infomodel.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/controllers/Home.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/views/artikel_view.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/controllers/Login.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/views/header.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/views/login_view.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/application/controllers/Artikel.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/greatnrip/css/bootstrap.min.css",
 		"/D/dev/xampp/htdocs/greatnrip/application/config/routes.php",
 		"/D/dev/xampp/htdocs/greatnrip/application/config/database.php",
 		"/D/dev/xampp/htdocs/greatnrip/application/config/config.php",
@@ -104,7 +147,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -118,6 +161,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$user",
+			"icon",
 			"');\n",
 			"bootstrap.min.js"
 		],
@@ -127,6 +172,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"$userd"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -137,39 +183,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "application/controllers/notif.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 964,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -212,7 +227,7 @@
 	"project": "greatnrip.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
