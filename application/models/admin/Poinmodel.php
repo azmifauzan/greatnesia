@@ -13,10 +13,25 @@ class Poinmodel extends CI_Model
 	public function countAllTukarPoin()
 	{
 		$this->db->from('penukaran');
+		$this->db->where('status',1);
 		return $this->db->count_all_results();
 	}
 
 	public function getAllTukarPoin($pg,$off)
+	{
+		$this->db->where('penukaran.status',1);
+		$this->db->order_by('waktu_penukaran','desc');
+		$this->db->join('barang_poin','penukaran.tid = barang_poin.tid');
+        return $this->db->get('penukaran',$pg,$off);
+	}
+
+	public function countAllTukarPoinList()
+	{
+		$this->db->from('penukaran');
+		return $this->db->count_all_results();
+	}
+
+	public function getAllTukarPoinList($pg,$off)
 	{
 		$this->db->order_by('waktu_penukaran','desc');
 		$this->db->join('barang_poin','penukaran.tid = barang_poin.tid');

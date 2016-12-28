@@ -111,11 +111,14 @@ class Kategori extends CI_Controller
             $data = array(
                 'button' => 'Update',
                 'action' => site_url('adminpanel/kategori/update_action'),
-		'kategori_id' => set_value('kategori_id', $row->kategori_id),
-		'nama' => set_value('nama', $row->nama),
-		'keterangan' => set_value('keterangan', $row->keterangan),
-		'group' => set_value('group', $row->group),
-	    );
+		        'kategori_id' => set_value('kategori_id', $row->kategori_id),
+		        'nama' => set_value('nama', $row->nama),
+		        'keterangan' => set_value('keterangan', $row->keterangan),
+		        'group' => set_value('group', $row->group),
+	        );
+            $username = $this->session->userdata('username');
+            $data['user'] = $this->usm->getUserDetail($username);
+            $data['menu'] = 'Kategori';
             $this->load->view('admin/kategori/kategori_form', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');

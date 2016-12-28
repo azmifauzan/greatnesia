@@ -1,8 +1,27 @@
 Greatnesia.com
 
 admin
-- login
-- logout
+- login				-> done
+- logout			-> done
+- profil
+- dashboard
+- kategori
+	- list			-> done
+	- add 			-> done
+	- edit			-> done
+	- delete		-> done
+- artikel			-> done
+- poin
+	- pengajuan
+		- pending	-> done
+		- list all 	-> done
+		- verify
+	- barang tukar
+		- list		-> done
+		- add 		-> done
+		- edit		-> done
+		- delete	-> done
+- user
 
 member
 - login				-> done

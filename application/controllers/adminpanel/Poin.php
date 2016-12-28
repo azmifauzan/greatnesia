@@ -58,8 +58,35 @@ class Poin extends CI_Controller
         $this->load->view('admin/barang_view',$data);
     }
 
-    public function verify()
+    public function all($off = 0)
     {
+        $data['menu'] = 'Poin';
+        $username = $this->session->userdata('username');
+        $data['user'] = $this->usm->getUserDetail($username);
+        $data['jumbarpoin'] = $this->pnm->countAllBarangPoin();
+        $data['jumpengajuan'] = $this->pnm->countPengajuanPenukaran();
+        $data['totpengajuan'] = $this->pnm->countAllTukarPoin();
+                
+        $total = $this->pnm->countAllTukarPoinList();                
+        $this->load->library('pagination');
+        $config["base_url"] = site_url('adminpanel/poin/index');
+        $config["total_rows"] = $total;
+        $config["per_page"] = 20;
+        $config["uri_segment"] = 4;
+        $this->pagination->initialize($config);
         
+        $data['penukaran'] = $this->pnm->getAllTukarPoinList($config['per_page'],$off);
+        if($this->session->flashdata('info'))
+            $data['info'] = $this->session->flashdata('info');
+        $this->load->view('admin/poin_view',$data);
+    }
+
+    public function verify($id)
+    {
+        $data['menu'] = 'Poin';
+        $username = $this->session->userdata('username');
+        $data['user'] = $this->usm->getUserDetail($username);
+        $data["tukar"] = $this->pnm->getPenukaranDetil($id);
+        $this->load->view('admin/verify_view');
     }
 }

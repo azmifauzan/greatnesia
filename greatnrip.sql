@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.9
+-- version 4.5.2
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 04, 2016 at 12:32 PM
--- Server version: 5.5.34
--- PHP Version: 5.4.22
+-- Host: localhost
+-- Generation Time: Aug 17, 2016 at 06:03 AM
+-- Server version: 10.1.9-MariaDB
+-- PHP Version: 5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `greatnrip`
@@ -26,15 +26,14 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-CREATE TABLE IF NOT EXISTS `admin` (
-  `admin_id` int(20) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `admin` (
+  `admin_id` int(20) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `nama` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `last_login` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`admin_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+  `last_login` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `admin`
@@ -49,8 +48,8 @@ INSERT INTO `admin` (`admin_id`, `username`, `password`, `nama`, `email`, `last_
 -- Table structure for table `artikel`
 --
 
-CREATE TABLE IF NOT EXISTS `artikel` (
-  `artikel_id` int(20) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `artikel` (
+  `artikel_id` int(20) NOT NULL,
   `judul` varchar(255) NOT NULL,
   `url` varchar(255) NOT NULL,
   `kategori_id` int(20) NOT NULL,
@@ -68,9 +67,29 @@ CREATE TABLE IF NOT EXISTS `artikel` (
   `status` varchar(1) DEFAULT NULL,
   `status_thumb` int(1) NOT NULL DEFAULT '1',
   `sum_rate` float DEFAULT '0',
-  `capcus` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`artikel_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC AUTO_INCREMENT=3804 ;
+  `capcus` varchar(255) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `barang_poin`
+--
+
+CREATE TABLE `barang_poin` (
+  `tid` int(11) NOT NULL,
+  `barang` varchar(255) NOT NULL,
+  `deskripsi` text NOT NULL,
+  `poin` int(11) NOT NULL,
+  `stock` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `barang_poin`
+--
+
+INSERT INTO `barang_poin` (`tid`, `barang`, `deskripsi`, `poin`, `stock`) VALUES
+(1, 'Pulsa 10K', 'Pulsa All Operator senilai 10.000', 10, 20);
 
 -- --------------------------------------------------------
 
@@ -78,14 +97,12 @@ CREATE TABLE IF NOT EXISTS `artikel` (
 -- Table structure for table `captcha`
 --
 
-CREATE TABLE IF NOT EXISTS `captcha` (
-  `captcha_id` bigint(13) unsigned NOT NULL AUTO_INCREMENT,
-  `captcha_time` int(10) unsigned NOT NULL,
+CREATE TABLE `captcha` (
+  `captcha_id` bigint(13) UNSIGNED NOT NULL,
+  `captcha_time` int(10) UNSIGNED NOT NULL,
   `ip_address` varchar(16) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
-  `word` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`captcha_id`),
-  KEY `word` (`word`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=19443 ;
+  `word` varchar(20) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -93,16 +110,15 @@ CREATE TABLE IF NOT EXISTS `captcha` (
 -- Table structure for table `comment`
 --
 
-CREATE TABLE IF NOT EXISTS `comment` (
-  `id_cat` int(100) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `comment` (
+  `id_cat` int(100) NOT NULL,
   `id_atk` varchar(255) NOT NULL,
   `datetime` datetime NOT NULL,
   `author` varchar(20) NOT NULL,
   `author_type` char(1) NOT NULL,
   `email` varchar(60) DEFAULT NULL,
-  `isi` text,
-  PRIMARY KEY (`id_cat`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC AUTO_INCREMENT=1495 ;
+  `isi` text
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 -- --------------------------------------------------------
 
@@ -110,13 +126,12 @@ CREATE TABLE IF NOT EXISTS `comment` (
 -- Table structure for table `kategori`
 --
 
-CREATE TABLE IF NOT EXISTS `kategori` (
-  `kategori_id` int(20) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `kategori` (
+  `kategori_id` int(20) NOT NULL,
   `nama` varchar(255) NOT NULL,
   `keterangan` varchar(255) NOT NULL,
-  `group` varchar(50) NOT NULL,
-  PRIMARY KEY (`kategori_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=48 ;
+  `group` varchar(50) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `kategori`
@@ -172,16 +187,15 @@ INSERT INTO `kategori` (`kategori_id`, `nama`, `keterangan`, `group`) VALUES
 -- Table structure for table `newsletter`
 --
 
-CREATE TABLE IF NOT EXISTS `newsletter` (
-  `id_newsletter` int(50) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `newsletter` (
+  `id_newsletter` int(50) NOT NULL,
   `tgl_dikirim` date NOT NULL,
   `pengirim` int(50) NOT NULL,
   `cc` varchar(255) NOT NULL,
   `penerima` varchar(255) NOT NULL,
   `judul` varchar(255) NOT NULL,
-  `isi` text NOT NULL,
-  PRIMARY KEY (`id_newsletter`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+  `isi` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `newsletter`
@@ -194,19 +208,50 @@ INSERT INTO `newsletter` (`id_newsletter`, `tgl_dikirim`, `pengirim`, `cc`, `pen
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `notif`
+--
+
+CREATE TABLE `notif` (
+  `nid` int(11) NOT NULL,
+  `waktu` datetime NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `isi` text NOT NULL,
+  `url` varchar(255) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `status` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `penukaran`
+--
+
+CREATE TABLE `penukaran` (
+  `pid` int(11) NOT NULL,
+  `waktu_penukaran` datetime NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `tid` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  `keterangan` text NOT NULL,
+  `waktu_konfirmasi` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pesan`
 --
 
-CREATE TABLE IF NOT EXISTS `pesan` (
-  `pid` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `pesan` (
+  `pid` int(11) NOT NULL,
   `pengirim` varchar(50) NOT NULL,
   `penerima` varchar(50) NOT NULL,
   `judul` varchar(255) NOT NULL,
   `isi` text NOT NULL,
   `tanggal_kirim` datetime NOT NULL,
-  `status` varchar(10) NOT NULL DEFAULT 'unread',
-  PRIMARY KEY (`pid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
+  `status` varchar(10) NOT NULL DEFAULT 'unread'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -214,13 +259,12 @@ CREATE TABLE IF NOT EXISTS `pesan` (
 -- Table structure for table `ripiu_desc`
 --
 
-CREATE TABLE IF NOT EXISTS `ripiu_desc` (
-  `id_desc` int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `ripiu_desc` (
+  `id_desc` int(10) NOT NULL,
   `nama_desc` varchar(255) NOT NULL,
   `url` varchar(255) NOT NULL,
-  `isi` text NOT NULL,
-  PRIMARY KEY (`id_desc`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+  `isi` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `ripiu_desc`
@@ -240,12 +284,11 @@ INSERT INTO `ripiu_desc` (`id_desc`, `nama_desc`, `url`, `isi`) VALUES
 -- Table structure for table `sessions`
 --
 
-CREATE TABLE IF NOT EXISTS `sessions` (
+CREATE TABLE `sessions` (
   `id` varchar(40) NOT NULL,
   `ip_address` varchar(45) NOT NULL,
-  `timestamp` int(10) unsigned NOT NULL DEFAULT '0',
-  `data` blob NOT NULL,
-  KEY `ci_sessions_timestamp` (`timestamp`)
+  `timestamp` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `data` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -253,17 +296,21 @@ CREATE TABLE IF NOT EXISTS `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('04197f8517c655fe07284c495c90c2ed84c0c346', '::1', 1470296160, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437303239353930323b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
-('55e1575e348a0f05534c9189febf938859154d32', '::1', 1470296591, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437303239363335353b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
-('2239dea1cd82a69ddb316e821ee6af4401a3b2df', '::1', 1470296832, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437303239363739313b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
-('4593e1b6d9c51f9da50cb4fdec65b1a6805b2378', '::1', 1470297771, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437303239373730323b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
-('c2e4bea6d1f096a726cfa153795613864bed9924', '::1', 1470303207, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437303330333133333b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
-('dceb1a97fb6ca299c65f52c375e50ae1da2489d1', '::1', 1470304013, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437303330333738383b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
-('67654d886c136e97d4cdcf92aaea1638a18eff56', '::1', 1470304384, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437303330343130373b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
-('18103eb24ae5ffd7cb31c6b47c006c5b0ddf1a7a', '::1', 1470304703, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437303330343434383b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
-('79a3214c8ce337f66162bda648b50dc70b9a02fd', '::1', 1470305036, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437303330343735363b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
-('493e9468ff2eaea8bb58c607ac532367c146330c', '::1', 1470305107, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437303330353130373b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
-('f63a7f7c3000388d3a0d86c26142cba75823c940', '::1', 1470305932, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437303330353638373b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b);
+('a22936f163708070a59a96f4fecc76122bb8cc31', '::1', 1471072466, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437313037323239383b757365726e616d657c733a363a226661757a616e223b69734c6f67696e7c623a313b),
+('9af3c71d3c13710b09222b724cec7ec062c261fb', '::1', 1471078695, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437313037383538333b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('4a484feadc629133ae4d088129c8e2182dbe089e', '::1', 1471079139, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437313037393133393b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('ded2b92918bd3f4c7eb51860eb74d2f41bb3b509', '::1', 1471161732, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437313136313437383b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('275b3635f7c00a27110ced032678075f01795243', '::1', 1471162194, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437313136323035383b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('9f8643ba501ab3164a050e8fd0ca7269608ce245', '::1', 1471165810, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437313136353539343b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('95323ea3a57eca4ee712b83be2b4a6c68f1dd335', '::1', 1471166517, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437313136363531373b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('698adf128f66a400c73c86681e8dbce666c4f650', '::1', 1471234512, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437313233343232393b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('fe2aac0b88deeac54ac01e290847e1704e8a14a0', '::1', 1471234601, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437313233343539363b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('6b01a05ff6d3c0ab4e8595eb9d91ca4eb848a1a7', '::1', 1471241329, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437313234313037383b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('3dbcdfe4dcb24b65729ca41dc17fbdfe4ab8170f', '::1', 1471343186, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437313334323839313b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('46a205aa9040ef7d41ddc0a921726f7f8ee6b7d9', '::1', 1471343362, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437313334333139333b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('d8b3199e76436035aa486992d18d9aa23eec322e', '::1', 1471343787, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437313334333531383b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('6f6ec64c5b6c70839a6e3ad69b69e8a12486cf4e', '::1', 1471343946, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437313334333833313b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b696e666f7c733a32313a22557064617465205265636f72642053756363657373223b5f5f63695f766172737c613a313a7b733a343a22696e666f223b733a333a226f6c64223b7d),
+('29341df10fb829e0adf3ecc07766f067aebedc19', '::1', 1471406539, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437313430363532333b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b);
 
 -- --------------------------------------------------------
 
@@ -271,16 +318,15 @@ INSERT INTO `sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 -- Table structure for table `slide_show`
 --
 
-CREATE TABLE IF NOT EXISTS `slide_show` (
-  `id_slide` int(25) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `slide_show` (
+  `id_slide` int(25) NOT NULL,
   `url_artikel` varchar(255) NOT NULL,
   `active` enum('active','disable') NOT NULL,
   `image_desc` tinytext,
   `judul` tinytext,
   `deskripsi` tinytext,
-  `group` varchar(25) NOT NULL,
-  PRIMARY KEY (`id_slide`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=188 ;
+  `group` varchar(25) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -288,16 +334,15 @@ CREATE TABLE IF NOT EXISTS `slide_show` (
 -- Table structure for table `trade`
 --
 
-CREATE TABLE IF NOT EXISTS `trade` (
-  `trade_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `trade` (
+  `trade_id` int(11) NOT NULL,
   `trader` varchar(50) NOT NULL,
   `peruntukan` varchar(250) NOT NULL,
   `poin` int(11) NOT NULL,
   `datetime` datetime NOT NULL,
   `desc` text NOT NULL,
-  `status` int(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`trade_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+  `status` int(1) NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -305,7 +350,7 @@ CREATE TABLE IF NOT EXISTS `trade` (
 -- Table structure for table `user`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
+CREATE TABLE `user` (
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -319,9 +364,180 @@ CREATE TABLE IF NOT EXISTS `user` (
   `avatar` varchar(255) DEFAULT NULL,
   `newsletter` int(1) NOT NULL DEFAULT '1',
   `sent` int(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`username`)
+  `poin` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`username`, `password`, `email`, `tgl_daftar`, `nama`, `website`, `biodata`, `jenis_member`, `status`, `ip`, `avatar`, `newsletter`, `sent`, `poin`) VALUES
+('fauzan', '595d275ad04a4d9a526716390042c1d4', 'azmifauzan@gmail.com', '2016-08-11', 'Fauzan', '', '', 1, '', '', NULL, 1, 0, 0);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`admin_id`);
+
+--
+-- Indexes for table `artikel`
+--
+ALTER TABLE `artikel`
+  ADD PRIMARY KEY (`artikel_id`);
+
+--
+-- Indexes for table `barang_poin`
+--
+ALTER TABLE `barang_poin`
+  ADD PRIMARY KEY (`tid`);
+
+--
+-- Indexes for table `captcha`
+--
+ALTER TABLE `captcha`
+  ADD PRIMARY KEY (`captcha_id`),
+  ADD KEY `word` (`word`);
+
+--
+-- Indexes for table `comment`
+--
+ALTER TABLE `comment`
+  ADD PRIMARY KEY (`id_cat`);
+
+--
+-- Indexes for table `kategori`
+--
+ALTER TABLE `kategori`
+  ADD PRIMARY KEY (`kategori_id`);
+
+--
+-- Indexes for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  ADD PRIMARY KEY (`id_newsletter`);
+
+--
+-- Indexes for table `notif`
+--
+ALTER TABLE `notif`
+  ADD PRIMARY KEY (`nid`);
+
+--
+-- Indexes for table `penukaran`
+--
+ALTER TABLE `penukaran`
+  ADD PRIMARY KEY (`pid`);
+
+--
+-- Indexes for table `pesan`
+--
+ALTER TABLE `pesan`
+  ADD PRIMARY KEY (`pid`);
+
+--
+-- Indexes for table `ripiu_desc`
+--
+ALTER TABLE `ripiu_desc`
+  ADD PRIMARY KEY (`id_desc`);
+
+--
+-- Indexes for table `sessions`
+--
+ALTER TABLE `sessions`
+  ADD KEY `ci_sessions_timestamp` (`timestamp`);
+
+--
+-- Indexes for table `slide_show`
+--
+ALTER TABLE `slide_show`
+  ADD PRIMARY KEY (`id_slide`);
+
+--
+-- Indexes for table `trade`
+--
+ALTER TABLE `trade`
+  ADD PRIMARY KEY (`trade_id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`username`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `admin_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `artikel`
+--
+ALTER TABLE `artikel`
+  MODIFY `artikel_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3805;
+--
+-- AUTO_INCREMENT for table `barang_poin`
+--
+ALTER TABLE `barang_poin`
+  MODIFY `tid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `captcha`
+--
+ALTER TABLE `captcha`
+  MODIFY `captcha_id` bigint(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19443;
+--
+-- AUTO_INCREMENT for table `comment`
+--
+ALTER TABLE `comment`
+  MODIFY `id_cat` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1495;
+--
+-- AUTO_INCREMENT for table `kategori`
+--
+ALTER TABLE `kategori`
+  MODIFY `kategori_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+--
+-- AUTO_INCREMENT for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  MODIFY `id_newsletter` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+--
+-- AUTO_INCREMENT for table `notif`
+--
+ALTER TABLE `notif`
+  MODIFY `nid` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `penukaran`
+--
+ALTER TABLE `penukaran`
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `pesan`
+--
+ALTER TABLE `pesan`
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+--
+-- AUTO_INCREMENT for table `ripiu_desc`
+--
+ALTER TABLE `ripiu_desc`
+  MODIFY `id_desc` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `slide_show`
+--
+ALTER TABLE `slide_show`
+  MODIFY `id_slide` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=188;
+--
+-- AUTO_INCREMENT for table `trade`
+--
+ALTER TABLE `trade`
+  MODIFY `trade_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

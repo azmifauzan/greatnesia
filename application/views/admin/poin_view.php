@@ -12,14 +12,14 @@
 		<div class="stat-holder">						
 			<div class="stat">							
 				<span><?php echo $totpengajuan; ?></span>							
-				Total Penukaran	Poin						
+				<?php echo anchor('adminpanel/poin/all','Total Penukaran Poin'); ?>						
 			</div> <!-- /stat -->						
 		</div> <!-- /stat-holder -->
 		
 		<div class="stat-holder">						
 			<div class="stat">							
 				<span><?php echo $jumpengajuan; ?></span>							
-				Pengajuan Penukaran poin							
+				<?php echo anchor('adminpanel/poin','Pengajuan Penukaran poin'); ?>							
 			</div> <!-- /stat -->						
 		</div> <!-- /stat-holder -->
 
