@@ -44,9 +44,10 @@
 					<thead>
 						<tr>
 							<th>Waktu Penukaran</th>
-							<th width="30%">Penukaran Poin</th>
+							<th>Penukaran Poin</th>
 							<th>Status</th>
-							<th width="35%">Keterangan</th>
+							<th width="20%">Keterangan</th>
+							<th width="25%">Validasi</th>
 						</tr>
 					</thead>
 					
@@ -66,7 +67,8 @@
 							<td><?php echo date('d F Y H:i',strtotime($tp->waktu_penukaran)); ?></td>
 							<td><?php echo $tp->barang; ?></td>
 							<td><?php echo $st; ?></td>
-							<td><?php echo $tp->keterangan; ?></td>
+							<td><?php echo $tp->keterangan_penukaran; ?></td>
+							<td><?php echo $tp->keterangan_konfirmasi; ?></td>
 						</tr>
 					<?php endforeach; ?>
 					<?php endif; ?>

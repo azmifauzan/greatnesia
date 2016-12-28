@@ -41,19 +41,7 @@
       
       <a class="brand" href="http://www.greatnesia.com">Greatnesia</a>
       <div class="nav-collapse">
-      <!--
-	<ul class="nav pull-left">
-	  <li class="divider-vertical"></li>
-	  <li><a href="#" title="Ripiu.com - Ulasan Produk dan Panduan Belanja">Produk</a></li>
-	  <li class="divider-vertical"></li>
-	  <li><a href="#" title="Ripiu.net - Ulasan Website">Website</a></li>
-	  <li class="divider-vertical"></li>
-	  <li><a href="http://www.ripiu.info" title="Ripiu.info - Sumber Informasi dan Pengetahuan">Informasi</a></li>
-	  <li class="divider-vertical"></li>
-	  <li><a href="#" title="Ripiu.travel - Ulasan dan Panduan Tempat Wisata">Wisata</a></li>
-	  <li class="divider-vertical"></li>
-	</ul>
-	-->
+      
 	<ul class="nav pull-right">
 	  <?php if($urnotif > 0) : ?>
 	  <li class="divider-vertical"></li>

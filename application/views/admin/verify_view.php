@@ -43,10 +43,8 @@
 						<textarea name="validasi" cols="50" rows="5"></textarea>
 					</div> <!-- /controls -->
 				</div>
-				<div class="control-group">											
-					<div class="controls">
-						<input type="submit" name="verify" value="Proses">
-					</div> <!-- /controls -->
+				<div class="form-actions">
+					<input type="submit" name="verify" value="Proses" class="btn btn-primary">
 				</div>
 				<?php echo form_hidden('pid',$tukar->pid); ?>
 			<?php echo form_close(); ?>

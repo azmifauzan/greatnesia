@@ -58,6 +58,46 @@ class Poin extends CI_Controller
     public function tukar($tid)
     {
         $username = $this->session->userdata('username');
+        $data['menu'] = 'Poin';
+        $data['user'] = $this->usm->getUserDetail($username);
+        $data['urnotif'] = $this->usm->countUnreadNotif($username);
+        $us = $this->usm->getUserDetail($username);
+        $brg = $this->pnm->getDetailBarang($tid);
+        if($us->poin >= $brg->poin)
+        {
+            $data["tukar"] = $this->pnm->getDetailBarang($tid);
+            $this->load->view('tukar_view',$data);
+        }
+        else
+        {
+            $this->session->set_flashdata('info','Maaf, Poin Anda tidak mencukupi.');
+            redirect('poin','refresh');
+        }
+    }
+
+    public function proses()
+    {
+        if($this->input->post('proses'))
+        {
+            $tid = $this->input->post('tid');
+            $ket = $this->input->post('keterangan');
+            $username = $this->session->userdata('username');
+            $us = $this->usm->getUserDetail($username);
+            $brg = $this->pnm->getDetailBarang($tid);
+            $this->pnm->simpanPenukaran($tid,$username,$ket);
+            $this->usm->kurangiPoin($username,$brg->poin);
+            $this->session->set_flashdata('info','Terima Kasih, Penukaran Poin Anda akan segera kami verifikasi greaters.');
+            redirect('poin/history','refresh');
+        }
+        else
+        {
+            redirect('poin','refresh');
+        }
+    }
+
+    public function tukar_old($tid)
+    {
+        $username = $this->session->userdata('username');
         $us = $this->usm->getUserDetail($username);
         $brg = $this->pnm->getDetailBarang($tid);
         if($us->poin >= $brg->poin)

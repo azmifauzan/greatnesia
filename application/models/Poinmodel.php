@@ -44,9 +44,10 @@ class Poinmodel extends CI_model
 		return $this->db->get('barang_poin')->row();
 	}
 
-	public function simpanPenukaran($tid,$us)
+	public function simpanPenukaran($tid,$us,$ket)
 	{
 		$data = array(
+			'keterangan_penukaran' => $ket,
 			'waktu_penukaran' => date('Y-m-d H:i:s'),
 			'username' => $us,
 			'tid' => $tid,

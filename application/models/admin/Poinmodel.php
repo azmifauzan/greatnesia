@@ -67,8 +67,9 @@ class Poinmodel extends CI_Model
 
 	public function updateVerify($kt,$pid)
 	{
-		$this->db->set('keterangan',$kt);
+		$this->db->set('keterangan_konfirmasi',$kt);
 		$this->db->set('status',2);
+		$this->db->set('waktu_konfirmasi',date('Y-m-d H:i:s'));
 		$this->db->where('pid',$pid);
 		return $this->db->update('penukaran');
 	}

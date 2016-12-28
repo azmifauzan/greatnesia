@@ -15,7 +15,7 @@ admin
 	- pengajuan
 		- pending	-> done
 		- list all 	-> done
-		- verify
+		- verify	-> done
 	- barang tukar
 		- list		-> done
 		- add 		-> done
