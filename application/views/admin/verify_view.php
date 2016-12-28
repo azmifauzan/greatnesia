@@ -7,31 +7,6 @@
 		Poin					
 	</h1>
 	
-	<div class="stat-container">
-		
-		<div class="stat-holder">						
-			<div class="stat">							
-				<span><?php echo $totpengajuan; ?></span>							
-				<?php echo anchor('adminpanel/poin/all','Total Penukaran Poin'); ?>						
-			</div> <!-- /stat -->						
-		</div> <!-- /stat-holder -->
-		
-		<div class="stat-holder">						
-			<div class="stat">							
-				<span><?php echo $jumpengajuan; ?></span>							
-				<?php echo anchor('adminpanel/poin','Pengajuan Penukaran poin'); ?>							
-			</div> <!-- /stat -->						
-		</div> <!-- /stat-holder -->
-
-		<div class="stat-holder">						
-			<div class="stat">							
-				<span><?php echo $jumbarpoin; ?></span>							
-				<?php echo anchor('adminpanel/barangpoin','Barang Tukar Poin'); ?>							
-			</div> <!-- /stat -->						
-		</div> <!-- /stat-holder -->
-		
-	</div> <!-- /stat-container -->
-	
 </div> <!-- /span9 -->
 
 <div class="row">					
@@ -43,10 +18,40 @@
 			</div> <!-- /widget-header -->
 
 			<div class="widget-content">
+			<?php echo form_open("adminpanel/poin/proses","class='form-horizontal'"); ?>
+				<div class="control-group">											
+					<label class="control-label" for="barang">Barang :</label>
+					<div class="controls">
+						<input type="text" disabled value="<?php echo $tukar->barang; ?>">
+					</div> <!-- /controls -->
+				</div>
+				<div class="control-group">											
+					<label class="control-label" for="user">User :</label>
+					<div class="controls">
+						<input type="text" disabled value="<?php echo $tukar->username; ?>">
+					</div> <!-- /controls -->
+				</div>
+				<div class="control-group">											
+					<label class="control-label" for="tgl">Tgl Pengajuan :</label>
+					<div class="controls">
+						<input type="text" disabled value="<?php echo date('d M Y - H:i:s', strtotime($tukar->waktu_penukaran)); ?>">
+					</div> <!-- /controls -->
+				</div>
+				<div class="control-group">											
+					<label class="control-label" for="Validasi">Validasi :</label>
+					<div class="controls">
+						<textarea name="validasi" cols="50" rows="5"></textarea>
+					</div> <!-- /controls -->
+				</div>
+				<div class="control-group">											
+					<div class="controls">
+						<input type="submit" name="verify" value="Proses">
+					</div> <!-- /controls -->
+				</div>
+				<?php echo form_hidden('pid',$tukar->pid); ?>
+			<?php echo form_close(); ?>
+			</div> <!-- /widget-content -->
 				
-			</div> <!-- /widget-header -->
-
-					
 		</div> <!-- /widget -->		
 	</div> <!-- /span9 -->	
 </div> <!-- /row -->

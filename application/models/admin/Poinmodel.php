@@ -33,6 +33,7 @@ class Poinmodel extends CI_Model
 
 	public function getAllTukarPoinList($pg,$off)
 	{
+		$this->db->order_by('status','asc');
 		$this->db->order_by('waktu_penukaran','desc');
 		$this->db->join('barang_poin','penukaran.tid = barang_poin.tid');
         return $this->db->get('penukaran',$pg,$off);
@@ -55,5 +56,20 @@ class Poinmodel extends CI_Model
 		$this->db->where('status',1);
 		$this->db->from('penukaran');
 		return $this->db->count_all_results();
+	}
+
+	public function getPenukaranDetil($pid)
+	{
+		$this->db->where('pid',$pid);
+		$this->db->join('barang_poin','penukaran.tid = barang_poin.tid');
+		return $this->db->get('penukaran')->row();
+	}
+
+	public function updateVerify($kt,$pid)
+	{
+		$this->db->set('keterangan',$kt);
+		$this->db->set('status',2);
+		$this->db->where('pid',$pid);
+		return $this->db->update('penukaran');
 	}
 }

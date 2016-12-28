@@ -22,7 +22,7 @@ class Poin extends CI_Controller
         $data['user'] = $this->usm->getUserDetail($username);
         $data['jumbarpoin'] = $this->pnm->countAllBarangPoin();
         $data['jumpengajuan'] = $this->pnm->countPengajuanPenukaran();
-        $data['totpengajuan'] = $this->pnm->countAllTukarPoin();
+        $data['totpengajuan'] = $this->pnm->countAllTukarPoinList();
                 
         $total = $this->pnm->countAllTukarPoin();                
         $this->load->library('pagination');
@@ -65,7 +65,7 @@ class Poin extends CI_Controller
         $data['user'] = $this->usm->getUserDetail($username);
         $data['jumbarpoin'] = $this->pnm->countAllBarangPoin();
         $data['jumpengajuan'] = $this->pnm->countPengajuanPenukaran();
-        $data['totpengajuan'] = $this->pnm->countAllTukarPoin();
+        $data['totpengajuan'] = $this->pnm->countAllTukarPoinList();
                 
         $total = $this->pnm->countAllTukarPoinList();                
         $this->load->library('pagination');
@@ -87,6 +87,21 @@ class Poin extends CI_Controller
         $username = $this->session->userdata('username');
         $data['user'] = $this->usm->getUserDetail($username);
         $data["tukar"] = $this->pnm->getPenukaranDetil($id);
-        $this->load->view('admin/verify_view');
+        $this->load->view('admin/verify_view',$data);
+    }
+
+    public function proses()
+    {
+        if($this->input->post('verify'))
+        {
+            $kt = $this->input->post('validasi');
+            $pid = $this->input->post('pid');
+            $this->pnm->updateVerify($kt,$pid);
+            redirect('adminpanel/poin','refresh');
+        }
+        else
+        {
+            redirect('adminpanel/poin/all','refresh');
+        }
     }
 }

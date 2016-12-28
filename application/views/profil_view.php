@@ -51,7 +51,7 @@
 					<div class="control-group">											
 						<label class="control-label" for="avatar">Avatar</label>
 						<div class="controls">
-							<? if(trim($user->avatar) != "") :?>
+							<?php if(trim($user->avatar) != ""): ?>
 								<img border="0" src="<? echo base_url()."uploads/avatar/".$user->avatar; ?>" /><br/>
 							<?php endif; ?>
 							<input type="file" name="avatar" />

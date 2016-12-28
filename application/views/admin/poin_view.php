@@ -60,9 +60,9 @@
 					<?php
 						switch($pn->status)
 						{
-							case 1 : $st = '<span class="label label-success">Menunggu Verifikasi</span>';
+							case 1 : $st = '<span class="label label-important">Menunggu Verifikasi</span>';
 								break;
-							case 2 : $st = '<span class="label label-important">Berhasil</span>';
+							case 2 : $st = '<span class="label label-success">Berhasil</span>';
 								break;
 						}
 					?>
@@ -72,7 +72,7 @@
 						<td><?php echo date('d M Y - H:i', strtotime($pn->waktu_penukaran)) ?></td>
 						<td><?php echo $st; ?></td>
 						<td class="action-td">
-							<a title="Tinjau Penukaran" href="<?php echo site_url('poin/verify/'.$pn->pid); ?>" class="btn btn-info">Verify</a>
+							<?php if($pn->status == 1): ?><a title="Tinjau Penukaran" href="<?php echo site_url('adminpanel/poin/verify/'.$pn->pid); ?>" class="btn btn-info">Verify</a><?php endif; ?>
 						</td>
 					</tr>
 					<?php endforeach; ?>
