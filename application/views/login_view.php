@@ -87,7 +87,7 @@
 	
 	<div id="login-content" class="clearfix">
 	
-		<?php echo form_open('login/proses'); ?>
+		<?php echo form_open('ucp/login/proses'); ?>
 			<fieldset>
 				<div class="control-group">
 					<label class="control-label" for="username">Username</label>

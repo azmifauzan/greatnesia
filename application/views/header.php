@@ -46,7 +46,7 @@
 	  <?php if($urnotif > 0) : ?>
 	  <li class="divider-vertical"></li>
 	  <li>
-	    <a href="<?php echo site_url('notif'); ?>"><span class="badge badge-warning"><?php echo $urnotif; ?></span></a>
+	    <a href="<?php echo site_url('ucp/notif'); ?>"><span class="badge badge-warning"><?php echo $urnotif; ?></span></a>
 	  </li>	  
 	  <li class="divider-vertical"></li>
 	  <?php endif; ?>
@@ -59,13 +59,13 @@
 	    
 	    <ul class="dropdown-menu">
 		    <li>
-			<a href="<?php echo site_url('profil'); ?>"><i class="icon-user"></i> Profil  </a>
+			<a href="<?php echo site_url('ucp/profil'); ?>"><i class="icon-user"></i> Profil  </a>
 		    </li>
 		    
 		    <li class="divider"></li>
 		    
 		    <li>
-			    <a href="<?php echo site_url('login/out'); ?>"><i class="icon-off"></i> Logout</a>
+			    <a href="<?php echo site_url('ucp/login/out'); ?>"><i class="icon-off"></i> Logout</a>
 		    </li>
 	    </ul>
 	  </li>
@@ -102,8 +102,8 @@
 	    <span class="account-name"><?php echo $user->nama; ?></span>
 	    
 	    <span class="account-actions">
-		    <a href="<?php echo site_url('profil'); ?>">Profil</a> |							
-		    <a href="<?php echo site_url('login/out'); ?>">Logout</a>
+		    <a href="<?php echo site_url('ucp/profil'); ?>">Profil</a> |							
+		    <a href="<?php echo site_url('ucp/login/out'); ?>">Logout</a>
 	    </span>
 	  
 	  </div> <!-- /account-details -->
@@ -115,14 +115,14 @@
 	<ul id="main-nav" class="nav nav-tabs nav-stacked">
 		
 	  <li <?php if($menu == 'Home') echo 'class="active"'; ?>>
-		  <a href="<?php echo site_url('home'); ?>">
+		  <a href="<?php echo site_url('ucp/home'); ?>">
 			  <i class="icon-home"></i>
 			  Dashboard 		
 		  </a>
 	  </li>
 	  
 	  <li <?php if($menu == 'Notifikasi') echo 'class="active"'; ?>>
-		  <a href="<?php echo site_url('notif'); ?>">
+		  <a href="<?php echo site_url('ucp/notif'); ?>">
 			  <i class="icon-comment"></i>
 			  Notifikasi	
 			  <?php if($urnotif > 0) : ?><span class="label label-warning pull-right"><?php echo $urnotif; ?></span><?php endif; ?>
@@ -130,7 +130,7 @@
 	  </li>
 	  
 	  <li <?php if($menu == 'Artikel') echo 'class="active"'; ?>>
-		  <a href="<?php echo site_url('artikel'); ?>">
+		  <a href="<?php echo site_url('ucp/artikel'); ?>">
 			  <i class="icon-book"></i>
 			  Artikel	
 		  </a>
@@ -141,20 +141,20 @@
 	
 	<ul id="main-nav" class="nav nav-tabs nav-stacked">	  
 	  <li <?php if($menu == 'Poin') echo 'class="active"'; ?>>
-		  <a href="<?php echo site_url('poin'); ?>">
+		  <a href="<?php echo site_url('ucp/poin'); ?>">
 			  <i class="icon-time"></i>
 			  Poin
 		  </a>
 	  </li>	
 	  <li <?php if($menu == 'Bantuan') echo 'class="active"'; ?>>
-		  <a href="<?php echo site_url('help'); ?>">
+		  <a href="<?php echo site_url('ucp/help'); ?>">
 			  <i class="icon-question-sign"></i>
 			  Bantuan	
 		  </a>
 	  </li>
 	  	  
 	  <li>
-		  <a href="<?php echo site_url('login/out'); ?>">
+		  <a href="<?php echo site_url('ucp/login/out'); ?>">
 			  <i class="icon-off"></i>
 			  Logout	
 		  </a>

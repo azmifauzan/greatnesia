@@ -60,8 +60,8 @@
 		<i class="icon-book"></i>
 		Artikel
 		<div style="float: right;">
-			<a href="<?php echo site_url('artikel/tambah'); ?>"><i class="icon-plus"></i></a>
-			<a href="<?php echo site_url('artikel/tambah'); ?>">Tulis Artikel</a>
+			<a href="<?php echo site_url('ucp/artikel/tambah'); ?>"><i class="icon-plus"></i></a>
+			<a href="<?php echo site_url('ucp/rtikel/tambah'); ?>">Tulis Artikel</a>
 		</div>
 	</h1>
 	
@@ -76,7 +76,7 @@
 			</div> <!-- /widget-header -->
 
 			<div class="widget-content">
-				<?php echo form_open_multipart('artikel/proses','class="form-horizontal"'); ?>
+				<?php echo form_open_multipart('ucp/artikel/proses','class="form-horizontal"'); ?>
 				<fieldset>
 					
 					<div class="control-group">											

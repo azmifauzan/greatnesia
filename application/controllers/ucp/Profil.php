@@ -5,7 +5,7 @@ class Profil extends CI_Controller
     {
         parent::__construct();
         if($this->session->userdata('isLogin') != TRUE)
-            redirect('login','refresh');
+            redirect('ucp/login','refresh');
         $this->load->model('usermodel','usm');
     }
     
@@ -68,7 +68,7 @@ class Profil extends CI_Controller
 			$this->usm->uodateDataWithPass($this->session->userdata('username'),$nama,$web,$bio,$pass,$image["file_name"]);
 		    
 		    $this->session->set_flashdata('info','Profil berhasil diupdate.');
-		    redirect('profil','refresh');
+		    redirect('ucp/profil','refresh');
 		}
 		else
 		{
@@ -92,7 +92,7 @@ class Profil extends CI_Controller
 			$this->usm->uodateDataWithPassNoImg($this->session->userdata('username'),$nama,$web,$bio,$pass);
 		    
 		    $this->session->set_flashdata('info','Profil berhasil diupdate.');
-		    redirect('profil','refresh');
+		    redirect('ucp/profil','refresh');
 		}
 		else
 		{

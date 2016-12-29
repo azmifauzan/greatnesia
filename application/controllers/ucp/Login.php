@@ -32,7 +32,7 @@ class Login extends CI_Controller
             if ($this->form_validation->run() == FALSE)
             {
                 $this->session->set_flashdata('error','username / password tidak dikenali');
-                redirect('login','refresh');
+                redirect('ucp/login','refresh');
             }
             else
             {
@@ -43,24 +43,24 @@ class Login extends CI_Controller
                         'isLogin' => TRUE
                     );
                     $this->session->set_userdata($data);
-                    redirect('home','refresh');
+                    redirect('ucp/home','refresh');
                 }
                 else
                 {
                     $this->session->set_flashdata('error','username / password tidak dikenali');
-                    redirect('login','refresh');    
+                    redirect('ucp/login','refresh');    
                 }
             }
         }
         else
         {
-            redirect('login','refresh');
+            redirect('ucp/login','refresh');
         }
     }
     
     public function out()
     {
         $this->session->sess_destroy();
-        redirect('login','refresh');
+        redirect('ucp/login','refresh');
     }
 }

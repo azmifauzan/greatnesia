@@ -9,7 +9,7 @@ class Poin extends CI_Controller
 	{
 		parent::__construct();
 		if($this->session->userdata('isLogin') != TRUE)
-            redirect('login','refresh');
+            redirect('ucp/login','refresh');
         $this->load->model('usermodel','usm');
         $this->load->model('poinmodel','pnm');
 	}
@@ -71,7 +71,7 @@ class Poin extends CI_Controller
         else
         {
             $this->session->set_flashdata('info','Maaf, Poin Anda tidak mencukupi.');
-            redirect('poin','refresh');
+            redirect('ucp/poin','refresh');
         }
     }
 
@@ -91,7 +91,7 @@ class Poin extends CI_Controller
         }
         else
         {
-            redirect('poin','refresh');
+            redirect('ucp/poin','refresh');
         }
     }
 
@@ -110,7 +110,7 @@ class Poin extends CI_Controller
         else
         {
             $this->session->set_flashdata('info','Maaf, Poin Anda tidak mencukupi.');
-            redirect('poin','refresh');
+            redirect('ucp/poin','refresh');
         }
     }
 }

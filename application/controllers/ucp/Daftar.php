@@ -24,7 +24,7 @@ class Daftar extends CI_Controller
 	if($this->input->post("daftar"))
 	{
 	    $this->load->library('form_validation');
-            $this->form_validation->set_rules('username', 'Username', 'required|min_length[6]|is_unique[user.username]');
+        $this->form_validation->set_rules('username', 'Username', 'required|min_length[6]|is_unique[user.username]');
 	    $this->form_validation->set_rules('password', 'Password', 'required|min_length[6]');
 	    $this->form_validation->set_rules('repassword', 'Ulangi Password', 'required|matches[password]');
 	    $this->form_validation->set_rules('email', 'email', 'required|valid_email|is_unique[user.email]');
@@ -41,7 +41,7 @@ class Daftar extends CI_Controller
 	}
 	else
 	{
-	    redirect('login');
+	    redirect('ucp/login');
 	}
     }
 }

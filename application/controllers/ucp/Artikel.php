@@ -5,7 +5,7 @@ class Artikel extends CI_Controller
     {
         parent::__construct();
         if($this->session->userdata('isLogin') != TRUE)
-            redirect('login','refresh');
+            redirect('ucp/login','refresh');
         $this->load->model('usermodel','usm');
         $this->load->model('infomodel','ifm');
     }
@@ -232,7 +232,7 @@ class Artikel extends CI_Controller
                         $this->session->set_flashdata('info','Artikel berhasil ditambahkan, Moderator kami akan mereview artikel tersebut secepatnya.');
                     else
                         $this->session->set_flashdata('info','Artikel berhasil disimpan.');
-                    redirect('artikel','refresh');
+                    redirect('ucp/artikel','refresh');
                 }
                 else
                 {					
@@ -255,7 +255,7 @@ class Artikel extends CI_Controller
                             $this->session->set_flashdata('info','Artikel berhasil ditambahkan, Moderator kami akan mereview artikel tersebut secepatnya.');
                         else
                             $this->session->set_flashdata('info','Artikel berhasil disimpan.'); 
-                        redirect('artikel','refresh');
+                        redirect('ucp/artikel','refresh');
                     }
                     else 
                     {					
@@ -270,7 +270,7 @@ class Artikel extends CI_Controller
             
         }
         else{
-            redirect('artikel/tambah','refresh');
+            redirect('ucp/artikel/tambah','refresh');
         }
     }
     
@@ -315,7 +315,7 @@ class Artikel extends CI_Controller
             $this->load->view('artikeledit_view',$data);
         }
         else{
-            redirect('artikel');
+            redirect('ucp/artikel');
         }
     }
     
@@ -432,7 +432,7 @@ class Artikel extends CI_Controller
                     {
                         $u = $this->session->userdata("username");
                         $this->ifm->updateDataNoImg($u,$id,$judul,$kategori,$isi,$url);
-                        redirect('artikel/'.$red,'refresh');
+                        redirect('ucp/artikel/'.$red,'refresh');
                     }
                     else 
                     {					
@@ -449,7 +449,7 @@ class Artikel extends CI_Controller
         }
         else
         {
-            redirect('artikel','refresh');
+            redirect('ucp/artikel','refresh');
         }
     }
     
@@ -460,7 +460,7 @@ class Artikel extends CI_Controller
             $this->ifm->deleteData($id,$username);
         }
         
-        redirect('artikel/'.$red,'refresh');       
+        redirect('ucp/artikel/'.$red,'refresh');       
     }
     
     public function ajukan($id,$red = '')
@@ -470,13 +470,13 @@ class Artikel extends CI_Controller
             $this->ifm->ajukan($id,$username);
         }
         
-        redirect('artikel/'.$red,'refresh');   
+        redirect('ucp/artikel/'.$red,'refresh');   
     }
     
     public function preview($id)
     {
         $data['artikel'] = $this->ifm->getArtikelDetilFromId($id);
-        $data['url'] = 'http://localdev/ripiu.info2/';
+        $data['url'] = 'http://localhost/greatnesia.com/';
         $this->load->view('preview',$data);
     }
     

@@ -24,6 +24,7 @@ admin
 - user
 
 member
+- daftar
 - login				-> done
 - dashboard		
 - notifikasi

@@ -5,7 +5,7 @@ class Notif extends CI_Controller
     {
         parent::__construct();
         if($this->session->userdata('isLogin') != TRUE)
-            redirect('login','refresh');
+            redirect('ucp/login','refresh');
         $this->load->model('usermodel','usm');
     }
     
