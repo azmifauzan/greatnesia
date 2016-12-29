@@ -6,8 +6,8 @@
 		<i class="icon-book"></i>
 		Artikel
 		<div style="float: right;">
-			<a href="<?php echo site_url('artikel/tambah'); ?>"><i class="icon-plus"></i></a>
-			<a href="<?php echo site_url('artikel/tambah'); ?>">Tulis Artikel</a>
+			<a href="<?php echo site_url('ucp/artikel/tambah'); ?>"><i class="icon-plus"></i></a>
+			<a href="<?php echo site_url('ucp/artikel/tambah'); ?>">Tulis Artikel</a>
 		</div>
 	</h1>
 	
@@ -16,28 +16,28 @@
 		<div class="stat-holder">						
 			<div class="stat">
 				<span><?php echo $jaraktif; ?></span>							
-				<a href="<?php echo site_url('artikel/terbit'); ?>">Artikel diterbitkan</a>
+				<a href="<?php echo site_url('ucp/artikel/terbit'); ?>">Artikel diterbitkan</a>
 			</div> <!-- /stat -->						
 		</div> <!-- /stat-holder -->
 		
 		<div class="stat-holder">						
 			<div class="stat">							
 				<span><?php echo $jarpending; ?></span>							
-				<a href="<?php echo site_url('artikel/pending'); ?>">Menunggu Persetujuan</a>							
+				<a href="<?php echo site_url('ucp/artikel/pending'); ?>">Menunggu Persetujuan</a>							
 			</div> <!-- /stat -->						
 		</div> <!-- /stat-holder -->
 		
 		<div class="stat-holder">						
 			<div class="stat">							
 				<span><?php echo $jartolak; ?></span>							
-				<a href="<?php echo site_url('artikel/tolak'); ?>">Artikel ditolak</a>							
+				<a href="<?php echo site_url('ucp/artikel/tolak'); ?>">Artikel ditolak</a>							
 			</div> <!-- /stat -->						
 		</div> <!-- /stat-holder -->
 		
 		<div class="stat-holder">						
 			<div class="stat">							
 				<span><?php echo $jardraft; ?></span>							
-				<a href="<?php echo site_url('artikel/draft'); ?>">Draft Artikel</a>							
+				<a href="<?php echo site_url('ucp/artikel/draft'); ?>">Draft Artikel</a>							
 			</div> <!-- /stat -->						
 		</div> <!-- /stat-holder -->
 		
@@ -61,7 +61,7 @@
 			</div> <!-- /widget-header -->
 
 			<div class="widget-content">
-				<?php echo form_open('artikel/cari','class="form-horizontal"'); ?>
+				<?php echo form_open('ucp/artikel/cari','class="form-horizontal"'); ?>
 				<fieldset>
 					<input type="text" name="keyword" placeholder="kata kunci" required />
 					<input type="submit" class="btn" value="Pencarian" />
@@ -99,10 +99,10 @@
 						<td><?php echo $st; ?></td>
 						<td class="action-td">
 							<a title="view artikel" href="#" onclick="clview('<?php echo $ar->artikel_id; ?>')" class="btn btn-small btn-info"><i class="icon-share-alt"></i></a>
-							<?php if($ar->status == 2) : ?><a title="ajukan kembali" href="<?php echo site_url('artikel/ajukan/'.$ar->artikel_id); ?>" class="btn btn-small btn-success"><i class="icon-share"></i></a><?php endif; ?>
-							<?php if($ar->status == 9) : ?><a title="terbitkan artikel" href="<?php echo site_url('artikel/ajukan/'.$ar->artikel_id.'/draft'); ?>" class="btn btn-small btn-success"><i class="icon-check"></i></a><?php endif; ?>
-							<a title="edit" href="<?php echo site_url('artikel/edit/'.$ar->artikel_id); ?>" class="btn btn-small"><i class="icon-edit"></i></a>
-							<a title="delete" href="<?php echo site_url('artikel/delete/'.$ar->artikel_id); ?>" class="btn btn-small btn-warning"><i class="icon-remove"></i></a>
+							<?php if($ar->status == 2) : ?><a title="ajukan kembali" href="<?php echo site_url('ucp/artikel/ajukan/'.$ar->artikel_id); ?>" class="btn btn-small btn-success"><i class="icon-share"></i></a><?php endif; ?>
+							<?php if($ar->status == 9) : ?><a title="terbitkan artikel" href="<?php echo site_url('ucp/artikel/ajukan/'.$ar->artikel_id.'/draft'); ?>" class="btn btn-small btn-success"><i class="icon-check"></i></a><?php endif; ?>
+							<a title="edit" href="<?php echo site_url('ucp/artikel/edit/'.$ar->artikel_id); ?>" class="btn btn-small"><i class="icon-edit"></i></a>
+							<a title="delete" href="<?php echo site_url('ucp/artikel/delete/'.$ar->artikel_id); ?>" class="btn btn-small btn-warning"><i class="icon-remove"></i></a>
 						</td>
 					</tr>
 					<?php endforeach; ?>
@@ -123,7 +123,7 @@
 <script type="text/javascript">
     function clview(id)
     {
-	var url = '<?php echo site_url("artikel/preview/"); ?>'+'/'+id;
+	var url = '<?php echo site_url("ucp/artikel/preview/"); ?>'+'/'+id;
 	$.popupWindow(url, {
 	    height: 500,
 	    width: 700,

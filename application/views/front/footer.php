@@ -88,15 +88,15 @@
 </footer> 
 
 <!-- JS -->
-<script src="js/jquery.js"></script> <!-- jQuery -->
-<script src="js/bootstrap.js"></script> <!-- Bootstrap -->
-<script src="js/jquery.prettyPhoto.js"></script> <!-- prettyPhoto -->
-<script src="js/jquery.isotope.js"></script> <!-- isotope -->
-<script src="js/ddlevelsmenu.js"></script> <!-- Navigation menu -->
-<script src="js/jquery.cslider.js"></script> <!-- jQuery cSlider -->
-<script src="js/modernizr.custom.28468.js"></script> <!-- Extra script for cslider -->
+<script src="<?php echo base_url(); ?>front/js/jquery.js"></script> <!-- jQuery -->
+<script src="<?php echo base_url(); ?>front/js/bootstrap.js"></script> <!-- Bootstrap -->
+<script src="<?php echo base_url(); ?>front/js/jquery.prettyPhoto.js"></script> <!-- prettyPhoto -->
+<script src="<?php echo base_url(); ?>front/js/jquery.isotope.js"></script> <!-- isotope -->
+<script src="<?php echo base_url(); ?>front/js/ddlevelsmenu.js"></script> <!-- Navigation menu -->
+<script src="<?php echo base_url(); ?>front/js/jquery.cslider.js"></script> <!-- jQuery cSlider -->
+<script src="<?php echo base_url(); ?>front/js/modernizr.custom.28468.js"></script> <!-- Extra script for cslider -->
 
-<script src="js/filter.js"></script> <!-- Support -->
-<script src="js/custom.js"></script> <!-- Custom JS -->
+<script src="<?php echo base_url(); ?>front/js/filter.js"></script> <!-- Support -->
+<script src="<?php echo base_url(); ?>front/js/custom.js"></script> <!-- Custom JS -->
 </body>
 </html>

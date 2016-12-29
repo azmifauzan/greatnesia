@@ -25,7 +25,7 @@
 			</div> <!-- /widget-header -->
 
 			<div class="widget-content">
-				<?php echo form_open_multipart('profil/simpan','class="form-horizontal"'); ?>
+				<?php echo form_open_multipart('ucp/profil/simpan','class="form-horizontal"'); ?>
 				<fieldset>					
 					<div class="control-group">											
 						<label class="control-label" for="nama">Nama</label>

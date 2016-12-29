@@ -6,8 +6,8 @@
 		<i class="icon-time"></i>
 		Poin			
 		<div style="float: right;">
-			<a href="<?php echo site_url('poin'); ?>"><i class="icon-list"></i></a>
-			<a href="<?php echo site_url('poin'); ?>">Tukar Poin</a>
+			<a href="<?php echo site_url('ucp/poin'); ?>"><i class="icon-list"></i></a>
+			<a href="<?php echo site_url('ucp/poin'); ?>">Tukar Poin</a>
 		</div>		
 	</h1>
 	

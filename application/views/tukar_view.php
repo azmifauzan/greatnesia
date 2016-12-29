@@ -6,8 +6,8 @@
 		<i class="icon-time"></i>
 		Poin			
 		<div style="float: right;">
-			<a href="<?php echo site_url('poin/history'); ?>"><i class="icon-search"></i></a>
-			<a href="<?php echo site_url('poin/history'); ?>">Riwayat Penukaran Poin</a>
+			<a href="<?php echo site_url('ucp/poin/history'); ?>"><i class="icon-search"></i></a>
+			<a href="<?php echo site_url('ucp/poin/history'); ?>">Riwayat Penukaran Poin</a>
 		</div>		
 	</h1>
 	
@@ -40,7 +40,7 @@
 			</div> <!-- /widget-header -->
 
 			<div class="widget-content">
-				<?php echo form_open("poin/proses","class='form-horizontal'"); ?>
+				<?php echo form_open("ucp/poin/proses","class='form-horizontal'"); ?>
 				<div class="control-group">											
 					<label class="control-label" for="barang">Penukaran Poin :</label>
 					<div class="controls">

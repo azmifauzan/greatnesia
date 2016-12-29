@@ -6,8 +6,8 @@
 		<i class="icon-time"></i>
 		Poin			
 		<div style="float: right;">
-			<a href="<?php echo site_url('poin/history'); ?>"><i class="icon-search"></i></a>
-			<a href="<?php echo site_url('poin/history'); ?>">Riwayat Penukaran Poin</a>
+			<a href="<?php echo site_url('ucp/poin/history'); ?>"><i class="icon-search"></i></a>
+			<a href="<?php echo site_url('ucp/poin/history'); ?>">Riwayat Penukaran Poin</a>
 		</div>		
 	</h1>
 	
@@ -57,7 +57,7 @@
 							<td><?php echo $tp->barang; ?></td>
 							<td><?php echo $tp->deskripsi; ?></td>
 							<td><?php echo $tp->poin; ?></td>
-							<td align="center"><a title="tukar poin" href="<?php echo site_url('poin/tukar/'.$tp->tid); ?>" class="btn btn-small btn-success" onclick="javasciprt: return confirm('Tukar Poin Anda dengan pilihan ini?')">Tukar Poin</a></td>
+							<td align="center"><a title="tukar poin" href="<?php echo site_url('ucp/poin/tukar/'.$tp->tid); ?>" class="btn btn-small btn-success" onclick="javasciprt: return confirm('Tukar Poin Anda dengan pilihan ini?')">Tukar Poin</a></td>
 						</tr>
 					<?php endforeach; ?>
 					<?php endif; ?>
