@@ -23,10 +23,10 @@ class Artikel extends CI_Controller
                 
         $total = $this->ifm->countAllArtikel($username);                
         $this->load->library('pagination');
-        $config["base_url"] = site_url('artikel/index');
+        $config["base_url"] = site_url('ucp/artikel/index');
         $config["total_rows"] = $total;
         $config["per_page"] = 20;
-        $config["uri_segment"] = 3;
+        $config["uri_segment"] = 4;
         $this->pagination->initialize($config);
         
         $data['artikel'] = $this->ifm->getAllArtikel($username,$config['per_page'],$off);
@@ -48,10 +48,10 @@ class Artikel extends CI_Controller
                 
         $total = $this->ifm->countArtikelAktif($username);                
         $this->load->library('pagination');
-        $config["base_url"] = site_url('artikel/terbit');
+        $config["base_url"] = site_url('ucp/artikel/terbit');
         $config["total_rows"] = $total;
         $config["per_page"] = 20;
-        $config["uri_segment"] = 3;
+        $config["uri_segment"] = 4;
         $this->pagination->initialize($config);
         
         $data['artikel'] = $this->ifm->getAllArtikelTerbit($username,$config['per_page'],$off);
@@ -71,10 +71,10 @@ class Artikel extends CI_Controller
                 
         $total = $this->ifm->countArtikelPending($username);                
         $this->load->library('pagination');
-        $config["base_url"] = site_url('artikel/pending');
+        $config["base_url"] = site_url('ucp/artikel/pending');
         $config["total_rows"] = $total;
         $config["per_page"] = 20;
-        $config["uri_segment"] = 3;
+        $config["uri_segment"] = 4;
         $this->pagination->initialize($config);
         
         $data['artikel'] = $this->ifm->getAllArtikelPending($username,$config['per_page'],$off);
@@ -94,10 +94,10 @@ class Artikel extends CI_Controller
                 
         $total = $this->ifm->countArtikelTolak($username);                
         $this->load->library('pagination');
-        $config["base_url"] = site_url('artikel/tolak');
+        $config["base_url"] = site_url('ucp/artikel/tolak');
         $config["total_rows"] = $total;
         $config["per_page"] = 20;
-        $config["uri_segment"] = 3;
+        $config["uri_segment"] = 4;
         $this->pagination->initialize($config);
         
         $data['artikel'] = $this->ifm->getAllArtikelTolak($username,$config['per_page'],$off);
@@ -117,10 +117,10 @@ class Artikel extends CI_Controller
                 
         $total = $this->ifm->countArtikelDraft($username);                
         $this->load->library('pagination');
-        $config["base_url"] = site_url('artikel/draft');
+        $config["base_url"] = site_url('ucp/artikel/draft');
         $config["total_rows"] = $total;
         $config["per_page"] = 20;
-        $config["uri_segment"] = 3;
+        $config["uri_segment"] = 4;
         $this->pagination->initialize($config);
         
         $data['artikel'] = $this->ifm->getAllArtikelDraft($username,$config['per_page'],$off);
@@ -499,10 +499,10 @@ class Artikel extends CI_Controller
                 
         $total = $this->ifm->countAllArtikelSearch($username,$key);                
         $this->load->library('pagination');
-        $config["base_url"] = site_url('artikel/cari/'.$key);
+        $config["base_url"] = site_url('ucp/artikel/cari/'.$key);
         $config["total_rows"] = $total;
         $config["per_page"] = 20;
-        $config["uri_segment"] = 4;
+        $config["uri_segment"] = 5;
         $this->pagination->initialize($config);
         
         $data['artikel'] = $this->ifm->getAllArtikelSearch($username,$key,$config['per_page'],$off);

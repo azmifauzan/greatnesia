@@ -43,7 +43,7 @@
         <div class="span8">
           <div class="spara"> 
             <!-- Contact details -->
-            <p>Great Story | Great Nature | Great Culture
+            <p><a href="<?php echo site_url('cat'); ?>">Great Story</a> | <a href="<?php echo site_url('cat'); ?>">Great Nature</a> | <a href="<?php echo site_url('cat'); ?>">Great Culture</a>
             </p>
           </div>
         </div>
@@ -76,7 +76,7 @@
           <div class="logo">
             <div class="logo-image">
               <!-- Image link -->
-              <a href="index.html"><i class="icon-comments blue"></i></a>
+              <a href="index.html"><i class="icon-user blue"></i></a>
             </div>
             <div class="logo-text">
               <h1><a href="<?php echo site_url('home'); ?>">Great<span class="lightblue">Nesia</span></a></h1>
@@ -97,41 +97,11 @@
           <div class="navi pull-right">
             <div id="ddtopmenubar" class="mattblackmenu">
               <!-- Main navigation -->
-              <!-- Use the background color class in anchor tag for colorful menu -->
-                            <ul>
-
-                <li><a href="<?php echo site_url('home'); ?>" class="blightblue"> <i class="icon-home"></i> Beranda</a></li>
-                <li><a href="<?php echo site_url('home'); ?>" class="blightblue"> <i class="icon-home"></i> Beranda</a></li>
-
-                <!-- Main navigation -->
-                <li><a href="#" rel="ddsubmenu2" class="bviolet"> <i class="icon-tablet"></i> Pages</a>
-                    <!-- Sub Navigation -->
-                    <ul id="ddsubmenu2" class="ddsubmenustyle">
-                       <li><a href="404.html">404</a></li>
-                       <li><a href="testimonials.html">Testimonials</a></li>
-                       <li><a href="clients.html">Clients</a></li>
-                       <li><a href="pricingtable.html">Pricing Table</a></li>
-                       <li><a href="projects.html">Projects</a></li>
-                       <li><a href="register.html">Register</a></li>
-                       <li><a href="login.html">Login</a></li>
-                       <li><a href="events.html">Events</a></li>
-                    </ul>
-                </li>                
-
-                <li><a href="#" rel="ddsubmenu2" class="bgreen"> <i class="icon-comments"></i> Blog</a>
-                  <!-- Sub navigation -->
-                  <ul id="ddsubmenu2" class="ddsubmenustyle">
-                    <li><a href="blog2.html">Blog #1</a></li>
-                    <li><a href="blog1.html">Blog #2</a></li>
-                    <li><a href="blogsingle.html">Blog Single</a></li>
-                  </ul>
-                </li>
-
-                <li><a href="portfolio.html" class="borange"> <i class="icon-camera"></i> Portfolio</a></li>
-
-                <li><a href="contactus.html" class="bblue"> <i class="icon-envelope-alt"></i> Contact</a></li>
-
-
+              <ul>
+                <li><a href="<?php echo site_url('home'); ?>" class="blightblue"> <i class="icon-home"></i> Home</a></li>
+                <li><a href="<?php echo site_url('home'); ?>" class="bviolet"> <i class="icon-comments"></i> Great Story</a></li>
+                <li><a href="<?php echo site_url('home'); ?>" class="bgreen"> <i class="icon-leaf"></i> Great Nature</a></li>
+                <li><a href="<?php echo site_url('home'); ?>" class="borange"> <i class="icon-magic"></i> Great Culture</a></li>
               </ul>
             </div>
           </div>
