@@ -93,7 +93,7 @@
 <script type="text/javascript">
     function clview(id)
     {
-	var url = '<?php echo site_url("adminpanel/artikel/preview/"); ?>'+'/'+id;
+	var url = '<?php echo site_url("adminpanel/artikel/preview"); ?>'+'/'+id;
 	$.popupWindow(url, {
 	    height: 500,
 	    width: 700,

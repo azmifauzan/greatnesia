@@ -23,7 +23,7 @@
 			
 			<div class="widget-content">
 			<?php foreach($notif->result() as $nt) : ?>
-				<a href="<?php echo site_url('notif/view/'.$nt->id); ?>" target="_blank"><b><?php echo $nt->judul; ?></b></a> : <?php echo $nt->isi; ?><hr/>
+				<a href="<?php echo site_url('notif/view/'.$nt->nid); ?>" target="_blank"><b><?php echo $nt->judul; ?></b></a> : <?php echo $nt->isi; ?><hr/>
 			<?php endforeach; ?>
 			</div> <!-- /widget-header -->
 					

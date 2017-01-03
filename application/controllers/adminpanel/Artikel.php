@@ -310,15 +310,19 @@ class Artikel extends CI_Controller
         
     public function publish($id,$red = '')
     {
+        //$this->output->enable_profiler(TRUE);
+        //$username = $this->session->userdata('username');
         $this->ifm->setStatus($id,1);
         $ar = $this->ifm->getArtikel($id);
+        $user = $this->usm->getMemberDetail($ar->creator);
         $judul = 'Artikel Anda '.$ar->judul.' telah disetujui';
-        $isi = 'Artikel Anda yang berjudul '.$ar->judul.' telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Ripiu.info';
-        $url = 'http://www.ripiu.info/artikel/baca/'.$ar->url;
+        $isi = 'Artikel Anda yang berjudul '.$ar->judul.' telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com';
+        $url = 'http://www.greatnesia.com/artikel/baca/'.$ar->url;
         $em = 'Hai '.$user->nama.',<br/><br/>
-            Artikel Anda yang berjudul '.$ar->judul.' telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Ripiu.info<br/><br/>
-            Anda dapat melihat artikel tersebut pada link berikut ini :<br/>'.anchor('http://www.ripiu.info/artikel/baca/'.$ar->url);
+            Artikel Anda yang berjudul '.$ar->judul.' telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com<br/><br/>
+            Anda dapat melihat artikel tersebut pada link berikut ini :<br/>'.anchor('http://www.greatnesia.com/artikel/baca/'.$ar->url);
         $this->_tambahNotifikasi($ar,$judul,$isi,$url,$em);
+        $this->ifm->tambahPoin($user->username,5);
         redirect('adminpanel/artikel/'.$red);
     }
     
@@ -338,14 +342,15 @@ class Artikel extends CI_Controller
         if($this->input->post('tolak'))
         {
             $ar = $this->ifm->getArtikel($this->input->post('id'));
+            $user = $this->usm->getMemberDetail($ar->creator);
             $this->ifm->setStatus($ar->artikel_id,2);
             $alasan = $this->input->post('alasan');
             $red = $this->input->post('red');
             $judul = 'Maaf, Artikel Anda '.$ar->judul.' tidak disetujui';
-            $isi = 'Artikel Anda yang berjudul '.$ar->judul.' telah selesai ditinjau oleh reviewer kami, tetapi tidak dapat diterbitkan di Ripiu.info, dengan alasan : '.$alasan;
-            $url = 'http://www.ripiu.me/index.php/artikel/tolak/';
+            $isi = 'Artikel Anda yang berjudul '.$ar->judul.' telah selesai ditinjau oleh reviewer kami, tetapi tidak dapat diterbitkan di Greatnesia.com, dengan alasan : '.$alasan;
+            $url = 'http://www.greatnesia.com/artikel/tolak/';
             $em = 'Hai '.$user->nama.',<br/><br/>
-                Artikel Anda yang berjudul '.$ar->judul.' telah selesai ditinjau oleh reviewer kami, tetapi tidak dapat diterbitkan di Ripiu.info, dengan alasan : '.$alasan.'<br/><br/>';
+                Artikel Anda yang berjudul '.$ar->judul.' telah selesai ditinjau oleh reviewer kami, tetapi tidak dapat diterbitkan di Greatnesia.com, dengan alasan : '.$alasan.'<br/><br/>';
             $this->_tambahNotifikasi($ar,$judul,$isi,$url,$em);
             redirect('adminpanel/artikel/'.$red);
         }
@@ -357,8 +362,9 @@ class Artikel extends CI_Controller
     
     public function _tambahNotifikasi($ar,$jd,$isi,$url,$em)
     {
-        $user = $this->usm->getUserDetail($ar->creator);
+        $user = $this->usm->getMemberDetail($ar->creator);
         $this->usm->insertNotif($ar->creator,$jd,$isi,$url);
+        //echo $ar->creator;
         if($user->notifikasi == 1)
         {
             $this->load->library('email');

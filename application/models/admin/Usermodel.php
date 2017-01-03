@@ -12,6 +12,12 @@ class Usermodel extends CI_Model
         return $this->db->get('admin')->row();
     }
 
+    public function getMemberDetail($u)
+    {
+        $this->db->where('username',$u);
+        return $this->db->get('user')->row();
+    }
+
     public function getAdminDetail($u)
     {
         $this->db->where('username',$u);

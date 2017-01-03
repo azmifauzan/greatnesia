@@ -5,6 +5,13 @@ class Infomodel extends CI_Model
     {
         parent::__construct();
     }
+
+    public function tambahPoin($us,$pt)
+    {
+        $this->db->set('poin','poin+'.$pt,FALSE);
+        $this->db->where('username',$us);
+        return $this->db->update('user');
+    }
     
     public function hitungTotalArtikel($u)
     {

@@ -40,11 +40,11 @@
                            <?php if($ar->image != '') : ?>
                            <!-- Thumbnail -->
                            <div class="bthumb2">
-                              <img src="<?php echo $ar->image; ?>" alt="<?php echo $ar->judul; ?>" />
+                              <img src="uploads/crop/<?php echo $ar->image; ?>" alt="<?php echo $ar->judul; ?>" />
                            </div>
                            <?php endif; ?>
                            
-                           <?php echo word_limitter($ar->isi,100); ?>
+                           <?php echo word_limiter($ar->isi,120); ?>
                            <a href="#" class="btn btn-info">Read More...</a>
                            <div class="clearfix"></div>
                         </div>
