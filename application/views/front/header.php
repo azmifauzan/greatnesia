@@ -101,7 +101,7 @@
                 <li><a href="<?php echo site_url('home'); ?>" class="blightblue"> <i class="icon-home"></i> Home</a></li>
                 <li><a href="<?php echo site_url('home'); ?>" class="bviolet"> <i class="icon-comments"></i> Great Story</a></li>
                 <li><a href="<?php echo site_url('home'); ?>" class="bgreen"> <i class="icon-leaf"></i> Great Nature</a></li>
-                <li><a href="<?php echo site_url('home'); ?>" class="borange"> <i class="icon-magic"></i> Great Culture</a></li>
+                <li><a href="<?php echo site_url('home'); ?>" class="bred"> <i class="icon-magic"></i> Great Culture</a></li>
               </ul>
             </div>
           </div>

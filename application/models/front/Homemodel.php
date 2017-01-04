@@ -26,4 +26,10 @@ class Homemodel extends CI_Model
 		$this->db->from('artikel');
         return $this->db->count_all_results();
 	}
+
+	public function getRelatedArtikel($rel,$jum)
+	{
+		$this->db->limit($jum,$rel);
+		return $this->db->get('artikel');
+	}
 }

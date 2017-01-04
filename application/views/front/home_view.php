@@ -7,7 +7,7 @@
       <div class="row">
         <div class="span12">
           <h2 class="pull-left"><i class="icon-flag title-icon"></i> Pesona Indonesia</h2>
-          <div class="pull-right heading-meta">Macan <span class="lightblue">Asia & Dunia</span>.</div>
+          <div class="pull-right heading-meta">Zamrud <span class="lightblue">Khatulistiwa</span></div>
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@
                         <?php if($artikel->num_rows() > 0) : ?>
                         <?php foreach($artikel->result() as $ar) : ?>
                         <div class="entry">
-                           <h2><i class="icon-pencil title-icon"></i> <a href="#"><?php echo $ar->judul; ?></a></h2>
+                           <h2><i class="icon-pencil title-icon"></i> <a href="<?php echo site_url('artikel/baca/'.$ar->artikel_id.'/'.$ar->url); ?>"><?php echo $ar->judul; ?></a></h2>
                            
                            <!-- Meta details -->
                            <div class="meta">
@@ -40,25 +40,19 @@
                            <?php if($ar->image != '') : ?>
                            <!-- Thumbnail -->
                            <div class="bthumb2">
-                              <img src="uploads/crop/<?php echo $ar->image; ?>" alt="<?php echo $ar->judul; ?>" />
+                              <img src="<?php echo base_url('uploads/crop/'.$ar->image); ?>" alt="<?php echo $ar->judul; ?>" />
                            </div>
                            <?php endif; ?>
                            
                            <?php echo word_limiter($ar->isi,120); ?>
-                           <a href="#" class="btn btn-info">Read More...</a>
+                           <br/><a href="<?php echo site_url('artikel/baca/'.$ar->artikel_id.'/'.$ar->url); ?>" class="btn btn-info">Baca Lebih Lanjut...</a>
                            <div class="clearfix"></div>
                         </div>
                         <?php endforeach; ?>
                         <?php endif; ?>                        
                         
                         <!-- Pagination -->
-                        <div class="paging">
-                           <span class='current'>1</span>
-                           <a href='#'>2</a>
-                           <span class="dots">&hellip;</span>
-                           <a href='#'>6</a>
-                           <a href="#">Next</a>
-                        </div> 
+                        <?php echo $this->pagination->create_links(); ?>
                         
                         <div class="clearfix"></div>
                         
@@ -68,26 +62,25 @@
                      <div class="sidebar">
                         <!-- Widget -->
                         <div class="widget">
-                           <h4>Search</h4>
+                           <h4>Pencarian</h4>
                            <form method="get" id="searchform" action="#" class="form-search">
-                              <input type="text" value="" name="s" id="s" class="input-medium"/>
+                              <input type="text" value="" name="s" id="s" class="input-medium" placeholder="kata kunci" />
                               <button type="submit" class="btn">Search</button>
                            </form>
                         </div>
+                      </div>
+                     <div class="sidebar">
+                        <!-- Widget -->
                         <div class="widget">
-                           <h4>Recent Posts</h4>
+                           <h4>Tulisan Lainnya</h4>
                            <ul>
-                              <li><a href="#">Sed eu leo orci, condimentum gravida metus</a></li>
-                              <li><a href="#">Etiam at nulla ipsum, in rhoncus purus</a></li>
-                              <li><a href="#">Fusce vel magna faucibus felis dapibus facilisis</a></li>
-                              <li><a href="#">Vivamus scelerisque dui in massa</a></li>
-                              <li><a href="#">Pellentesque eget adipiscing dui semper</a></li>
+                              <?php if($lain->num_rows() > 0) : ?>
+                              <?php foreach($lain->result() as $ln) : ?>
+                                <li><a href="<?php echo site_url('artikel/baca/'.$ln->artikel_id.'/'.$ln->url); ?>"><?php echo $ln->judul; ?></a></li>
+                              <?php endforeach; ?>
+                              <?php endif; ?>
                            </ul>
-                        </div>
-                        <div class="widget">
-                           <h4>About</h4>
-                           <p>Nulla facilisi. Sed justo dui, id erat. Morbi auctor adipiscing tempor. Phasellus condimentum rutrum aliquet. Quisque eu consectetur erat. Proin rutrum, erat eget posuere semper, <em>arcu mauris posuere tortor</em>,velit at <a href="#">magna sollicitudin cursus</a> ac ultrices magna. Aliquam consequat, purus vitae auctor ullamcorper, sem velit convallis quam, a pharetra justo nunc et mauris. </p>
-                        </div>                              
+                        </div>                                                  
                      </div>                                                
                   </div>
                </div>
