@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <!-- Title and other stuffs -->
-  <title>Greatnesia.com - Wonderful Indonesia!</title>
+  <title><?php if(isset($title)) echo $title.' | '; ?>Greatnesia.com - Wonderful Indonesia!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="keywords" content="">
@@ -98,10 +98,10 @@
             <div id="ddtopmenubar" class="mattblackmenu">
               <!-- Main navigation -->
               <ul>
-                <li><a href="<?php echo site_url('home'); ?>" class="blightblue"> <i class="icon-home"></i> Home</a></li>
+                <li><a href="<?php echo site_url('home'); ?>" class="bblue"> <i class="icon-home"></i> Home</a></li>
                 <li><a href="<?php echo site_url('home'); ?>" class="bviolet"> <i class="icon-comments"></i> Great Story</a></li>
                 <li><a href="<?php echo site_url('home'); ?>" class="bgreen"> <i class="icon-leaf"></i> Great Nature</a></li>
-                <li><a href="<?php echo site_url('home'); ?>" class="bred"> <i class="icon-magic"></i> Great Culture</a></li>
+                <li><a href="<?php echo site_url('home'); ?>" class="bred"> <i class="icon-heart"></i> Great Culture</a></li>
               </ul>
             </div>
           </div>
@@ -121,3 +121,16 @@
   <div class="clearfix"></div>
 
   <!-- Header ends -->
+  <!-- Page heading -->
+  <!-- Give background color class on below line (bred, bgreen, borange, bviolet, blightblue, bblue) -->
+  <div class="page-heading blightblue">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h2 class="pull-left"><i class="icon-flag title-icon"></i> Pesona Indonesia</h2>
+          <div class="pull-right heading-meta">Zamrud <span class="lightblue">Khatulistiwa</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Page heading ends -->

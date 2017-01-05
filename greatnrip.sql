@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.2
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Dec 28, 2016 at 02:56 PM
+-- Host: 127.0.0.1
+-- Generation Time: Jan 05, 2017 at 05:25 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -59,16 +59,18 @@ CREATE TABLE `artikel` (
   `rating` int(10) NOT NULL,
   `image` varchar(255) NOT NULL,
   `view` int(50) NOT NULL,
-  `paid_view` int(50) NOT NULL,
   `tag` varchar(150) NOT NULL,
-  `log_rate` text,
-  `count_rate` int(20) DEFAULT '0',
-  `official_flag` varchar(1) DEFAULT '0',
   `status` varchar(1) DEFAULT NULL,
-  `status_thumb` int(1) NOT NULL DEFAULT '1',
-  `sum_rate` float DEFAULT '0',
-  `capcus` varchar(255) DEFAULT NULL
+  `status_thumb` varchar(15) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `artikel`
+--
+
+INSERT INTO `artikel` (`artikel_id`, `judul`, `url`, `kategori_id`, `isi`, `tgl_dibuat`, `creator`, `rating`, `image`, `view`, `tag`, `status`, `status_thumb`) VALUES
+(1, 'Reaktor Biogas - Andrias Wiji Setio Pamudji', 'reaktor-biogas-andrias-wiji-setio-pamudji', 1, '<p>Apa itu Reaktor Biogas? Dalam kamus besar bahasa Indonesia reaktor diartikan sebagai sarana atau alat pembangkit tenaga. Sementara biogas adalah gas yang terbuat dari kotoran ternak. Penemunya punya nama lengkap Andrias Wiji Setio Pamudji. Seorang lelaki yang berasal dari desa Ngrendeng, Kecamatan Sine, Kabupaten Ngawi, Jawa Timur.</p>\r\n<p>Penemuan ini bermula dari rasa penasaran pria tersebut untuk membuktikan teori-teori yang pernah didengatnya di bangku sekolahan dengan cara melakukan percobaan. Memang sudah sedari kecil Andrias menyukai dunia riset-meriset. Dia pernah membuat listrik dan perahu motor mainan dengan tenaga penggerak kincir angin. Kincir angin ini dibuatnya dari pemutar kaset dalam tape. Pun ia juga hobi dalam bercocok tanam dan beternak. Dalam melakukan hal ini ia selalu tekun, sebab ketekunan merupakan kuncinya dan sudah menjadi prinsip Andrias yang diajarkan oleh ibunya.</p>', '2017-01-03 04:21:13', 'greaters', 0, 'greaters/39814982dea58f949b30acc75142daac.png', 0, '', '1', '1'),
+(2, 'Indomie Masuk 10 Besar Merek Paling Banyak Dibeli di Dunia', 'indomie-masuk-10-besar-merek-paling-banyak-dibeli-di-dunia', 1, '<p>Siapa yang tidak suka mie instan merek Indomie? Bagi anak-anak rantau, makanan instan satu ini selalu jadi pemadam kelaparan termujur dan termurah. Dan kita semua tahu, merek mie instan nomor satu di Indonesia ini juga sudah amat terkenal di berbagai negara di dunia. Sebut saja Nigeria misalnya, yang sampai-sampai warganya mengira kalau Indomie adalah mie instan produksi negara mereka dan salah satu <em>rapper</em> mereka pun sampai membuat lagu tentang Indomie.</p>\r\n<p>Ada satu kabar membanggakan dari merek mie instan kebanggaan nusantara ini, pasalnya di tahun 2016 Indomie masuk di jajaran 10 besar merek paling banyak dibeli di dunia, tepatnya berada di peringkat delapan. Hal ini didasarkan pada hasil studi mutakhir salah satu lembaga riset Kantar Worldpanel yang beberapa waktu lalu merilis studi bertajuk Brand Footprint.</p>', '2017-01-04 04:47:48', 'greaters', 0, 'greaters/7fcf446727af67e5eec8c787ea98e61c.jpg', 0, '', '1', '1');
 
 -- --------------------------------------------------------
 
@@ -138,48 +140,9 @@ CREATE TABLE `kategori` (
 --
 
 INSERT INTO `kategori` (`kategori_id`, `nama`, `keterangan`, `group`) VALUES
-(1, 'Ripiu', 'Membahas review, feedback untuk kemajuan ripiu', ''),
-(6, 'Internet dan Telco', 'Bahas semua tentang Internet dan Telekomunikasi', 'Tekno'),
-(2, 'Film ', 'Semua tentang FILM berbagai Genre, animasi dan Acara di Televisi', 'Hiburan'),
-(3, 'Musik', 'Tentang musik lokal dan mancanegara dan penyanyi', 'Hiburan'),
-(4, 'Games', 'Tentang Games berbagai Platform', 'Hiburan'),
-(5, 'Bisnis dan Ekonomi', 'SEO, Internet Marketing, Adsense, Toko Online, Wiraswasta dan Bisnis lainnya yg legal dan tidak menipu silakan bahas disini', 'Bisnis'),
-(7, 'Kuliner', 'Segala yang berbau makanan dan minuman kumpul dimari :)', 'Kuliner'),
-(8, 'Wisata dan Travel', 'Membahas tentang Jenis-jenis wisata, tempat wisata dan sarana penunjang', 'Wisata'),
-(9, 'Olahraga', 'Yang pada suka olahraga, naik sepeda, balap, senam dan semua olahraga kumpul disini', 'Sport'),
-(10, 'Otomotif', 'Membahas seputar Otomotif baik roda 2 sampe banyak roda :D', 'Otomotif'),
-(11, 'Buku', 'Membahas topik-topik menarik, best seller ataupun karya2 menarik', 'Edukasi'),
-(12, 'Daerah-mu dan aku', 'Tulis tentang daerahmu mau dalam atau luar negeri dan share untuk semua orang.', 'Wisata'),
-(13, 'Seni dan Budaya', 'Bahas tentang seni, budaya, tradisi, dan kehidupan manusia.', 'Humaniora'),
-(14, 'Kesehatan', 'Tulis tentang seputar kesehatan', 'Lifestyle'),
-(15, 'Perangkat Lunak', 'Tulis yang berhubungan dengan Software dan Sistem Operasi', 'Tekno'),
-(16, 'Tips dan Trik', 'Berbagi tips dan trik yuk', 'Informasi'),
-(17, 'Hobie', 'Yang punya hobie berbagi tentang hobiemu', 'Hiburan'),
-(18, 'Lain-lain', 'Yang pengen nulis yang tidak ada pada semua kategori yang tersedia silakan disini', 'Informasi'),
-(38, 'Teknologi dan Sains', 'Segala sesuatu yang berhubungan dengan teknologi dan sains.', 'Tekno'),
-(34, 'Programming dan DB', 'Share tentang programming dan database yuk', 'Tekno'),
-(19, 'Gadget', 'Membahas tentang handphone, PDA, phone, BB, dan Bermacam-macam Gadget', 'Tekno'),
-(20, 'Komputer', 'Membahas masalah hardware komputer, perangkat-perangkat pendukung, laptop, printer, scanner, speaker, monitor dll', 'Tekno'),
-(21, 'Animasi dan Kartun', 'Membahas tentang animasi, anime, kartun', 'Hiburan'),
-(22, 'Pengembangan Diri', 'Share informasi tentang Manajemen Diri dan Pengembangan Diri', 'Humaniora'),
-(24, 'Psikologi', 'Membahas materi-materi yang berkaitan dengan aspek psikologi', 'Humaniora'),
-(25, 'Motivasi', 'Sharing tentang artikel-artikel motivasi', 'Humaniora'),
-(27, 'Berita dan Politik', 'Membahas berita dan politik dalam dan luar negeri', 'News'),
-(28, 'Edukasi', 'Sharing materi-materi, berita, atau segala sesuatu tentang pendidikan di Indonesia atau luar negeri', 'Edukasi'),
-(29, 'Foto dan Video', 'Share foto-foto dan Video tentunya yang sesuai aturan :D', 'Foto & Video'),
-(31, 'Event dan Peristiwa', 'Sharing tentang peristiwa-peristiwa nasional dan internasional atau laporkan event-event yang sedang terjadi', 'News'),
-(32, 'Bumi dan Lingkungan', 'Share tentang kondisi alam disekitarmu, atau apapun yang berhubungan dengan "Nature"', 'News'),
-(33, 'Sosial Masyarakat', 'Berisi info-info tentang bakti sosial, iklan layanan masyarakat.', 'Humaniora'),
-(35, 'Fashion dan Mode', 'Sharing tentang baju, celana, kaos, pokoknya macem2 pakaian deh', 'Lifestyle'),
-(36, 'Promosi', 'Yang mau promosi usaha, website, kegiatan-kegiatan tau promo lainnya sesuai dengan TOS', 'Bisnis'),
-(37, 'Seni Beladiri', 'Hal yang berhubungan dengan seni beladiri, martial arts.', 'Sport'),
-(39, 'Jobs dan LoKer', 'Share tentang kiat-kiat bekerja, hal2 yang berhubungan dengan karir, perkerjaan dan lowongan pekerjaan', 'Informasi'),
-(40, 'Dongeng dan Legenda', 'Share dongeng dan legenda yang ada di dunia', 'Edukasi'),
-(41, 'Sepakbola', 'Kategori khusus olahraga sepakbola.', 'Sport'),
-(42, 'Tokoh dan Sejarah', 'Tokoh dan sejarah merupakan cerita masa lalu yang menginspirasi keadaan saat ini.', 'Edukasi'),
-(45, 'Pelajar dan Mahasiswa', 'Segala yang berhubungan dengan pelajar atau mahasiswa', 'Edukasi'),
-(46, 'Sekolah & Kampus', 'Artikel seputar sekolah dan kampus di sekitar kamu', 'Edukasi'),
-(47, 'English Corner', 'For English Article', 'English');
+(1, 'Great Story', 'Great Story', 'Greatnesia'),
+(2, 'Great Nature', 'Great Nature', 'Greatnesia'),
+(3, 'Great Culture', 'Great Culture', 'Greatnesia');
 
 -- --------------------------------------------------------
 
@@ -221,6 +184,14 @@ CREATE TABLE `notif` (
   `status` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `notif`
+--
+
+INSERT INTO `notif` (`nid`, `waktu`, `judul`, `isi`, `url`, `username`, `status`) VALUES
+(1, '2017-01-03 04:33:40', 'Artikel Anda Reaktor Biogas - Andrias Wiji Setio Pamudji telah disetujui', 'Artikel Anda yang berjudul Reaktor Biogas - Andrias Wiji Setio Pamudji telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com', 'http://www.greatnesia.com/artikel/baca/reaktor-biogas-andrias-wiji-setio-pamudji', 'greaters', 1),
+(2, '2017-01-04 04:48:16', 'Artikel Anda Indomie Masuk 10 Besar Merek Paling Banyak Dibeli di Dunia telah disetujui', 'Artikel Anda yang berjudul Indomie Masuk 10 Besar Merek Paling Banyak Dibeli di Dunia telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com', 'http://www.greatnesia.com/artikel/baca/indomie-masuk-10-besar-merek-paling-banyak-dibeli-di-dunia', 'greaters', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -260,6 +231,19 @@ CREATE TABLE `pesan` (
   `tanggal_kirim` datetime NOT NULL,
   `status` varchar(10) NOT NULL DEFAULT 'unread'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `quote`
+--
+
+CREATE TABLE `quote` (
+  `qid` int(11) NOT NULL,
+  `penulis` varchar(150) NOT NULL,
+  `isi` text NOT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -325,7 +309,43 @@ INSERT INTO `sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('53f4a8bc592abcafbe0bb2fc9904264f614dbdec', '::1', 1482932665, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438323933323636353b757365726e616d657c733a363a226661757a616e223b69734c6f67696e7c623a313b),
 ('b6a4ae49bc58fcb24a9ba0f58343acc5171aa651', '::1', 1482933097, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438323933333039373b757365726e616d657c733a363a226661757a616e223b69734c6f67696e7c623a313b),
 ('87c85c8eaaa1a576164e62b8c9ea52f23e08dc17', '::1', 1482933138, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438323933333039373b757365726e616d657c733a363a226661757a616e223b69734c6f67696e7c623a313b),
-('fbec164dc30ad610748678d4bae09da7aadc2282', '::1', 1482933190, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438323933333138353b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b);
+('fbec164dc30ad610748678d4bae09da7aadc2282', '::1', 1482933190, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438323933333138353b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('5596adc1f346598a535ebfc3d1d8bb58089e1aa0', '::1', 1482985430, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438323938353433303b),
+('52eaa13f8e7e40d1b582a98559ee04c4e40fffbb', '::1', 1482985557, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438323938353433303b757365726e616d657c733a363a226661757a616e223b69734c6f67696e7c623a313b),
+('8e6bd263b45ae161ca0f0937de089ed797045fb9', '::1', 1483002190, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333030323139303b757365726e616d657c733a363a226661757a616e223b69734c6f67696e7c623a313b),
+('7b775c392d1764df61d18e8ed5259f1aa897f572', '::1', 1483002512, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333030323531323b),
+('996245f347c85ef0df4f20944f66827c774c91d0', '::1', 1483002814, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333030323831343b),
+('4d9e2d1816bce1492003803e27a0932e55b4bffa', '::1', 1483003579, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333030333537393b),
+('0c48197e8d5d0743991393eeb8919151bc9d2b36', '::1', 1483003580, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333030333537393b),
+('83496960c326883031f773cb442effcdc8dfe4ec', '::1', 1483065292, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333036353239323b),
+('a33aeb334a3a0fdbfcf3d64749d83d279ce3a6f1', '::1', 1483070440, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333037303434303b),
+('deeb2004bc863b9846bf2e40facf00510eecdd5c', '::1', 1483070543, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333037303434303b),
+('4a980ca5b422be881de27faec7e306e959840afd', '::1', 1483412866, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333431323836363b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('602eaf5c4c8fc1e6854e0d88b1f8a6c175fe7cdb', '::1', 1483413592, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333431333539323b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('4d9a77960f01a345418e55b1b8a2591d44c7a73a', '::1', 1483413695, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333431333639353b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('87ae25942745a4e70760d4366af5260b6d73b03f', '::1', 1483414145, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333431343134353b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('19ad2c3ca0d95d86ebbbeebe15f618010c56d04b', '::1', 1483414151, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333431343135313b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('cec3922204e831d8b542ed9b13dbc41bd7344854', '::1', 1483415866, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333431353836363b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('c55b6e9d71dffe90b316bae8c827a71431198a4e', '::1', 1483414481, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333431343438313b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('64bd1b7b240f590413af281e638ed3c4302ab251', '::1', 1483415078, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333431353037383b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('fae221cf1c1cea8d062e03a7b7614d1aac625466', '::1', 1483415436, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333431353433363b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('a793b1fe2d6e54ebf98810a9f23eebfc053403bb', '::1', 1483415476, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333431353433363b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('5e62fc73b50fc06631b72e2468f51943b79fa69f', '::1', 1483416192, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333431363139323b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('64e58fa77ec0d862281eea6e938ab067f05321c4', '::1', 1483416806, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333431363830363b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('a8fb57fa0987cf26ae9e5665f5d9863a6790c685', '::1', 1483416806, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333431363830363b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('7142da9288ac1d6c5daabc25068183b096f080dc', '::1', 1483500953, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333530303935333b),
+('8932c420e1db6fb33c5fa32e12ce0cbccb434c65', '::1', 1483501521, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333530313532313b),
+('8729288711b25146a7c8337104d2196739e572b6', '::1', 1483502028, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333530323032383b),
+('0f58b8e4ab9385b0ec5bf229a628fe9b84e0917e', '::1', 1483502335, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333530323333353b),
+('ee0d53b5a0499fd066f98e2932b6282efe79f4e4', '::1', 1483503006, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333530333030363b),
+('72d291c10d409fa9570c23f78f238b2fdf8bb8a3', '::1', 1483503337, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333530333333373b),
+('cd8b588d869ca620d20a2c76fe551b729f0beed0', '::1', 1483503719, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333530333731393b),
+('b9692e6e814f22316c7867383ec8c6967415b703', '::1', 1483503769, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333530333731393b),
+('5249f6793bbfbc092fc8d704987fd11b22afb7c3', '::1', 1483585030, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333538353033303b),
+('c8acfc71e3bb08c8814be683a73c10b02e9335a9', '::1', 1483585445, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333538353434353b),
+('59e107362800a3e88472ba601052e319c3ea75a5', '::1', 1483586094, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333538363039343b),
+('76997f140465a96bbacfe54eca894e134e3f32ef', '::1', 1483586906, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333538363930363b),
+('b0b0483504e4801711419b3d037080940582b67d', '::1', 1483586923, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333538363930363b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b);
 
 -- --------------------------------------------------------
 
@@ -377,7 +397,7 @@ CREATE TABLE `user` (
   `status` enum('active','pending','disable') NOT NULL,
   `ip` varchar(20) NOT NULL,
   `avatar` varchar(255) DEFAULT NULL,
-  `newsletter` int(1) NOT NULL DEFAULT '1',
+  `notifikasi` int(1) NOT NULL DEFAULT '1',
   `sent` int(1) NOT NULL DEFAULT '0',
   `poin` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -386,8 +406,9 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`username`, `password`, `email`, `tgl_daftar`, `nama`, `website`, `biodata`, `jenis_member`, `status`, `ip`, `avatar`, `newsletter`, `sent`, `poin`) VALUES
-('fauzan', '595d275ad04a4d9a526716390042c1d4', 'azmifauzan@gmail.com', '2016-08-11', 'Fauzan', '', '', 1, '', '', NULL, 1, 0, 30);
+INSERT INTO `user` (`username`, `password`, `email`, `tgl_daftar`, `nama`, `website`, `biodata`, `jenis_member`, `status`, `ip`, `avatar`, `notifikasi`, `sent`, `poin`) VALUES
+('fauzan', '595d275ad04a4d9a526716390042c1d4', 'azmifauzan@gmail.com', '2016-08-11', 'Fauzan', '', '', 1, '', '', NULL, 1, 0, 40),
+('greaters', '26d55f2b896a8e3263ed67ebde6722dc', 'greatnesia@gmail.com', '2017-01-03', 'Greaters', 'http://www.greatnesia.com', '', 1, '', '', NULL, 1, 0, 17);
 
 --
 -- Indexes for dumped tables
@@ -455,6 +476,12 @@ ALTER TABLE `pesan`
   ADD PRIMARY KEY (`pid`);
 
 --
+-- Indexes for table `quote`
+--
+ALTER TABLE `quote`
+  ADD PRIMARY KEY (`qid`);
+
+--
 -- Indexes for table `ripiu_desc`
 --
 ALTER TABLE `ripiu_desc`
@@ -497,7 +524,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `artikel_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3805;
+  MODIFY `artikel_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `barang_poin`
 --
@@ -517,7 +544,7 @@ ALTER TABLE `comment`
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `kategori_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `kategori_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `newsletter`
 --
@@ -527,7 +554,7 @@ ALTER TABLE `newsletter`
 -- AUTO_INCREMENT for table `notif`
 --
 ALTER TABLE `notif`
-  MODIFY `nid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `nid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `penukaran`
 --
@@ -538,6 +565,11 @@ ALTER TABLE `penukaran`
 --
 ALTER TABLE `pesan`
   MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+--
+-- AUTO_INCREMENT for table `quote`
+--
+ALTER TABLE `quote`
+  MODIFY `qid` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `ripiu_desc`
 --

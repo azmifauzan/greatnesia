@@ -10,35 +10,25 @@
                <!-- Blog Posts -->
                <div class="row">
                   <div class="span8">
-                     <div class="posts">                     
-                        <!-- Each posts should be enclosed inside "entry" class" -->
-                        <!-- Post one -->
-                        <?php if($artikel->num_rows() > 0) : ?>
-                        <?php foreach($artikel->result() as $ar) : ?>
+                     <div class="posts"> 
                         <div class="entry">
-                           <h2><i class="icon-pencil title-icon"></i> <a href="<?php echo site_url('artikel/baca/'.$ar->artikel_id.'/'.$ar->url); ?>"><?php echo $ar->judul; ?></a></h2>
+                           <h2><i class="icon-pencil title-icon"></i><?php echo $artikel->judul; ?></h2>
                            
                            <!-- Meta details -->
                            <div class="meta">
-                              <i class="icon-calendar"></i><?php echo date('d M Y',strtotime($ar->tgl_dibuat)); ?><i class="icon-user"></i> <?php echo $ar->creator; ?> <i class="icon-folder-open"></i> <a href="#"><?php echo $ar->nama; ?></a>
+                              <i class="icon-calendar"></i><?php echo date('d M Y',strtotime($artikel->tgl_dibuat)); ?><i class="icon-user"></i> <?php echo $artikel->creator; ?> <i class="icon-folder-open"></i> <a href="#"><?php echo $artikel->nama; ?></a>
                            </div>
                            
-                           <?php if($ar->image != '') : ?>
+                           <?php if($artikel->image != '') : ?>
                            <!-- Thumbnail -->
                            <div class="bthumb2">
-                              <img src="<?php echo base_url('uploads/crop/'.$ar->image); ?>" alt="<?php echo $ar->judul; ?>" />
+                              <img src="<?php echo base_url('uploads/crop/'.$artikel->image); ?>" alt="<?php echo $artikel->judul; ?>" />
                            </div>
                            <?php endif; ?>
                            
-                           <?php echo word_limiter($ar->isi,120); ?>
-                           <br/><a href="<?php echo site_url('artikel/baca/'.$ar->artikel_id.'/'.$ar->url); ?>" class="btn btn-info">Baca Lebih Lanjut...</a>
+                           <?php echo $artikel->isi; ?>
                            <div class="clearfix"></div>
                         </div>
-                        <?php endforeach; ?>
-                        <?php endif; ?>                        
-                        
-                        <!-- Pagination -->
-                        <?php echo $this->pagination->create_links(); ?>
                         
                         <div class="clearfix"></div>
                         

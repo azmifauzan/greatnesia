@@ -96,6 +96,7 @@
 			  Kategori	
 		  </a>
 	  </li>
+	  <hr/>
 	  
 	  <li <?php if($menu == 'Artikel') echo 'class="active"'; ?>>
 		  <a href="<?php echo site_url('adminpanel/artikel'); ?>">
@@ -103,6 +104,13 @@
 			  Artikel	
 		  </a>
 	  </li>
+	  <li <?php if($menu == 'Quote') echo 'class="active"'; ?>>
+		  <a href="<?php echo site_url('adminpanel/quote'); ?>">
+			  <i class="icon-comment"></i>
+			  Quote	
+		  </a>
+	  </li>
+	  <hr/>
 
 	  <li <?php if($menu == 'Poin') echo 'class="active"'; ?>>
 		  <a href="<?php echo site_url('adminpanel/poin'); ?>">
