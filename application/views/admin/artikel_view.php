@@ -109,7 +109,6 @@
 			
 <?php $this->load->view('admin/footer'); ?>
 <script src="<?php echo base_url(); ?>js/jquery.popupwindow.js"></script>
-<script src="<?php echo base_url(); ?>js/jquery.popupwindow.js"></script>
 <script type="text/javascript">
     function clview(id)
     {
