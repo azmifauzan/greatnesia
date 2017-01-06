@@ -1,5 +1,19 @@
 <?php $this->load->view('front/header'); ?>
 
+<!-- Page heading -->
+  <!-- Give background color class on below line (bred, bgreen, borange, bviolet, blightblue, bblue) -->
+  <div class="page-heading blightblue">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h2 class="pull-left"><i class="icon-home title-icon"></i> Beranda</h2>
+          <div class="pull-right heading-meta">Pesona Indonesia<span class="lightblue"> Zamrud Khatulistiwa</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Page heading ends -->
+
   <!-- Content starts -->
   <div class="content">
     <div class="container">
@@ -20,7 +34,7 @@
                            
                            <!-- Meta details -->
                            <div class="meta">
-                              <i class="icon-calendar"></i><?php echo date('d M Y',strtotime($ar->tgl_dibuat)); ?><i class="icon-user"></i> <?php echo $ar->creator; ?> <i class="icon-folder-open"></i> <a href="#"><?php echo $ar->nama; ?></a>
+                              <i class="icon-calendar"></i><?php echo date('d M Y',strtotime($ar->tgl_dibuat)); ?><i class="icon-user"></i> <?php echo $ar->creator; ?> <i class="icon-folder-open"></i> <a href="<?php echo site_url('home/kategori/'.$ar->kategori_id.'/'.url_title($ar->nama,'-',TRUE)); ?>"><?php echo $ar->nama; ?></a>
                            </div>
                            
                            <?php if($ar->image != '') : ?>
@@ -85,8 +99,8 @@
     <div class="row">
       <div class="span12">          
           <!-- User icon -->
-          <span class="twitter-icon text-center"><i class="icon-user"></i></span>
-          <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum dolor eget nisi <br />fermentum quis hendrerit magna vestibulum."</em></p>        
+          <span class="twitter-icon text-center"><i class="icon-comment"></i></span>
+          <p><em>"<?php echo $quote->isi; ?>"</em><br/><strong><?php echo $quote->penulis; ?></strong></p>        
       </div>
     </div>
   </div>

@@ -43,17 +43,17 @@
         <div class="span8">
           <div class="spara"> 
             <!-- Contact details -->
-            <p><a href="<?php echo site_url('cat'); ?>">Great Story</a> | <a href="<?php echo site_url('cat'); ?>">Great Nature</a> | <a href="<?php echo site_url('cat'); ?>">Great Culture</a>
+            <p><a href="<?php echo site_url('home/kategori/1/great-story'); ?>">Great Story</a> | <a href="<?php echo site_url('home/kategori/2/great-nature'); ?>">Great Nature</a> | <a href="<?php echo site_url('home/kategori/3/great-culture'); ?>">Great Culture</a>
             </p>
           </div>
         </div>
         <div class="span4">
             <div class="social">
               <!-- Social media icons. Repalce # with your profile links -->
-                      <a href="#" class="bblue"><i class="icon-facebook"></i></a>
+                      <a href="https://www.facebook.com/Greatnesia" class="bblue" target="_blank"><i class="icon-facebook"></i></a>
                       <a href="#" class="borange"><i class="icon-google-plus"></i></a> 
                       <a href="#" class="blightblue"><i class="icon-twitter"></i></a>
-                      <a href="#" class="borange"><i class="icon-rss"></i></a>
+                      <a href="<?php echo site_url('rss'); ?>" class="borange"><i class="icon-rss"></i></a>
             </div>
         </div>
       </div>
@@ -99,9 +99,9 @@
               <!-- Main navigation -->
               <ul>
                 <li><a href="<?php echo site_url('home'); ?>" class="bblue"> <i class="icon-home"></i> Home</a></li>
-                <li><a href="<?php echo site_url('home'); ?>" class="bviolet"> <i class="icon-comments"></i> Great Story</a></li>
-                <li><a href="<?php echo site_url('home'); ?>" class="bgreen"> <i class="icon-leaf"></i> Great Nature</a></li>
-                <li><a href="<?php echo site_url('home'); ?>" class="bred"> <i class="icon-heart"></i> Great Culture</a></li>
+                <li><a href="<?php echo site_url('home/kategori/1/great-story'); ?>" class="bviolet"> <i class="icon-comments"></i> Great Story</a></li>
+                <li><a href="<?php echo site_url('home/kategori/2/great-nature'); ?>" class="bgreen"> <i class="icon-leaf"></i> Great Nature</a></li>
+                <li><a href="<?php echo site_url('home/kategori/3/great-culture'); ?>" class="bred"> <i class="icon-heart"></i> Great Culture</a></li>
               </ul>
             </div>
           </div>
@@ -121,16 +121,3 @@
   <div class="clearfix"></div>
 
   <!-- Header ends -->
-  <!-- Page heading -->
-  <!-- Give background color class on below line (bred, bgreen, borange, bviolet, blightblue, bblue) -->
-  <div class="page-heading blightblue">
-    <div class="container">
-      <div class="row">
-        <div class="span12">
-          <h2 class="pull-left"><i class="icon-flag title-icon"></i> Pesona Indonesia</h2>
-          <div class="pull-right heading-meta">Zamrud <span class="lightblue">Khatulistiwa</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Page heading ends -->
