@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 06, 2017 at 05:03 AM
+-- Generation Time: Jan 06, 2017 at 11:05 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -69,8 +69,7 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`artikel_id`, `judul`, `url`, `kategori_id`, `isi`, `tgl_dibuat`, `creator`, `rating`, `image`, `view`, `tag`, `status`, `status_thumb`) VALUES
-(1, 'Reaktor Biogas - Andrias Wiji Setio Pamudji', 'reaktor-biogas-andrias-wiji-setio-pamudji', 1, '<p>Apa itu Reaktor Biogas? Dalam kamus besar bahasa Indonesia reaktor diartikan sebagai sarana atau alat pembangkit tenaga. Sementara biogas adalah gas yang terbuat dari kotoran ternak. Penemunya punya nama lengkap Andrias Wiji Setio Pamudji. Seorang lelaki yang berasal dari desa Ngrendeng, Kecamatan Sine, Kabupaten Ngawi, Jawa Timur.</p>\r\n<p>Penemuan ini bermula dari rasa penasaran pria tersebut untuk membuktikan teori-teori yang pernah didengatnya di bangku sekolahan dengan cara melakukan percobaan. Memang sudah sedari kecil Andrias menyukai dunia riset-meriset. Dia pernah membuat listrik dan perahu motor mainan dengan tenaga penggerak kincir angin. Kincir angin ini dibuatnya dari pemutar kaset dalam tape. Pun ia juga hobi dalam bercocok tanam dan beternak. Dalam melakukan hal ini ia selalu tekun, sebab ketekunan merupakan kuncinya dan sudah menjadi prinsip Andrias yang diajarkan oleh ibunya.</p>', '2017-01-03 04:21:13', 'greaters', 0, 'greaters/39814982dea58f949b30acc75142daac.png', 0, '', '1', '1'),
-(2, 'Indomie Masuk 10 Besar Merek Paling Banyak Dibeli di Dunia', 'indomie-masuk-10-besar-merek-paling-banyak-dibeli-di-dunia', 1, '<p>Siapa yang tidak suka mie instan merek Indomie? Bagi anak-anak rantau, makanan instan satu ini selalu jadi pemadam kelaparan termujur dan termurah. Dan kita semua tahu, merek mie instan nomor satu di Indonesia ini juga sudah amat terkenal di berbagai negara di dunia. Sebut saja Nigeria misalnya, yang sampai-sampai warganya mengira kalau Indomie adalah mie instan produksi negara mereka dan salah satu <em>rapper</em> mereka pun sampai membuat lagu tentang Indomie.</p>\r\n<p>Ada satu kabar membanggakan dari merek mie instan kebanggaan nusantara ini, pasalnya di tahun 2016 Indomie masuk di jajaran 10 besar merek paling banyak dibeli di dunia, tepatnya berada di peringkat delapan. Hal ini didasarkan pada hasil studi mutakhir salah satu lembaga riset Kantar Worldpanel yang beberapa waktu lalu merilis studi bertajuk Brand Footprint.</p>', '2017-01-04 04:47:48', 'greaters', 0, 'greaters/7fcf446727af67e5eec8c787ea98e61c.jpg', 0, '', '1', '1');
+(1, 'Penemu Reaktor Biogas - Andrias Wiji Setio Pamudji', 'penemu-reaktor-biogas-andrias-wiji-setio-pamudji', 1, '<p>Apa itu Reaktor Biogas? Dalam kamus besar bahasa Indonesia reaktor diartikan sebagai sarana atau alat pembangkit tenaga. Sementara biogas adalah gas yang terbuat dari kotoran ternak. Penemunya punya nama lengkap Andrias Wiji Setio Pamudji. Seorang lelaki yang berasal dari desa Ngrendeng, Kecamatan Sine, Kabupaten Ngawi, Jawa Timur.</p>\r\n<p>Penemuan ini bermula dari rasa penasaran pria tersebut untuk membuktikan teori-teori yang pernah didengatnya di bangku sekolahan dengan cara melakukan percobaan. Memang sudah sedari kecil Andrias menyukai dunia riset-meriset. Dia pernah membuat listrik dan perahu motor mainan dengan tenaga penggerak kincir angin. Kincir angin ini dibuatnya dari pemutar kaset dalam tape. Pun ia juga hobi dalam bercocok tanam dan beternak. Dalam melakukan hal ini ia selalu tekun, sebab ketekunan merupakan kuncinya dan sudah menjadi prinsip Andrias yang diajarkan oleh ibunya.</p>\r\n<p>Cerita tentang reaktor biogas temuannya bermula kala ia masih kuliah ditingkat III Jurusan Teknik Kimia ITB Bandung tahun 2000-an. Waktu itu ia meriset pembikinan reaktor biogas yang sederhana. Dari yang sederhana inilah muncul sesuatu yang hebat. Andrias mengetahui bahwa kotoran ternak bisa dijadikan gas. Dengan hasil tersebut keingintahuannay semakin menggebu.</p>\r\n<p>Untuk mendapatkan kotoran ternak, ia pergi ke sebuah peternakan. Sepulangnya dari sana ia membawa kotoran ternak sapi yang sudah dicampuri air dan dimasukkan kedalam jerigen berukuran lima liter. Waktu itu ia langsung meletakkannya begitu saja di kos-kosaan dengan keadaan tertutup. Sebulan setelah itu, tutup jerigen dibuka. Kotoran sapi yang telah terfermentasi segera mengeluarkan gas.</p>\r\n<p>Demi menyempurnakan karyanya, ia pun mengutang ke sana - sini. Berkali - kali riset dilakukan guna mendapatkan reaktor dan penampung gas yang murah, kuat dan berkapasitas cukup apabila digunakan untuk keperluan rumah tangga. Semenjak ditekuni (tahun 2000-an), temuan Andrias baru dipasarkan tiga tahun kemudian, yaitu pada april 2005. Setahun sebelumnya, Andrias berhasil memenagkan lomba kreativitas mahasiswa berkat penemuan ini.</p>\r\n<p>&nbsp;</p>', '2017-01-03 04:21:13', 'greaters', 0, 'greaters/39814982dea58f949b30acc75142daac.png', 0, '', '1', '1');
 
 -- --------------------------------------------------------
 
@@ -189,8 +188,7 @@ CREATE TABLE `notif` (
 --
 
 INSERT INTO `notif` (`nid`, `waktu`, `judul`, `isi`, `url`, `username`, `status`) VALUES
-(1, '2017-01-03 04:33:40', 'Artikel Anda Reaktor Biogas - Andrias Wiji Setio Pamudji telah disetujui', 'Artikel Anda yang berjudul Reaktor Biogas - Andrias Wiji Setio Pamudji telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com', 'http://www.greatnesia.com/artikel/baca/reaktor-biogas-andrias-wiji-setio-pamudji', 'greaters', 1),
-(2, '2017-01-04 04:48:16', 'Artikel Anda Indomie Masuk 10 Besar Merek Paling Banyak Dibeli di Dunia telah disetujui', 'Artikel Anda yang berjudul Indomie Masuk 10 Besar Merek Paling Banyak Dibeli di Dunia telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com', 'http://www.greatnesia.com/artikel/baca/indomie-masuk-10-besar-merek-paling-banyak-dibeli-di-dunia', 'greaters', 1);
+(1, '2017-01-03 04:33:40', 'Artikel Anda Reaktor Biogas - Andrias Wiji Setio Pamudji telah disetujui', 'Artikel Anda yang berjudul Reaktor Biogas - Andrias Wiji Setio Pamudji telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com', 'http://www.greatnesia.com/artikel/baca/reaktor-biogas-andrias-wiji-setio-pamudji', 'greaters', 1);
 
 -- --------------------------------------------------------
 
@@ -371,7 +369,15 @@ INSERT INTO `sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('46ba0906ca657a9d8f8cb7fd567e465ce21dc935', '::1', 1483670839, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333637303833393b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
 ('9460685f66484f3477fc4a1ad79d2c6f86f72192', '::1', 1483671254, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333637313235343b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
 ('e90940b046d2a04aef864585da4daa0a932b3805', '::1', 1483671607, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333637313630373b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
-('12ed43e7384545461616f3cd43825d90c68ba901', '::1', 1483671607, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333637313630373b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b);
+('12ed43e7384545461616f3cd43825d90c68ba901', '::1', 1483671607, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333637313630373b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('c1ecff00fff5d7960a2160e1ca4d7dcc3d58e8a4', '::1', 1483690186, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333639303138363b),
+('61b05c10a3bb6746702f4b88294c8c6a70e552dc', '::1', 1483690495, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333639303439353b),
+('586003104b12f50dd299c48cde9228e78c6f8427', '::1', 1483690886, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333639303838363b),
+('2d107e5557b7d2764f55281fded054628c747fdb', '::1', 1483695312, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333639353331323b),
+('4d20fa9eed6b7ea61d9e9911af623418bd15f4b4', '::1', 1483695834, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333639353833343b),
+('05e9397121b280325788bd9694706e2c11db028d', '::1', 1483696177, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333639363137373b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('b4617131ff55c499e027a278fece7abfb00445f7', '::1', 1483696982, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333639363938323b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('d7b981e2e5020c4a7fe8a4c660f8d7b3bf0a6f22', '::1', 1483697091, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333639363938323b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b);
 
 -- --------------------------------------------------------
 
@@ -433,8 +439,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`username`, `password`, `email`, `tgl_daftar`, `nama`, `website`, `biodata`, `jenis_member`, `status`, `ip`, `avatar`, `notifikasi`, `sent`, `poin`) VALUES
-('fauzan', '595d275ad04a4d9a526716390042c1d4', 'azmifauzan@gmail.com', '2016-08-11', 'Fauzan', '', '', 1, '', '', NULL, 1, 0, 40),
-('greaters', '26d55f2b896a8e3263ed67ebde6722dc', 'greatnesia@gmail.com', '2017-01-03', 'Greaters', 'http://www.greatnesia.com', '', 1, '', '', NULL, 1, 0, 17);
+('fauzan', '595d275ad04a4d9a526716390042c1d4', 'azmifauzan@gmail.com', '2016-08-11', 'Fauzan', '', '', 1, '', '', NULL, 1, 0, 0),
+('greaters', '26d55f2b896a8e3263ed67ebde6722dc', 'greatnesia@gmail.com', '2017-01-03', 'Greaters', 'http://www.greatnesia.com', '', 1, '', '', NULL, 1, 0, 5);
 
 --
 -- Indexes for dumped tables
@@ -550,7 +556,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `artikel_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `artikel_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `barang_poin`
 --
@@ -580,7 +586,7 @@ ALTER TABLE `newsletter`
 -- AUTO_INCREMENT for table `notif`
 --
 ALTER TABLE `notif`
-  MODIFY `nid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `nid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `penukaran`
 --

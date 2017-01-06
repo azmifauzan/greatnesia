@@ -26,7 +26,7 @@ class Home extends CI_Controller
         $config["prev_link"] = 'Prev';
         $this->pagination->initialize($config);
 
-        $jumlain = 10;
+        $jumlain = 5;
         $rel = ($off+1) * $jumlain;
         $data['lain'] = $this->hmm->getRelatedArtikel($rel,$jumlain);
         $data["artikel"] = $this->hmm->getNewArtikel($config['per_page'],$off);
@@ -51,7 +51,7 @@ class Home extends CI_Controller
         $config["prev_link"] = 'Prev';
         $this->pagination->initialize($config);
 
-        $jumlain = 10;
+        $jumlain = 5;
         $rel = ($off+1) * $jumlain;
         $data["kat"] = $this->hmm->getKategoriDetil($id);
         $data["title"] = $data["kat"]->nama;
@@ -60,5 +60,35 @@ class Home extends CI_Controller
         $data["quote"] = $this->hmm->getRandomQuote();
         $this->load->helper('text');
         $this->load->view('front/kategori_view',$data);
+    }
+
+    public function about()
+    {
+        $jumlain = 5;
+        $rel = 0;
+        $data["title"] = "About Us";        
+        $data['lain'] = $this->hmm->getRelatedArtikel($rel,$jumlain);
+        $data["quote"] = $this->hmm->getRandomQuote();
+        $this->load->view('front/about_view',$data);
+    }
+
+    public function faq()
+    {
+        $jumlain = 5;
+        $rel = 0;
+        $data["title"] = "FAQ";        
+        $data['lain'] = $this->hmm->getRelatedArtikel($rel,$jumlain);
+        $data["quote"] = $this->hmm->getRandomQuote();
+        $this->load->view('front/faq_view',$data);
+    }
+
+    public function contact()
+    {
+        $jumlain = 5;
+        $rel = 0;
+        $data["title"] = "Contact";        
+        $data['lain'] = $this->hmm->getRelatedArtikel($rel,$jumlain);
+        $data["quote"] = $this->hmm->getRandomQuote();
+        $this->load->view('front/contact_view',$data);
     }
 }

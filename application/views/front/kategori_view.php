@@ -43,7 +43,7 @@
                         <?php if($artikel->num_rows() > 0) : ?>
                         <?php foreach($artikel->result() as $ar) : ?>
                         <div class="entry">
-                           <h2><i class="icon-pencil title-icon"></i> <a href="<?php echo site_url('artikel/baca/'.$ar->artikel_id.'/'.$ar->url); ?>"><?php echo $ar->judul; ?></a></h2>
+                           <h2><a href="<?php echo site_url('artikel/baca/'.$ar->artikel_id.'/'.$ar->url); ?>"><?php echo $ar->judul; ?></a></h2>
                            
                            <!-- Meta details -->
                            <div class="meta">
@@ -71,31 +71,9 @@
                         
                      </div>
                   </div>                        
-                  <div class="span4">
-                     <div class="sidebar">
-                        <!-- Widget -->
-                        <div class="widget">
-                           <h4>Pencarian</h4>
-                           <form method="get" id="searchform" action="#" class="form-search">
-                              <input type="text" value="" name="s" id="s" class="input-medium" placeholder="kata kunci" />
-                              <button type="submit" class="btn">Search</button>
-                           </form>
-                        </div>
-                      </div>
-                     <div class="sidebar">
-                        <!-- Widget -->
-                        <div class="widget">
-                           <h4>Tulisan Lainnya</h4>
-                           <ul>
-                              <?php if($lain->num_rows() > 0) : ?>
-                              <?php foreach($lain->result() as $ln) : ?>
-                                <li><a href="<?php echo site_url('artikel/baca/'.$ln->artikel_id.'/'.$ln->url); ?>"><?php echo $ln->judul; ?></a></li>
-                              <?php endforeach; ?>
-                              <?php endif; ?>
-                           </ul>
-                        </div>                                                  
-                     </div>                                                
-                  </div>
+                  
+<?php $this->load->view('front/sidebar'); ?>
+
                </div>
             </div>
          </div>

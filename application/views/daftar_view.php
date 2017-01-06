@@ -39,25 +39,13 @@
 				<span class="icon-bar"></span> 				
 			</a>
 			
-			<a class="brand" ><img style="border:0px;" src="<?php echo base_url(); ?>img/mini-logo.png"></a>
-			<div class="nav-collapse">
-				<ul class="nav pull-left">
-					<li class="divider-vertical"></li>
-					<li><a href="http://www.ripiu.com" title="Ripiu.com - Ulasan Produk dan Panduan Belanja">Produk</a></li>
-					<li class="divider-vertical"></li>
-					<li><a href="http://www.ripiu.net" title="Ripiu.net - Ulasan Website">Website</a></li>
-					<li class="divider-vertical"></li>
-					<li><a href="http://www.ripiu.info" title="Ripiu.info - Sumber Informasi dan Pengetahuan">Informasi</a></li>
-					<li class="divider-vertical"></li>
-					<li><a href="http://www.ripiu.travel" title="Ripiu.travel - Ulasan dan Panduan Tempat Wisata">Wisata</a></li>
-					<li class="divider-vertical"></li>
-				</ul>
-				
+			<a class="brand" >Greatnesia</a>
+			<div class="nav-collapse">				
 				<ul class="nav pull-right">
 					
 					<li class="">
 						
-						<a href="http://www.ripiu.com"><i class="icon-chevron-left"></i> Back to Homepage</a>
+						<a href="<?php echo base_url(); ?>"><i class="icon-chevron-left"></i> Back to Homepage</a>
 					</li>
 				</ul>
 
@@ -133,7 +121,7 @@
 		
 		
 	<div id="login-extra">			
-		<p>Sudah punya akun ? <a href="<?php echo site_url('login'); ?>">Login disini.</a></p>						
+		<p>Sudah punya akun ? <a href="<?php echo site_url('ucp/login'); ?>">Login disini.</a></p>						
 	</div> <!-- /login-extra -->
 	
 </div> <!-- /login-wrapper -->

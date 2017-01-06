@@ -48,31 +48,9 @@
                         
                      </div>
                   </div>                        
-                  <div class="span4">
-                     <div class="sidebar">
-                        <!-- Widget -->
-                        <div class="widget">
-                           <h4>Pencarian</h4>
-                           <form method="get" id="searchform" action="#" class="form-search">
-                              <input type="text" value="" name="s" id="s" class="input-medium" placeholder="kata kunci" />
-                              <button type="submit" class="btn">Search</button>
-                           </form>
-                        </div>
-                      </div>
-                     <div class="sidebar">
-                        <!-- Widget -->
-                        <div class="widget">
-                           <h4>Tulisan Lainnya</h4>
-                           <ul>
-                              <?php if($lain->num_rows() > 0) : ?>
-                              <?php foreach($lain->result() as $ln) : ?>
-                                <li><a href="<?php echo site_url('artikel/baca/'.$ln->artikel_id.'/'.$ln->url); ?>"><?php echo $ln->judul; ?></a></li>
-                              <?php endforeach; ?>
-                              <?php endif; ?>
-                           </ul>
-                        </div>                                                  
-                     </div>                                                
-                  </div>
+
+<?php $this->load->view('front/sidebar'); ?>
+
                </div>
             </div>
          </div>

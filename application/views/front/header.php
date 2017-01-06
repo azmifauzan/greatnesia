@@ -48,13 +48,13 @@
           </div>
         </div>
         <div class="span4">
-            <div class="social">
-              <!-- Social media icons. Repalce # with your profile links -->
-                      <a href="https://www.facebook.com/Greatnesia" class="bblue" target="_blank"><i class="icon-facebook"></i></a>
-                      <a href="#" class="borange"><i class="icon-google-plus"></i></a> 
-                      <a href="#" class="blightblue"><i class="icon-twitter"></i></a>
-                      <a href="<?php echo site_url('rss'); ?>" class="borange"><i class="icon-rss"></i></a>
-            </div>
+          <div class="social">
+            <!-- Social media icons. Repalce # with your profile links -->
+            <a href="https://www.facebook.com/Greatnesia" class="bblue" target="_blank"><i class="icon-facebook"></i></a>
+            <a href="#" class="borange"><i class="icon-google-plus"></i></a> 
+            <a href="#" class="blightblue"><i class="icon-twitter"></i></a>
+            <a href="<?php echo site_url('rss'); ?>" class="borange"><i class="icon-rss"></i></a>
+          </div>
         </div>
       </div>
       <div class="clearfix"></div>
@@ -62,17 +62,12 @@
   </div>
 
   <!-- Sliding panel ends-->
-
   <!-- Header starts -->
-
   <header>
     <div class="container">
       <div class="row">
-
         <div class="span3">
-
           <!-- Logo starts -->
-
           <div class="logo">
             <div class="logo-image">
               <!-- Image link -->

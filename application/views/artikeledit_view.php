@@ -91,7 +91,7 @@
 						<div class="controls">
 							<select name="kategori"><option value="0">Pilih Kategori ...</option>		
 							<?php $gr = "rip"; $cc = 1; ?>							
-							<? foreach($kategori->result() as $kat) : ?>
+							<?php foreach($kategori->result() as $kat) : ?>
 							<?php if($kat->group != $gr) : ?>
 								<?php if($cc > 1) : ?>
 								</optgroup>
@@ -99,9 +99,9 @@
 								<optgroup id="<?php echo $kat->group; ?>" label="<?php echo $kat->group; ?>">
 							<?php $gr = $kat->group; endif; ?>
 							
-							<option <?php if($artikel->kategori_id == $kat->kategori_id) echo 'selected'; ?> value="<? echo $kat->kategori_id; ?>" title="<? echo htmlentities($kat->keterangan); ?>" <?php echo set_select('kategori', $kat->kategori_id); ?>><?=$kat->nama?></option>
+							<option <?php if($artikel->kategori_id == $kat->kategori_id) echo 'selected'; ?> value="<?php echo $kat->kategori_id; ?>" title="<?php echo htmlentities($kat->keterangan); ?>" <?php echo set_select('kategori', $kat->kategori_id); ?>><?php echo $kat->nama; ?></option>
 							
-							<? $cc++; endforeach; ?>
+							<?php $cc++; endforeach; ?>
 							</select>
 							<?php echo form_error('kategori','<p class="help-block" style="color:red;">','</p>'); ?>
 						</div> <!-- /controls -->
@@ -109,9 +109,9 @@
 					<div class="control-group">											
 						<label class="control-label" for="gambar">Gambar</label>
 						<div class="controls">
-							<? if(trim($artikel->image) != "") :?>
-							<img border="0" src="<? echo base_url()."uploads/thumb/".substr($artikel->image,0,-4)."_thumb".substr($artikel->image,-4); ?>" /><br/><br/>
-							<? endif; ?>
+							<?php if(trim($artikel->image) != "") :?>
+							<img border="0" src="<?php echo base_url()."uploads/thumb/".substr($artikel->image,0,-4)."_thumb".substr($artikel->image,-4); ?>" /><br/><br/>
+							<?php endif; ?>
 							<input type="file" id="gambar" name="fileimage">
 							<?php if(isset($error)) echo $error; ?>
 						</div> <!-- /controls -->
