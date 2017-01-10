@@ -30,7 +30,8 @@
                            
                            <!-- Meta details -->
                            <div class="meta">
-                              <i class="icon-calendar"></i><?php echo date('d M Y',strtotime($artikel->tgl_dibuat)); ?><i class="icon-user"></i> <?php echo $artikel->creator; ?> <i class="icon-folder-open"></i> <a href="#"><?php echo $artikel->nama; ?></a>
+                              <i class="icon-calendar"></i><?php echo date('d M Y',strtotime($artikel->tgl_dibuat)); ?><i class="icon-user"></i> <?php echo $artikel->creator; ?> <i class="icon-folder-open"></i> <a href="<?php echo site_url('home/kategori/'.$artikel->kategori_id.'/'.url_title($artikel->nama,'-',TRUE)); ?>"><?php echo $artikel->nama; ?></a>
+                              <span class="pull-right"><span class='st_facebook_hcount' displayText='Facebook'></span><span class='st_twitter_hcount' displayText='Tweet'></span><span class='st__hcount' displayText=''></span></span>
                            </div>
                            
                            <?php if($artikel->image != '') : ?>
@@ -43,7 +44,24 @@
                            <?php echo $artikel->isi; ?>
                            <div class="clearfix"></div>
                         </div>
+
+                        <div class="post-foot well">
+                           <!-- Social media icons -->
+                           <div class="social">
+                              <h6>Bagikan cerita hebat ini: </h6>
+                              <span class='st_facebook_vcount' displayText='Facebook'></span>
+                              <span class='st_twitter_vcount' displayText='Tweet'></span>
+                              <span class='st_linkedin_vcount' displayText='LinkedIn'></span>
+                              <span class='st_email_vcount' displayText='Email'></span>
+                              <span class='st_plusone_vcount' displayText='Google +1'></span>
+                           </div>
+                        </div>
                         
+                        <hr/>
+                        <div class="comments">
+                        <div class="fb-comments" data-href="<?php echo site_url('artikel/baca/'.$artikel->artikel_id.'/'.$artikel->url); ?>" data-numposts="10" data-width="750"></div>
+                        </div>
+
                         <div class="clearfix"></div>
                         
                      </div>
@@ -66,9 +84,8 @@
   <div class="container">
     <div class="row">
       <div class="span12">          
-          <!-- User icon -->
-          <span class="twitter-icon text-center"><i class="icon-user"></i></span>
-          <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum dolor eget nisi <br />fermentum quis hendrerit magna vestibulum."</em></p>        
+          <span class="twitter-icon text-center"><i class="icon-comment"></i></span>
+          <p><em>"<?php echo $quote->isi; ?>"</em><br/><strong><?php echo $quote->penulis; ?></strong></p>        
       </div>
     </div>
   </div>

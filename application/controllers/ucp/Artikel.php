@@ -468,6 +468,7 @@ class Artikel extends CI_Controller
         $username = $this->session->userdata('username');
         if($this->ifm->artikelExist($id,$username)){
             $this->ifm->ajukan($id,$username);
+            $this->session->set_flashdata('info','Artikel berhasil diajukan, Moderator kami akan mereview artikel tersebut secepatnya.');
         }
         
         redirect('ucp/artikel/'.$red,'refresh');   
@@ -476,7 +477,7 @@ class Artikel extends CI_Controller
     public function preview($id)
     {
         $data['artikel'] = $this->ifm->getArtikelDetilFromId($id);
-        $data['url'] = 'http://localhost/greatnesia.com/';
+        $data['url'] = base_url();
         $this->load->view('preview',$data);
     }
     

@@ -75,8 +75,7 @@
 <div class="foot blightblue">
   <div class="container">
     <div class="row">
-      <div class="span12">          
-          <!-- User icon -->
+      <div class="span12">    
           <span class="twitter-icon text-center"><i class="icon-comment"></i></span>
           <p><em>"<?php echo $quote->isi; ?>"</em><br/><strong><?php echo $quote->penulis; ?></strong></p>        
       </div>

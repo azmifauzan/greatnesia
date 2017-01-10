@@ -25,6 +25,7 @@ class Infomodel extends CI_Model
         $this->db->limit($jum);
         $this->db->where('status',1);
         $this->db->where('image !=','');
+        $this->db->order_by('tgl_dibuat','desc');
         return $this->db->get('artikel');
     }
     
