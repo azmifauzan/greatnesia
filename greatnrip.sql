@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 06, 2017 at 11:05 AM
+-- Generation Time: Jan 10, 2017 at 02:23 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -69,7 +69,8 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`artikel_id`, `judul`, `url`, `kategori_id`, `isi`, `tgl_dibuat`, `creator`, `rating`, `image`, `view`, `tag`, `status`, `status_thumb`) VALUES
-(1, 'Penemu Reaktor Biogas - Andrias Wiji Setio Pamudji', 'penemu-reaktor-biogas-andrias-wiji-setio-pamudji', 1, '<p>Apa itu Reaktor Biogas? Dalam kamus besar bahasa Indonesia reaktor diartikan sebagai sarana atau alat pembangkit tenaga. Sementara biogas adalah gas yang terbuat dari kotoran ternak. Penemunya punya nama lengkap Andrias Wiji Setio Pamudji. Seorang lelaki yang berasal dari desa Ngrendeng, Kecamatan Sine, Kabupaten Ngawi, Jawa Timur.</p>\r\n<p>Penemuan ini bermula dari rasa penasaran pria tersebut untuk membuktikan teori-teori yang pernah didengatnya di bangku sekolahan dengan cara melakukan percobaan. Memang sudah sedari kecil Andrias menyukai dunia riset-meriset. Dia pernah membuat listrik dan perahu motor mainan dengan tenaga penggerak kincir angin. Kincir angin ini dibuatnya dari pemutar kaset dalam tape. Pun ia juga hobi dalam bercocok tanam dan beternak. Dalam melakukan hal ini ia selalu tekun, sebab ketekunan merupakan kuncinya dan sudah menjadi prinsip Andrias yang diajarkan oleh ibunya.</p>\r\n<p>Cerita tentang reaktor biogas temuannya bermula kala ia masih kuliah ditingkat III Jurusan Teknik Kimia ITB Bandung tahun 2000-an. Waktu itu ia meriset pembikinan reaktor biogas yang sederhana. Dari yang sederhana inilah muncul sesuatu yang hebat. Andrias mengetahui bahwa kotoran ternak bisa dijadikan gas. Dengan hasil tersebut keingintahuannay semakin menggebu.</p>\r\n<p>Untuk mendapatkan kotoran ternak, ia pergi ke sebuah peternakan. Sepulangnya dari sana ia membawa kotoran ternak sapi yang sudah dicampuri air dan dimasukkan kedalam jerigen berukuran lima liter. Waktu itu ia langsung meletakkannya begitu saja di kos-kosaan dengan keadaan tertutup. Sebulan setelah itu, tutup jerigen dibuka. Kotoran sapi yang telah terfermentasi segera mengeluarkan gas.</p>\r\n<p>Demi menyempurnakan karyanya, ia pun mengutang ke sana - sini. Berkali - kali riset dilakukan guna mendapatkan reaktor dan penampung gas yang murah, kuat dan berkapasitas cukup apabila digunakan untuk keperluan rumah tangga. Semenjak ditekuni (tahun 2000-an), temuan Andrias baru dipasarkan tiga tahun kemudian, yaitu pada april 2005. Setahun sebelumnya, Andrias berhasil memenagkan lomba kreativitas mahasiswa berkat penemuan ini.</p>\r\n<p>&nbsp;</p>', '2017-01-03 04:21:13', 'greaters', 0, 'greaters/39814982dea58f949b30acc75142daac.png', 0, '', '1', '1');
+(1, 'Penemu Reaktor Biogas - Andrias Wiji Setio Pamudji', 'penemu-reaktor-biogas-andrias-wiji-setio-pamudji-2', 1, '<p>Apa itu Reaktor Biogas? Dalam kamus besar bahasa Indonesia reaktor diartikan sebagai sarana atau alat pembangkit tenaga. Sementara biogas adalah gas yang terbuat dari kotoran ternak. Penemunya punya nama lengkap Andrias Wiji Setio Pamudji. Seorang lelaki yang berasal dari desa Ngrendeng, Kecamatan Sine, Kabupaten Ngawi, Jawa Timur.</p>\r\n<p>Penemuan ini bermula dari rasa penasaran pria tersebut untuk membuktikan teori-teori yang pernah didengatnya di bangku sekolahan dengan cara melakukan percobaan. Memang sudah sedari kecil Andrias menyukai dunia riset-meriset. Dia pernah membuat listrik dan perahu motor mainan dengan tenaga penggerak kincir angin. Kincir angin ini dibuatnya dari pemutar kaset dalam tape. Pun ia juga hobi dalam bercocok tanam dan beternak. Dalam melakukan hal ini ia selalu tekun, sebab ketekunan merupakan kuncinya dan sudah menjadi prinsip Andrias yang diajarkan oleh ibunya.</p>\r\n<p>Cerita tentang reaktor biogas temuannya bermula kala ia masih kuliah ditingkat III Jurusan Teknik Kimia ITB Bandung tahun 2000-an. Waktu itu ia meriset pembikinan reaktor biogas yang sederhana. Dari yang sederhana inilah muncul sesuatu yang hebat. Andrias mengetahui bahwa kotoran ternak bisa dijadikan gas. Dengan hasil tersebut keingintahuannay semakin menggebu.</p>\r\n<p>Untuk mendapatkan kotoran ternak, ia pergi ke sebuah peternakan. Sepulangnya dari sana ia membawa kotoran ternak sapi yang sudah dicampuri air dan dimasukkan kedalam jerigen berukuran lima liter. Waktu itu ia langsung meletakkannya begitu saja di kos-kosaan dengan keadaan tertutup. Sebulan setelah itu, tutup jerigen dibuka. Kotoran sapi yang telah terfermentasi segera mengeluarkan gas.</p>\r\n<p>Demi menyempurnakan karyanya, ia pun mengutang ke sana - sini. Berkali - kali riset dilakukan guna mendapatkan reaktor dan penampung gas yang murah, kuat dan berkapasitas cukup apabila digunakan untuk keperluan rumah tangga. Semenjak ditekuni (tahun 2000-an), temuan Andrias baru dipasarkan tiga tahun kemudian, yaitu pada april 2005. Setahun sebelumnya, Andrias berhasil memenagkan lomba kreativitas mahasiswa berkat penemuan ini.</p>\r\n<p>sumber: 30 tokoh penemu indonesia, Lilih Prilian Ari Pranowo</p>\r\n<p>&nbsp;</p>', '2017-01-03 04:21:13', 'greaters', 0, 'greaters/39814982dea58f949b30acc75142daac.png', 0, '', '1', '1'),
+(2, 'Singkong Raksasa - Abdul Jamil Ridho dan Niti Soedigdo', 'singkong-raksasa-abdul-jamil-ridho-dan-niti-soedigdo-2', 1, '<p>Bagi masyarakat Indonesia, singkong merupakan bahan pokok yang sudah tidak asing lagi. Pelbagai macam makanan bisa dibuat dari bahan dasar ini. Mulai dari getuk, tape, combro, misro dan masih banyak makanan lainnya. Umumnya singkong mempunyai ukuran normal sepanjang 40 hingga 50 cm. Namun, singkong yang ditemukan dan dikembangkan oleh Abdul Jamil Ridho dan Niti Soedigdo memang lain daripada yang lain. Sebab singkong temuannya lebih besar dan lebih panjang dari singkong normal.</p>\r\n<p>Tahun 1996-an, Abdul Jamil Ridho, pengelola pondok pesantren Darul Hidayah dikota Tulang Bawang, tengah melakukan zikir dan perenungan. Kala sedang khusuk, tanpa sengaja dia melihat kesebatang tanaman. Selanjutnya ia mendekati tanaman tersebut. Sekilas tanaman tersebut mirip dengan singkong yang biasa ia tanam. Dipenuhi rasa penasaran ia mencabut batang singkong tersebut, ternyata akar singkong tersebut berdiameter lebih kecil tetapi panjangnya mencapai satu meter bahkan lebih per batang jalar dalam rangkaian umbi.</p>\r\n<p>Pengembang sekaligus perekayasa singkong "ajaib" ini diserahkan kepada Niti Soedigdo, orang kepercayaan Ridho. Caranya dengan mengwinkan tanaman tersebut dengan singkong karet untuk memperoleh pembesaran pada diameter akarnya. Singkong karet adalah singkong yang tidak bisa dimakan karena mengandung racun. Hasil persilangan pertama dan kedua dari kedua singkong tersebut belum mencapai bentuk maksimal. Pada persilangan ketiga kalinya barulah didapatkan hasil dan bentuk yang maksimal. Pengembangan demi pengembangan pun terus dilakukan oleh Niti.</p>', '2017-01-09 05:35:03', 'greaters', 0, 'greaters/cdf6216185861af8fed2bd1b5b7ad0be.jpg', 0, '', '1', '1');
 
 -- --------------------------------------------------------
 
@@ -188,7 +189,8 @@ CREATE TABLE `notif` (
 --
 
 INSERT INTO `notif` (`nid`, `waktu`, `judul`, `isi`, `url`, `username`, `status`) VALUES
-(1, '2017-01-03 04:33:40', 'Artikel Anda Reaktor Biogas - Andrias Wiji Setio Pamudji telah disetujui', 'Artikel Anda yang berjudul Reaktor Biogas - Andrias Wiji Setio Pamudji telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com', 'http://www.greatnesia.com/artikel/baca/reaktor-biogas-andrias-wiji-setio-pamudji', 'greaters', 1);
+(1, '2017-01-03 04:33:40', 'Artikel Anda Reaktor Biogas - Andrias Wiji Setio Pamudji telah disetujui', 'Artikel Anda yang berjudul Reaktor Biogas - Andrias Wiji Setio Pamudji telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com', 'http://www.greatnesia.com/artikel/baca/reaktor-biogas-andrias-wiji-setio-pamudji', 'greaters', 1),
+(2, '2017-01-09 09:05:01', 'Artikel Anda Singkong Raksasa - Abdul Jamil Ridho dan Niti Soedigdo telah disetujui', 'Artikel Anda yang berjudul Singkong Raksasa - Abdul Jamil Ridho dan Niti Soedigdo telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com', 'http://www.greatnesia.com/artikel/baca/singkong-raksasa-abdul-jamil-ridho-dan-niti-soedigdo-2', 'greaters', 1);
 
 -- --------------------------------------------------------
 
@@ -377,7 +379,20 @@ INSERT INTO `sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('4d20fa9eed6b7ea61d9e9911af623418bd15f4b4', '::1', 1483695834, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333639353833343b),
 ('05e9397121b280325788bd9694706e2c11db028d', '::1', 1483696177, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333639363137373b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
 ('b4617131ff55c499e027a278fece7abfb00445f7', '::1', 1483696982, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333639363938323b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
-('d7b981e2e5020c4a7fe8a4c660f8d7b3bf0a6f22', '::1', 1483697091, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333639363938323b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b);
+('d7b981e2e5020c4a7fe8a4c660f8d7b3bf0a6f22', '::1', 1483697091, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333639363938323b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('3e07fd76977930575fd38b746ead768af21f7221', '::1', 1483930351, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333933303335313b),
+('b9c0166125e9b2e6a049cdf7c9d6f90253aa3e2c', '::1', 1483930657, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333933303635373b),
+('d8900e21eb36d77ac81af62142c8d2c292e31970', '::1', 1483931289, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333933313238393b),
+('1e2970ccdb8fdcb32f54fa09f55e4d5250b7025a', '::1', 1483934173, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333933343137333b),
+('7fb1be07fd66d4ce7331974153d4a2b915aef09b', '::1', 1483934495, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333933343439353b),
+('9a2bcc2dbb71f1e943c4c3a49264fa0de7dc83f2', '::1', 1483934870, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333933343837303b),
+('2c3d9cd7f0d45ca6ba2080f5602729d3b5fec34e', '::1', 1483935773, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333933353737333b),
+('605f4606168b88adac4b4e3d58a60991559b2127', '::1', 1483936502, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333933363530323b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('a236773aecc9766f7fdb3fea7d9d2db9f7d26f54', '::1', 1483936503, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333933363530323b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b696e666f7c733a32363a22417274696b656c20626572686173696c20646973696d70616e2e223b5f5f63695f766172737c613a313a7b733a343a22696e666f223b733a333a226f6c64223b7d),
+('f7fd970f7c862c24aedb706a9d2efc4fb9dea190', '::1', 1483949107, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333934393130373b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('ceb9acad92b7cc458aaeb76f7bbd9eb13b877b8b', '::1', 1483949241, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333934393036313b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
+('b1b44c6e237dba6b016d043aaf2044355c28aa39', '::1', 1483952536, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333935323533363b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('a87285d458f75ad4179fb7968c27db3e674af302', '::1', 1483952539, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333935323533363b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b);
 
 -- --------------------------------------------------------
 
@@ -440,7 +455,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`username`, `password`, `email`, `tgl_daftar`, `nama`, `website`, `biodata`, `jenis_member`, `status`, `ip`, `avatar`, `notifikasi`, `sent`, `poin`) VALUES
 ('fauzan', '595d275ad04a4d9a526716390042c1d4', 'azmifauzan@gmail.com', '2016-08-11', 'Fauzan', '', '', 1, '', '', NULL, 1, 0, 0),
-('greaters', '26d55f2b896a8e3263ed67ebde6722dc', 'greatnesia@gmail.com', '2017-01-03', 'Greaters', 'http://www.greatnesia.com', '', 1, '', '', NULL, 1, 0, 5);
+('greaters', '26d55f2b896a8e3263ed67ebde6722dc', 'greatnesia@gmail.com', '2017-01-03', 'Greaters', 'http://www.greatnesia.com', '', 1, '', '', NULL, 1, 0, 10);
 
 --
 -- Indexes for dumped tables
@@ -556,7 +571,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `artikel_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `artikel_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `barang_poin`
 --
@@ -586,7 +601,7 @@ ALTER TABLE `newsletter`
 -- AUTO_INCREMENT for table `notif`
 --
 ALTER TABLE `notif`
-  MODIFY `nid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `nid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `penukaran`
 --
