@@ -19,9 +19,11 @@ class Artikelmodel extends CI_Model
 		return $this->db->get('artikel')->row();
 	}
 
-	public function getTopArtikel($jum)
+	public function getTopArtikel($jum,$ex)
 	{
 		$this->db->limit($jum);
+		$this->db->order_by('tgl_dibuat','desc');
+		$this->db->where_not_in('artikel_id',$ex);
 		return $this->db->get('artikel');
 	}
 

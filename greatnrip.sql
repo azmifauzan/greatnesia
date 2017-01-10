@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 10, 2017 at 02:23 AM
+-- Generation Time: Jan 10, 2017 at 10:52 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -70,7 +70,9 @@ CREATE TABLE `artikel` (
 
 INSERT INTO `artikel` (`artikel_id`, `judul`, `url`, `kategori_id`, `isi`, `tgl_dibuat`, `creator`, `rating`, `image`, `view`, `tag`, `status`, `status_thumb`) VALUES
 (1, 'Penemu Reaktor Biogas - Andrias Wiji Setio Pamudji', 'penemu-reaktor-biogas-andrias-wiji-setio-pamudji-2', 1, '<p>Apa itu Reaktor Biogas? Dalam kamus besar bahasa Indonesia reaktor diartikan sebagai sarana atau alat pembangkit tenaga. Sementara biogas adalah gas yang terbuat dari kotoran ternak. Penemunya punya nama lengkap Andrias Wiji Setio Pamudji. Seorang lelaki yang berasal dari desa Ngrendeng, Kecamatan Sine, Kabupaten Ngawi, Jawa Timur.</p>\r\n<p>Penemuan ini bermula dari rasa penasaran pria tersebut untuk membuktikan teori-teori yang pernah didengatnya di bangku sekolahan dengan cara melakukan percobaan. Memang sudah sedari kecil Andrias menyukai dunia riset-meriset. Dia pernah membuat listrik dan perahu motor mainan dengan tenaga penggerak kincir angin. Kincir angin ini dibuatnya dari pemutar kaset dalam tape. Pun ia juga hobi dalam bercocok tanam dan beternak. Dalam melakukan hal ini ia selalu tekun, sebab ketekunan merupakan kuncinya dan sudah menjadi prinsip Andrias yang diajarkan oleh ibunya.</p>\r\n<p>Cerita tentang reaktor biogas temuannya bermula kala ia masih kuliah ditingkat III Jurusan Teknik Kimia ITB Bandung tahun 2000-an. Waktu itu ia meriset pembikinan reaktor biogas yang sederhana. Dari yang sederhana inilah muncul sesuatu yang hebat. Andrias mengetahui bahwa kotoran ternak bisa dijadikan gas. Dengan hasil tersebut keingintahuannay semakin menggebu.</p>\r\n<p>Untuk mendapatkan kotoran ternak, ia pergi ke sebuah peternakan. Sepulangnya dari sana ia membawa kotoran ternak sapi yang sudah dicampuri air dan dimasukkan kedalam jerigen berukuran lima liter. Waktu itu ia langsung meletakkannya begitu saja di kos-kosaan dengan keadaan tertutup. Sebulan setelah itu, tutup jerigen dibuka. Kotoran sapi yang telah terfermentasi segera mengeluarkan gas.</p>\r\n<p>Demi menyempurnakan karyanya, ia pun mengutang ke sana - sini. Berkali - kali riset dilakukan guna mendapatkan reaktor dan penampung gas yang murah, kuat dan berkapasitas cukup apabila digunakan untuk keperluan rumah tangga. Semenjak ditekuni (tahun 2000-an), temuan Andrias baru dipasarkan tiga tahun kemudian, yaitu pada april 2005. Setahun sebelumnya, Andrias berhasil memenagkan lomba kreativitas mahasiswa berkat penemuan ini.</p>\r\n<p>sumber: 30 tokoh penemu indonesia, Lilih Prilian Ari Pranowo</p>\r\n<p>&nbsp;</p>', '2017-01-03 04:21:13', 'greaters', 0, 'greaters/39814982dea58f949b30acc75142daac.png', 0, '', '1', '1'),
-(2, 'Singkong Raksasa - Abdul Jamil Ridho dan Niti Soedigdo', 'singkong-raksasa-abdul-jamil-ridho-dan-niti-soedigdo-2', 1, '<p>Bagi masyarakat Indonesia, singkong merupakan bahan pokok yang sudah tidak asing lagi. Pelbagai macam makanan bisa dibuat dari bahan dasar ini. Mulai dari getuk, tape, combro, misro dan masih banyak makanan lainnya. Umumnya singkong mempunyai ukuran normal sepanjang 40 hingga 50 cm. Namun, singkong yang ditemukan dan dikembangkan oleh Abdul Jamil Ridho dan Niti Soedigdo memang lain daripada yang lain. Sebab singkong temuannya lebih besar dan lebih panjang dari singkong normal.</p>\r\n<p>Tahun 1996-an, Abdul Jamil Ridho, pengelola pondok pesantren Darul Hidayah dikota Tulang Bawang, tengah melakukan zikir dan perenungan. Kala sedang khusuk, tanpa sengaja dia melihat kesebatang tanaman. Selanjutnya ia mendekati tanaman tersebut. Sekilas tanaman tersebut mirip dengan singkong yang biasa ia tanam. Dipenuhi rasa penasaran ia mencabut batang singkong tersebut, ternyata akar singkong tersebut berdiameter lebih kecil tetapi panjangnya mencapai satu meter bahkan lebih per batang jalar dalam rangkaian umbi.</p>\r\n<p>Pengembang sekaligus perekayasa singkong "ajaib" ini diserahkan kepada Niti Soedigdo, orang kepercayaan Ridho. Caranya dengan mengwinkan tanaman tersebut dengan singkong karet untuk memperoleh pembesaran pada diameter akarnya. Singkong karet adalah singkong yang tidak bisa dimakan karena mengandung racun. Hasil persilangan pertama dan kedua dari kedua singkong tersebut belum mencapai bentuk maksimal. Pada persilangan ketiga kalinya barulah didapatkan hasil dan bentuk yang maksimal. Pengembangan demi pengembangan pun terus dilakukan oleh Niti.</p>', '2017-01-09 05:35:03', 'greaters', 0, 'greaters/cdf6216185861af8fed2bd1b5b7ad0be.jpg', 0, '', '1', '1');
+(2, 'Singkong Raksasa - Abdul Jamil Ridho dan Niti Soedigdo', 'singkong-raksasa-abdul-jamil-ridho-dan-niti-soedigdo', 1, '<p>Bagi masyarakat Indonesia, singkong merupakan bahan pokok yang sudah tidak asing lagi. Pelbagai macam makanan bisa dibuat dari bahan dasar ini. Mulai dari getuk, tape, combro, misro dan masih banyak makanan lainnya. Umumnya singkong mempunyai ukuran normal sepanjang 40 hingga 50 cm. Namun, singkong yang ditemukan dan dikembangkan oleh Abdul Jamil Ridho dan Niti Soedigdo memang lain daripada yang lain. Sebab singkong temuannya lebih besar dan lebih panjang dari singkong normal.</p>\r\n<p>Tahun 1996-an, Abdul Jamil Ridho, pengelola pondok pesantren Darul Hidayah dikota Tulang Bawang, tengah melakukan zikir dan perenungan. Kala sedang khusuk, tanpa sengaja dia melihat kesebatang tanaman. Selanjutnya ia mendekati tanaman tersebut. Sekilas tanaman tersebut mirip dengan singkong yang biasa ia tanam. Dipenuhi rasa penasaran ia mencabut batang singkong tersebut, ternyata akar singkong tersebut berdiameter lebih kecil tetapi panjangnya mencapai satu meter bahkan lebih per batang jalar dalam rangkaian umbi.</p>\r\n<p>Pengembang sekaligus perekayasa singkong "ajaib" ini diserahkan kepada Niti Soedigdo, orang kepercayaan Ridho. Caranya dengan mengwinkan tanaman tersebut dengan singkong karet untuk memperoleh pembesaran pada diameter akarnya. Singkong karet adalah singkong yang tidak bisa dimakan karena mengandung racun. Hasil persilangan pertama dan kedua dari kedua singkong tersebut belum mencapai bentuk maksimal. Pada persilangan ketiga kalinya barulah didapatkan hasil dan bentuk yang maksimal. Pengembangan demi pengembangan pun terus dilakukan oleh Niti.</p>\r\n<p>sumber: 30 tokoh penemu indonesia, Lilih Prilian Ari Pranowo</p>', '2017-01-09 05:35:03', 'greaters', 0, 'greaters/cdf6216185861af8fed2bd1b5b7ad0be.jpg', 0, '', '1', '1'),
+(3, 'Kapal Ikan Bersirip', 'kapal-ikan-bersirip-2', 1, '<p>Inspirasi bisa ditemukan dimana saja. Misalnya waktu sedang berjalan-jalan ditaman, atau ketika sedang memancing disungai, atau pada saat sedang berkegiatan pun ada kalanya inspirasi tersebut datang dan melintas dipikiran kita. Termasuk tokoh kita ini, Kawilarang, penemu teknologi kapan ikan bersirip. Nama lengkapnya Alex Kawilarang Warouw Masengi. Ia lahir pada 13 Juni 1958, di desa Kinilou, Tomohon, Sulawesi Utara. Pendidikan formalnya dikenyam di Sekolah Dasar Desa Kinilou (lulus tahun 1971), Sekolah Teknik Pertama (lulus 1974), Sekolah Usaha Perikanan Menengah di Manado (lulus 1977), Fakultas Perikanan Unsrat (lulus 1984), Program Master di Faculty of Fisheries Nagasaki University pada tahun 1990, Doktor dari The Graduate School of Marine Science and Engineering Nagasaki University, Jepang, tahun 1993.</p>\r\n<p>Pada 1989, ia menemukan teknologi kapal ikan bersirip yang telah dipatenkan di Jepang. Penemuan ini memungkinkan kapal ikan tidak mudah goyah saat diterjang gelombang besar, dan stabilitas kapal bisa tercapai. Stabilitas kapal adalah kemampuan kapal untuk kembali dalam posisinya semula setelah mengalami guncangan. Kecermatan Alex dalam mengamati ikan terbang antonilah yang mngilhaminya. Mulai dari bentuk tubuh yang montok, sirip, kepala, hingga pergelangan ekornya. Ia heran melihat ikan itu mampu melayang-layang di atas permukaan air laut. Tubuhnya terangkat lewat pergerakan sirip yang relatif panjang dan dorongan pergerakan tubuhnya sendiri.</p>\r\n<p>Ikan ini bisa terbang tinggi bagaikan pesawat udara sedang melayang-layang rendah di atas permukaan laut. Bentuk tubuh dan sifat-sifat khas ikan antoni inilah yang diterapkan menjadi desain badan kapal ikan. Hasilnya tingkat kestabilan kapal ikan relatif menjadi lebih tinggi dibandingkan jenis kapal ikan yang lain. Dari inspirasi ini, Alex melakukan sejumlah pengkajian melalui rangkaian ujicoba. Alex melakukan pengkajian dibeberapa perairan baik nasional maupun internasional. Tak hanya uji lapangan, uji laboratorium pun dilakukan dibeberapa laboratorium ternama. Hasil pengujian stabilitas terhadap kapal ikan tipe sabani dari okinawa menggunakan sirip, dalam kondisi statis naik 17%. Ketika kapal berada dalam kondisi dinamis atau sedang bergerak, tingkat stabilitasnya malah semakin naik yaitu 22%.</p>\r\n<p>Berkat keberhasilan ini, di medio 2005-an, membuat perusahaan galangan kapal di Jepang tertarik untuk memproduksi masal kapal ikan bersirip dengan teknologi yang ditemukan Alex.</p>\r\n<p>sumber: 30 tokoh penemu indonesia, Lilih Prilian Ari Pranowo</p>', '2017-01-10 04:56:16', 'greaters', 0, 'greaters/1c83d86db25401bab44c589f7380aba0.jpg', 0, '', '1', '1'),
+(4, 'Pemacu Produktivitas Kualitas Udang dan Ikan', 'pemacu-produktivitas-kualitas-udang-dan-ikan', 1, '<p>Meski lelaki ini ahli dibidang kimia, tetapi ia enggan menggunakan produk-produk berbahan kimia buatan, khususnya obat-obatan pemicu produktivitas dan kualitas ternak. Sebab obat-obatan yang banyak tersebar dipasaran tersebut tidak baik untuk kesehatan dan memiliki dampak yang buruk untuk keseimbangan lingkungan. Melihat kenyataan tersebut, Arief Mulyana Djurma melakukan sebuah inovasi, dengan menciptakan Mikrobial Plus.<br /><br />Mikrobial adalah teknologi berkonsep pengayaan nutrisi yang manfaat utamanya untuk meningkatkan produktivitas dan kualitas tambak. Aktivator ini merupakan hasil penelitian bioteknologi terapan yang memadukan konsep effective microorganism technology dari Jepang dan pengayaan nutrisi. Adapun mikroba yang digunakan dipilih dari spesies unggul jasad renik tanpa campuran bahan kimia buatan dan rekayasa genetika. Hal tersebut dipilih guna menjadikannya aman 100% terhadap lingkungan.<br /><br />Lokasi lahan percontohan penggunaan mikroba ini dibuat di daerah Dipasena (Lampung), Demak (Jawa Tengah), dan Karawang (Jawa Barat). Terbukti dari uji coba tersebut didapatkan hasil yang cukup mengembirakan. Sebagai contah, hasil yang didapatkan dari tambak yang dijadikan uji coba di daerah Karawang, dalam tempo 65 hari, udang telah mencapai ukuran 30. Padahal rata-rata tambak biasa untuk mencapai ukuran tersebut membutuhkan waktu 90 hari.<br /><br />Selain itu, mikrobial plus ini mempunyai manfaat lain. Yaitu untuk menyembuhkan penyakit stres pada udang, baik yang baru menggejala maupub yang sudah terkena penyakit. Salah satu kunci keberhasilan produk yang diciptakan oleh Arief Mulyana ini adalah dengan menerapkan sistem keseimbangan lingkungan, tanpa sedikitpun membuat kerusakan dikemudian hari.</p>\r\n<p>sumber: 30 tokoh penemu indonesia, Lilih Prilian Ari Pranowo</p>', '2017-01-10 10:13:03', 'greaters', 0, 'greaters/b378b051ac2ff66c7650331e30bf40b0.jpg', 0, '', '1', '1');
 
 -- --------------------------------------------------------
 
@@ -190,7 +192,9 @@ CREATE TABLE `notif` (
 
 INSERT INTO `notif` (`nid`, `waktu`, `judul`, `isi`, `url`, `username`, `status`) VALUES
 (1, '2017-01-03 04:33:40', 'Artikel Anda Reaktor Biogas - Andrias Wiji Setio Pamudji telah disetujui', 'Artikel Anda yang berjudul Reaktor Biogas - Andrias Wiji Setio Pamudji telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com', 'http://www.greatnesia.com/artikel/baca/reaktor-biogas-andrias-wiji-setio-pamudji', 'greaters', 1),
-(2, '2017-01-09 09:05:01', 'Artikel Anda Singkong Raksasa - Abdul Jamil Ridho dan Niti Soedigdo telah disetujui', 'Artikel Anda yang berjudul Singkong Raksasa - Abdul Jamil Ridho dan Niti Soedigdo telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com', 'http://www.greatnesia.com/artikel/baca/singkong-raksasa-abdul-jamil-ridho-dan-niti-soedigdo-2', 'greaters', 1);
+(2, '2017-01-09 09:05:01', 'Artikel Anda Singkong Raksasa - Abdul Jamil Ridho dan Niti Soedigdo telah disetujui', 'Artikel Anda yang berjudul Singkong Raksasa - Abdul Jamil Ridho dan Niti Soedigdo telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com', 'http://www.greatnesia.com/artikel/baca/singkong-raksasa-abdul-jamil-ridho-dan-niti-soedigdo-2', 'greaters', 1),
+(3, '2017-01-10 04:57:17', 'Artikel Anda Kapal Ikan Bersirip telah disetujui', 'Artikel Anda yang berjudul Kapal Ikan Bersirip telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com', 'http://www.greatnesia.com/artikel/baca/kapal-ikan-bersirip-2', 'greaters', 1),
+(4, '2017-01-10 10:13:28', 'Artikel Anda Pemacu Produktivitas Kualitas Udang dan Ikan telah disetujui', 'Artikel Anda yang berjudul Pemacu Produktivitas Kualitas Udang dan Ikan telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com', 'http://www.greatnesia.com/artikel/baca/pemacu-produktivitas-kualitas-udang-dan-ikan', 'greaters', 1);
 
 -- --------------------------------------------------------
 
@@ -208,13 +212,6 @@ CREATE TABLE `penukaran` (
   `keterangan_konfirmasi` text NOT NULL,
   `waktu_konfirmasi` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `penukaran`
---
-
-INSERT INTO `penukaran` (`pid`, `keterangan_penukaran`, `waktu_penukaran`, `username`, `tid`, `status`, `keterangan_konfirmasi`, `waktu_konfirmasi`) VALUES
-(2, '085220150587', '2016-12-28 14:48:05', 'fauzan', 1, 1, '', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -392,7 +389,15 @@ INSERT INTO `sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('f7fd970f7c862c24aedb706a9d2efc4fb9dea190', '::1', 1483949107, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333934393130373b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
 ('ceb9acad92b7cc458aaeb76f7bbd9eb13b877b8b', '::1', 1483949241, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333934393036313b757365726e616d657c733a363a226661757a616e223b69734c6f67696e41646d696e7c623a313b),
 ('b1b44c6e237dba6b016d043aaf2044355c28aa39', '::1', 1483952536, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333935323533363b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
-('a87285d458f75ad4179fb7968c27db3e674af302', '::1', 1483952539, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333935323533363b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b);
+('a87285d458f75ad4179fb7968c27db3e674af302', '::1', 1483952539, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438333935323533363b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('8a3363712defd881a9060b6d584dbf7bdb914b71', '::1', 1484020576, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438343032303537363b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('04a7f1f02798f4eb218bfa5d83945c986ec6a362', '::1', 1484020927, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438343032303833373b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('cefda4652e7032bc955fa973f67190e0adaeb385', '::1', 1484035399, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438343033353339393b),
+('3535fb2b571b3b3fd236046d986c96294dac3715', '::1', 1484036409, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438343033363430393b),
+('ef351d6d763acb435b5e1a67a7e13442b7ed84ea', '::1', 1484039567, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438343033393536373b757365726e616d657c733a383a226772656174657273223b69734c6f67696e7c623a313b),
+('086c6e5264721726eb36c084ccaac9985473173a', '::1', 1484039915, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438343033393931353b),
+('25a0fd8a72fc64a87b033dc16451449cebbcd2e8', '::1', 1484040970, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438343034303937303b),
+('40d8378d5ca6e5015d232769990694b015b263cb', '::1', 1484040970, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438343034303937303b);
 
 -- --------------------------------------------------------
 
@@ -455,7 +460,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`username`, `password`, `email`, `tgl_daftar`, `nama`, `website`, `biodata`, `jenis_member`, `status`, `ip`, `avatar`, `notifikasi`, `sent`, `poin`) VALUES
 ('fauzan', '595d275ad04a4d9a526716390042c1d4', 'azmifauzan@gmail.com', '2016-08-11', 'Fauzan', '', '', 1, '', '', NULL, 1, 0, 0),
-('greaters', '26d55f2b896a8e3263ed67ebde6722dc', 'greatnesia@gmail.com', '2017-01-03', 'Greaters', 'http://www.greatnesia.com', '', 1, '', '', NULL, 1, 0, 10);
+('greaters', '26d55f2b896a8e3263ed67ebde6722dc', 'greatnesia@gmail.com', '2017-01-03', 'Greaters', 'http://www.greatnesia.com', '', 1, '', '', NULL, 1, 0, 20);
 
 --
 -- Indexes for dumped tables
@@ -571,7 +576,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `artikel_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `artikel_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `barang_poin`
 --
@@ -601,12 +606,12 @@ ALTER TABLE `newsletter`
 -- AUTO_INCREMENT for table `notif`
 --
 ALTER TABLE `notif`
-  MODIFY `nid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `nid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `penukaran`
 --
 ALTER TABLE `penukaran`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `pesan`
 --

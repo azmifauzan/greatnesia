@@ -145,11 +145,11 @@ class Artikel extends CI_Controller
             $this->load->library('form_validation');
             $this->form_validation->set_rules('judul', 'Judul', 'required');
             $this->form_validation->set_rules('kategori', 'Kategori', 'trim|required');
-	    $this->form_validation->set_rules('artikel', 'Artikel', 'trim|required');
+	       $this->form_validation->set_rules('artikel', 'Artikel', 'trim|required');
             
             $config['upload_path'] = './uploads';
-	    $config['allowed_types'] = 'gif|jpg|png';
-	    $config['encrypt_name'] = TRUE;	
+	       $config['allowed_types'] = 'gif|jpg|png';
+	       $config['encrypt_name'] = TRUE;	
             
             $this->load->library('upload', $config);
             $judul = $this->input->post("judul");
