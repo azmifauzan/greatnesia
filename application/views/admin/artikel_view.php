@@ -64,7 +64,7 @@
 							<th>Kategori</th>
 							<th>Creator</th>
 							<th>Status</th>
-							<th width="20%">&nbsp;</th>
+							<th width="22%">&nbsp;</th>
 						</tr>
 					</thead>
 					
@@ -90,6 +90,10 @@
 						<td><?php echo $ar->creator; ?></td>
 						<td><?php echo $st; ?></td>
 						<td class="action-td">
+							<?php if($ar->status == 0): ?>
+							<a title="publish" href="<?php echo site_url('adminpanel/artikel/publish/'.$ar->artikel_id); ?>" class="btn btn-small btn-success"><i class="icon-ok"></i></a>
+							<?php endif; ?>
+							<a title="reject" href="<?php echo site_url('adminpanel/artikel/reject/'.$ar->artikel_id); ?>" class="btn btn-small btn-danger"><i class="icon-minus"></i></a>
 							<a title="view artikel" href="#" onclick="clview('<?php echo $ar->artikel_id; ?>')" class="btn btn-small btn-info"><i class="icon-share-alt"></i></a>
 							<a title="edit" href="<?php echo site_url('adminpanel/artikel/edit/'.$ar->artikel_id); ?>" class="btn btn-small"><i class="icon-edit"></i></a>
 							<a title="delete" href="<?php echo site_url('adminpanel/artikel/delete/'.$ar->artikel_id); ?>" class="btn btn-small btn-warning"><i class="icon-remove"></i></a>

@@ -10,7 +10,12 @@ class Login extends CI_Controller
     {
         if($this->session->flashdata('error'))
         {
-            $data['error'] = $this->session->flashdata('error');
+            $data['error'] = $this->session->flashdata('error');            
+            $this->load->view('login_view',$data);
+        }
+        if($this->session->flashdata('info'))
+        {
+            $data['info'] = $this->session->flashdata('info');
             $this->load->view('login_view',$data);
         }
         else

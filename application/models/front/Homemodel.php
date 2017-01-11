@@ -54,7 +54,8 @@ class Homemodel extends CI_Model
 
 	public function getRelatedArtikel($rel,$jum)
 	{
-		$this->db->limit($jum,$rel);
+		$this->db->order_by('artikel_id','RANDOM');
+		$this->db->limit($jum);
 		return $this->db->get('artikel');
 	}
 

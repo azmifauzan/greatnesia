@@ -157,15 +157,18 @@ class Artikel extends CI_Controller
     
     public function edit($id,$red='')
     {
-        $username = $this->session->userdata('username');
-        if($this->ifm->artikelExist($id,$username)){
-            $data['menu'] = 'Artikel';
-            $data['user'] = $this->usm->getUserDetail($username);
-            $data['urnotif'] = $this->usm->countUnreadNotif($username);
+        if($this->ifm->artikelExist($id)){
+            $username = $this->session->userdata('username');
+            $data['menu'] = 'Artikel';        
+            $data['user'] = $this->usm->getUserDetail($username);        
+            $data['jaraktif'] = $this->ifm->countArtikelAktif();
+            $data['jarpending'] = $this->ifm->countArtikelPending();
+            $data['jartolak'] = $this->ifm->countArtikelTolak();
+            $data['jardraft'] = $this->ifm->countArtikelDraft();
             $data['kategori'] = $this->ifm->getAllKategori();
             $data['artikel'] = $this->ifm->getArtikel($id,$username);
             $data['red'] = $red;
-            $this->load->view('artikeledit_view',$data);
+            $this->load->view('admin/artikeledit_view',$data);
         }
         else{
             redirect('artikel');
@@ -180,11 +183,11 @@ class Artikel extends CI_Controller
             $this->load->library('form_validation');
             $this->form_validation->set_rules('judul', 'Judul', 'required');
             $this->form_validation->set_rules('kategori', 'Kategori', 'trim|required|callback_checkKategori');
-	    $this->form_validation->set_rules('artikel', 'Artikel', 'trim|required|xss_clean');
+	        $this->form_validation->set_rules('artikel', 'Artikel', 'trim|required');
             
             $config['upload_path'] = './uploads';
-	    $config['allowed_types'] = 'gif|jpg|png';
-	    $config['encrypt_name'] = TRUE;	
+	        $config['allowed_types'] = 'gif|jpg|png';
+	        $config['encrypt_name'] = TRUE;	
             
             $this->load->library('upload', $config);
             $judul = $this->input->post("judul");
@@ -205,7 +208,7 @@ class Artikel extends CI_Controller
                 if ($this->form_validation->run() && $this->upload->do_upload('fileimage'))
                 {					
                     $image = $this->upload->data();
-                    $u = $this->session->userdata("username");
+                    $u = $this->input->post("creator");
                     if($image["image_width"] != 560 || $image["image_heigth"] != 300)
                     { 						
                         $dircrop = "./uploads/crop/".$u;
@@ -259,42 +262,52 @@ class Artikel extends CI_Controller
                     }
                     
                     $this->ifm->updateData($u,$id,$judul,$kategori,$isi,$url,$u.'/'.$image["file_name"]);
-                    redirect('artikel/'.$red,'refresh');
+                    redirect('adminpanel/artikel/'.$red,'refresh');
                 }
                 else
                 {					
                         if(!$this->upload->do_upload())
                             $data["error"] = $this->upload->display_errors('<p class="help-block" style="color:red;">','</p>');
-                        $username = $this->session->userdata('username');
-                        $data['menu'] = 'Artikel';
-                        $data['user'] = $this->usm->getUserDetail($username);
-                        $data['urnotif'] = $this->usm->countUnreadNotif($username);
+                        $username = $this->input->post('username');
+                        $data['menu'] = 'Artikel';        
+                        $data['user'] = $this->usm->getUserDetail($username);        
+                        $data['jaraktif'] = $this->ifm->countArtikelAktif();
+                        $data['jarpending'] = $this->ifm->countArtikelPending();
+                        $data['jartolak'] = $this->ifm->countArtikelTolak();
+                        $data['jardraft'] = $this->ifm->countArtikelDraft();
                         $data['kategori'] = $this->ifm->getAllKategori();
-                        $this->load->view('artikeladd_view',$data);
+                        $data['artikel'] = $this->ifm->getArtikel($id,$username);
+                        $data['red'] = $red;
+                        $this->load->view('admin/artikeledit_view',$data);
                 }
             }
             else 
             {	
                     if ($this->form_validation->run())
                     {
-                        $u = $this->session->userdata("username");
+                        $u = $this->input->post("creator");
                         $this->ifm->updateDataNoImg($u,$id,$judul,$kategori,$isi,$url);
-                        redirect('artikel/'.$red,'refresh');
+                        redirect('adminpanel/artikel/'.$red,'refresh');
                     }
                     else 
                     {					
                         $username = $this->session->userdata('username');
-                        $data['menu'] = 'Artikel';
-                        $data['user'] = $this->usm->getUserDetail($username);
-                        $data['urnotif'] = $this->usm->countUnreadNotif($username);
+                        $data['menu'] = 'Artikel';        
+                        $data['user'] = $this->usm->getUserDetail($username);        
+                        $data['jaraktif'] = $this->ifm->countArtikelAktif();
+                        $data['jarpending'] = $this->ifm->countArtikelPending();
+                        $data['jartolak'] = $this->ifm->countArtikelTolak();
+                        $data['jardraft'] = $this->ifm->countArtikelDraft();
                         $data['kategori'] = $this->ifm->getAllKategori();
-                        $this->load->view('artikeladd_view',$data);
+                        $data['artikel'] = $this->ifm->getArtikel($id,$username);
+                        $data['red'] = $red;
+                        $this->load->view('admin/artikeledit_view',$data);
                     }
             }
         }
         else
         {
-            redirect('artikel','refresh');
+            redirect('admin/artikel','refresh');
         }
     }
     
@@ -305,25 +318,45 @@ class Artikel extends CI_Controller
             $this->ifm->deleteData($id,$username);
         }
         
-        redirect('artikel/'.$red,'refresh');       
+        redirect('adminpanel/artikel/'.$red,'refresh');       
+    }
+
+    public function publish($id, $red = '')
+    {
+        $data['menu'] = 'Artikel';
+        $username = $this->session->userdata('username');
+        $data['user'] = $this->usm->getUserDetail($username);
+        $ar = $this->ifm->getArtikel($id);
+        $data['artikel'] = $ar;
+        $data['red'] = $red;
+        $this->load->view('admin/publish_view',$data);
     }
         
-    public function publish($id,$red = '')
+    public function dopublish()
     {
-        //$this->output->enable_profiler(TRUE);
-        //$username = $this->session->userdata('username');
-        $this->ifm->setStatus($id,1);
-        $ar = $this->ifm->getArtikel($id);
-        $user = $this->usm->getMemberDetail($ar->creator);
-        $judul = 'Artikel Anda '.$ar->judul.' telah disetujui';
-        $isi = 'Artikel Anda yang berjudul '.$ar->judul.' telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com';
-        $url = 'http://www.greatnesia.com/artikel/baca/'.$ar->url;
-        $em = 'Hai '.$user->nama.',<br/><br/>
-            Artikel Anda yang berjudul '.$ar->judul.' telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com<br/><br/>
-            Anda dapat melihat artikel tersebut pada link berikut ini :<br/>'.anchor('http://www.greatnesia.com/artikel/baca/'.$ar->url);
-        $this->_tambahNotifikasi($ar,$judul,$isi,$url,$em);
-        $this->ifm->tambahPoin($user->username,5);
-        redirect('adminpanel/artikel/'.$red);
+        if($this->input->post('publish'))
+        {
+            $id = $this->input->post('id');
+            $red = $this->input->post('red');
+            $this->ifm->setStatus($id,1);
+            $ar = $this->ifm->getArtikel($id);
+            $user = $this->usm->getMemberDetail($ar->creator);
+            $judul = 'Artikel Anda '.$ar->judul.' telah disetujui';
+            $isi = 'Artikel Anda yang berjudul: '.$ar->judul.' telah selesai ditinjau oleh moderator kami dan layak untuk diterbitkan di Greatnesia.com';
+            $url = 'http://www.greatnesia.com/artikel/baca/'.$ar->url;
+            $em = 'Hai '.$user->nama.',<br/><br/>
+                Artikel Anda yang berjudul '.$ar->judul.' telah selesai ditinjau oleh reviewer kami dan layak untuk diterbitkan di Greatnesia.com<br/><br/>
+                Anda dapat melihat artikel tersebut pada link berikut ini :<br/>'.anchor('http://www.greatnesia.com/artikel/baca/'.$ar->url);
+            $this->_tambahNotifikasi($ar,$judul,$isi,$url,$em);
+
+            $pn = $this->input->post('poin');
+            $this->ifm->tambahPoin($user->username,$pn);
+            redirect('adminpanel/artikel/'.$red);
+        }
+        else
+        {
+            redirect('adminpanel/artikel');
+        }
     }
     
     public function reject($id,$red = '')

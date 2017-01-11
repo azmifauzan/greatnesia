@@ -62,6 +62,12 @@
 		<strong>Error : </strong><?php echo $error; ?>
 	</div>
 	<?php endif; ?>
+
+	<?php if(isset($info)) : ?>
+	<div class="alert alert-info" align="center">
+		<strong>Info : </strong><?php echo $info; ?>
+	</div>
+	<?php endif; ?>
 	
 	<div id="login-header">
 		

@@ -173,10 +173,9 @@ class Infomodel extends CI_Model
         return $this->db->update('artikel',$data);
     }
     
-    public function artikelExist($id,$username)
+    public function artikelExist($id)
     {
         $this->db->where('artikel_id',$id);
-        $this->db->where('creator',$username);
         $this->db->from('artikel');
         $cek = $this->db->count_all_results();
         if($cek > 0)

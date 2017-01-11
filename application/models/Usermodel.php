@@ -5,6 +5,18 @@ class Usermodel extends CI_Model
     {
         parent::__construct();
     }
+
+    public function addUser($us,$ps,$em,$nm)
+    {
+        $data = array(
+            'username' => $us,
+            'password' => MD5($ps),
+            'email' => strtolower($em),
+            'nama' => $nm
+        );
+
+        return $this->db->insert('user',$data);
+    }
     
     public function getUserDetail($u)
     {

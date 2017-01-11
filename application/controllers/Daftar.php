@@ -4,6 +4,7 @@ class Daftar extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('usermodel','usm');
     }
     
     public function index()
@@ -31,12 +32,18 @@ class Daftar extends CI_Controller
 	    $this->form_validation->set_rules('nama', 'Nama', 'required');
 	    if ($this->form_validation->run() == FALSE)
 	    {
-		$data['error'] = 'Terdapat kesalahan dalam data yang Anda inputkan, mohon diperbaiki kembali !';
-		$this->load->view('daftar_view',$data);
+			$data['error'] = 'Terdapat kesalahan dalam data yang Anda inputkan, mohon diperbaiki kembali !';
+			$this->load->view('daftar_view',$data);
 	    }
 	    else
 	    {
-		
+			$us = $this->input->post('username');
+			$ps = $this->input->post('password');
+			$em = $this->input->post('email');
+			$nm = $this->input->post('nama');
+			$this->usm->addUser($us,$ps,$em,$nm);
+			$this->session->set_flashdata('info','Pendaftaran Anda berhasil. Silahkan login menggunakan akun Anda!');
+			redirect('ucp/login','refresh');
 	    }
 	}
 	else

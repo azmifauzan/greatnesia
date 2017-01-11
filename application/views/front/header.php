@@ -6,7 +6,7 @@
   <!-- Title and other stuffs -->
   <title><?php if(isset($title)) echo $title.' | '; ?>Greatnesia.com - Wonderful Indonesia!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
+  <meta name="description" content="Greatnesia, Informasi positif dari masyarakat untuk Indonesia Hebat!">
   <meta name="keywords" content="">
   <meta name="author" content="">
 

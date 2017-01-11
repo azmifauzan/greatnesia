@@ -16,7 +16,7 @@ class Rss extends CI_Controller
 		$this->load->library('feed');
 		$feed = new Feed();
 		$feed->title = 'Greatnesia.com - Wonderfull Indonesia!';
-	    $feed->description = 'Your description';
+	    $feed->description = 'Greatnesia.com, Informasi positif dari masyarakat untuk Indonesia Hebat!';
 	    $feed->link = 'http://www.greatnesia.com';
 	    $feed->lang = 'id';
 	    $feed->pubdate = $this->rsm->getLastArtikelDate();
