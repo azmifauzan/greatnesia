@@ -10,11 +10,11 @@ class Artikelmodel extends CI_Model
 		parent::__construct();
 	}
 
-	public function getArtikelDetil($id,$url)
+	public function getArtikelDetil($id)
 	{
 		$this->db->select('artikel.kategori_id, artikel.url, artikel.artikel_id, artikel.judul, artikel.tgl_dibuat, artikel.isi, kategori.nama, artikel.creator, artikel.image');
 		$this->db->where('artikel_id',$id);
-		$this->db->where('url',$url);
+		//$this->db->where('url',$url);
 		$this->db->join('kategori','artikel.kategori_id = kategori.kategori_id');
 		return $this->db->get('artikel')->row();
 	}

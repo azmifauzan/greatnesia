@@ -11,10 +11,10 @@ class Artikel extends CI_Controller
 		$this->load->model('front/artikelmodel','arm');
 	}
 
-	public function baca($id,$url)
+	public function baca($id,$url = '')
 	{
 		$jumlain = 10;
-		$data['artikel'] = $this->arm->getArtikelDetil($id,$url);
+		$data['artikel'] = $this->arm->getArtikelDetil($id);
 		$data['title'] = $data['artikel']->judul;
 		$data['lain'] = $this->arm->getTopArtikel($jumlain,$id);
 		$data["quote"] = $this->arm->getRandomQuote();

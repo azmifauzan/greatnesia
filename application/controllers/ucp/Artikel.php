@@ -174,7 +174,7 @@ class Artikel extends CI_Controller
                 if ($this->form_validation->run() && $this->upload->do_upload('fileimage'))
                 {					
                     $image = $this->upload->data();
-                    if($image["image_width"] != 560 || $image["image_heigth"] != 300)
+                    if($image["image_width"] != 700 || $image["image_height"] != 400)
                     {
                         $u = $this->session->userdata("username");
                         $dircrop = "./uploads/crop/".$u;
@@ -194,12 +194,13 @@ class Artikel extends CI_Controller
                         $config['source_image'] = './uploads/'.$image["file_name"];						
                         $config['new_image'] = $dircrop;
                         $img['maintain_ratio']= TRUE;		            
-                        $config['width']  = '300' ;
-                        $config['height'] = '300' ;
+                        $config['width']  = '700' ;
+                        $config['height'] = '400' ;
                         $this->image_lib->initialize($config); 
                         $this->image_lib->resize();						
                         $this->image_lib->clear();
                     
+                        /*
                         $config['image_library'] = 'GD2';
                         $config['source_image'] = './uploads/crop/'.$u.'/'.$image["file_name"];						
                         $config['new_image'] = $dircrop;
@@ -211,6 +212,7 @@ class Artikel extends CI_Controller
                         $this->image_lib->initialize($config); 
                         $this->image_lib->crop();						
                         $this->image_lib->clear();
+                        */
                                 
                         $config['image_library'] = 'GD2';
                         $config['source_image'] = './uploads/crop/'.$u.'/'.$image["file_name"];							
@@ -354,7 +356,7 @@ class Artikel extends CI_Controller
                     $imgbefore = $this->ifm->getArtikelDetilFromId($id)->image;					
                     $image = $this->upload->data();
                     $u = $this->session->userdata("username");
-                    if($image["image_width"] != 560 || $image["image_heigth"] != 300)
+                    if($image["image_width"] != 700 || $image["image_height"] != 400)
                     { 						
                         $dircrop = "./uploads/crop/".$u;
                         $dirthumb = "./uploads/thumb/".$u;
@@ -373,23 +375,25 @@ class Artikel extends CI_Controller
                         $config['source_image'] = './uploads/'.$image["file_name"];						
                         $config['new_image'] = $dircrop;
                         $img['maintain_ratio']= TRUE;		            
-                        $config['width']  = '300' ;
-                        $config['height'] = '300' ;
+                        $config['width']  = '700' ;
+                        $config['height'] = '400' ;
                         $this->image_lib->initialize($config); 
                         $this->image_lib->resize();						
                         $this->image_lib->clear();
                     
+                        /*
                         $config['image_library'] = 'GD2';
                         $config['source_image'] = './uploads/crop/'.$u.'/'.$image["file_name"];						
                         $config['new_image'] = $dircrop;
                         $config['x_axis'] = '0';
                         $config['y_axis'] = '0';
                         $config['width']  = '300' ;
-                        $config['height'] = '300' ;
+                        $config['height'] = '300' ;                        
                                 
                         $this->image_lib->initialize($config); 
                         $this->image_lib->crop();						
                         $this->image_lib->clear();
+                        */
                                 
                         $config['image_library'] = 'GD2';
                         $config['source_image'] = './uploads/crop/'.$u.'/'.$image["file_name"];							
@@ -457,7 +461,10 @@ class Artikel extends CI_Controller
     {
         $username = $this->session->userdata('username');
         if($this->ifm->artikelExist($id,$username)){
+            $imgbefore = $this->ifm->getArtikelDetilFromId($id)->image;
             $this->ifm->deleteData($id,$username);
+            unlink("uploads/crop/".$imgbefore);
+            unlink("uploads/thumb/".substr($imgbefore,0,-4)."_thumb".substr($imgbefore,-4));
         }
         
         redirect('ucp/artikel/'.$red,'refresh');       

@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"el",
+				"else"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"strto",
+				"strtolower"
+			],
+			[
 				"artikel",
 				"artikel_id"
 			],
@@ -52,27 +64,34 @@
 	"buffers":
 	[
 		{
-			"file": "application/controllers/Rss.php",
+			"file": "application/controllers/adminpanel/Artikel.php",
 			"settings":
 			{
-				"buffer_size": 833,
-				"line_ending": "Windows",
-				"name": "<?php"
-			}
-		},
-		{
-			"file": "application/models/front/Artikelmodel.php",
-			"settings":
-			{
-				"buffer_size": 867,
+				"buffer_size": 18203,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/controllers/Artikel.php",
+			"file": "application/models/front/Homemodel.php",
 			"settings":
 			{
-				"buffer_size": 479,
+				"buffer_size": 1583,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/admin/artikeledit_view.php",
+			"settings":
+			{
+				"buffer_size": 5772,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/models/admin/Infomodel.php",
+			"settings":
+			{
+				"buffer_size": 6078,
 				"line_ending": "Windows"
 			}
 		}
@@ -116,30 +135,39 @@
 		"/D/dev/laravel/htdocs/greatnesia.com/application/models/admin",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/models/front",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/views/admin",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front",
 		"/D/dev/laravel/htdocs/greatnesia.com/front",
 		"/D/dev/laravel/htdocs/greatnesia.com/front/style"
 	],
 	"file_history":
 	[
+		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/ucp/Artikel.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/Rss.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/header.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/views/admin/artikelpending_view.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/views/admin/artikel_view.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/views/admin/publish_view.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/views/artikelpending_view.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/models/front/Artikelmodel.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/Daftar.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/views/daftar_view.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/models/Usermodel.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/ucp/Login.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/views/login_view.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/Artikel.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/front/style/style.css",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/models/front/Rssmodel.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/models/admin/Infomodel.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/ucp/Artikel.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/models/Infomodel.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/artikel_view.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/Artikel.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/home_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/footer.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/models/front/Artikelmodel.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/header.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/contact_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/artikeledit_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/faq_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/Home.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/sidebar.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/views/daftar_view.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/views/login_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/models/front/Homemodel.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/adminpanel/Artikel.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/adminpanel/Quote.php",
@@ -147,11 +175,9 @@
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/admin/quoteadd_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/artikeladd_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/models/admin/Quotemodel.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/views/admin/artikel_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/admin/header.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/front/style/ddlevelsmenu-topbar.css",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/models/admin/Usermodel.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/views/admin/artikelpending_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/notif_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/artikel_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/config/routes.php",
@@ -163,13 +189,11 @@
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/artikelterbit_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/cari_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/artikeltolak_view.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/views/artikelpending_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/artikeldraft_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/README.md",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/ucp/Profil.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/ucp/Poin.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/ucp/Notif.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/ucp/Login.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/ucp/Home.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/ucp/Daftar.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/admin/verify_view.php",
@@ -255,48 +279,49 @@
 			[
 				{
 					"buffer": 0,
-					"file": "application/controllers/Rss.php",
+					"file": "application/controllers/adminpanel/Artikel.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 833,
+						"buffer_size": 18203,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								777,
-								777
+								14801,
+								14801
 							]
 						],
 						"settings":
 						{
-							"auto_name": "<?php",
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 4920.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "application/models/front/Artikelmodel.php",
+					"file": "application/models/front/Homemodel.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 867,
+						"buffer_size": 1583,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								679,
-								679
+								1368,
+								1368
 							]
 						],
 						"settings":
@@ -305,7 +330,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 375.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -313,19 +338,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "application/controllers/Artikel.php",
+					"file": "application/views/admin/artikeledit_view.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 479,
+						"buffer_size": 5772,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								374,
-								374
+								5571,
+								5571
 							]
 						],
 						"settings":
@@ -334,10 +359,40 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1719.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "application/models/admin/Infomodel.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6078,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5073,
+								5073
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2541.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

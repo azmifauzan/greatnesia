@@ -36,7 +36,8 @@
                            
                            <?php if($artikel->image != '') : ?>
                            <!-- Thumbnail -->
-                           <div class="bthumb2">
+                           <!-- <div class="bthumb2"> -->
+                           <div class="well tengah">
                               <img src="<?php echo base_url('uploads/crop/'.$artikel->image); ?>" alt="<?php echo $artikel->judul; ?>" />
                            </div>
                            <?php endif; ?>

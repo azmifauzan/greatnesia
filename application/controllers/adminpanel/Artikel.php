@@ -195,6 +195,7 @@ class Artikel extends CI_Controller
             $isi = $this->input->post("artikel");
             $url = url_title(strtolower($judul));
             $id = $this->input->post("id");
+            $ar = $this->ifm->getArtikelDetilFromId($id);
             
             $i=1;
             while($this->ifm->isUrlExist($url))
@@ -209,7 +210,7 @@ class Artikel extends CI_Controller
                 {					
                     $image = $this->upload->data();
                     $u = $this->input->post("creator");
-                    if($image["image_width"] != 560 || $image["image_heigth"] != 300)
+                    if($image["image_width"] != 700 || $image["image_height"] != 400)
                     { 						
                         $dircrop = "./uploads/crop/".$u;
                         $dirthumb = "./uploads/thumb/".$u;
@@ -228,12 +229,13 @@ class Artikel extends CI_Controller
                         $config['source_image'] = './uploads/'.$image["file_name"];						
                         $config['new_image'] = $dircrop;
                         $img['maintain_ratio']= TRUE;		            
-                        $config['width']  = '300' ;
-                        $config['height'] = '300' ;
+                        $config['width']  = '700' ;
+                        $config['height'] = '400' ;
                         $this->image_lib->initialize($config); 
                         $this->image_lib->resize();						
                         $this->image_lib->clear();
                     
+                        /*
                         $config['image_library'] = 'GD2';
                         $config['source_image'] = './uploads/crop/'.$u.'/'.$image["file_name"];						
                         $config['new_image'] = $dircrop;
@@ -245,6 +247,7 @@ class Artikel extends CI_Controller
                         $this->image_lib->initialize($config); 
                         $this->image_lib->crop();						
                         $this->image_lib->clear();
+                        */
                                 
                         $config['image_library'] = 'GD2';
                         $config['source_image'] = './uploads/crop/'.$u.'/'.$image["file_name"];							
@@ -259,6 +262,8 @@ class Artikel extends CI_Controller
                         $this->image_lib->clear();
                         
                         unlink('./uploads/'.$image["file_name"]);
+                        unlink('./uploads/crop/'.$ar->image);
+                        unlink('./uploads/thumb/'.substr($ar->image,0,-4)."_thumb".substr($ar->image,-4));
                     }
                     
                     $this->ifm->updateData($u,$id,$judul,$kategori,$isi,$url,$u.'/'.$image["file_name"]);
@@ -315,7 +320,10 @@ class Artikel extends CI_Controller
     {
         $username = $this->session->userdata('username');
         if($this->ifm->artikelExist($id,$username)){
+            $imgbefore = $this->ifm->getArtikelDetilFromId($id)->image;
             $this->ifm->deleteData($id,$username);
+            unlink("uploads/crop/".$imgbefore);
+            unlink("uploads/thumb/".substr($imgbefore,0,-4)."_thumb".substr($imgbefore,-4));
         }
         
         redirect('adminpanel/artikel/'.$red,'refresh');       
