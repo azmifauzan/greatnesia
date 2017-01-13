@@ -34,7 +34,7 @@
                            
                            <!-- Meta details -->
                            <div class="meta">
-                              <i class="icon-calendar"></i><?php echo date('d M Y',strtotime($ar->tgl_dibuat)); ?><i class="icon-user"></i> <a href="<?php echo site_url('penulis/profil/'.$ar->creator); ?>"><?php echo $ar->creator; ?></a> <i class="icon-folder-open"></i> <a href="<?php echo site_url('home/kategori/'.$ar->kategori_id.'/'.url_title($ar->nama,'-',TRUE)); ?>"><?php echo $ar->nama; ?></a>
+                              <i class="icon-calendar"></i><?php echo date('d M Y',strtotime($ar->tgl_dibuat)); ?><i class="icon-user"></i> <?php echo $ar->creator; ?> <i class="icon-folder-open"></i> <a href="<?php echo site_url('home/kategori/'.$ar->kategori_id.'/'.url_title($ar->nama,'-',TRUE)); ?>"><?php echo $ar->nama; ?></a>
                            </div>
                            
                            <?php if($ar->image != '') : ?>

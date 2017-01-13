@@ -28,12 +28,14 @@ class Profil extends CI_Controller
             $this->load->library('form_validation');
             $this->form_validation->set_rules('nama', 'Nama', 'trim|required');
 	    $this->form_validation->set_rules('website', 'Website', 'trim');	
-            $this->form_validation->set_rules('biodata', 'Biodata', 'trim|xss_clean');
+            $this->form_validation->set_rules('biodata', 'Biodata', 'trim');
 	    
 	    $nama = $this->input->post('nama');
 	    $web = $this->input->post('website');
 	    $bio = $this->input->post('biodata');
 	    $pass = $this->input->post('password');
+	    $username = $this->session->userdata('username');
+	    $ava = $this->usm->getUserDetail($username)->avatar;
 	    
             if(trim($_FILES["avatar"]["name"])!='')
 	    {
@@ -68,6 +70,10 @@ class Profil extends CI_Controller
 			$this->usm->uodateDataWithPass($this->session->userdata('username'),$nama,$web,$bio,$pass,$image["file_name"]);
 		    
 		    $this->session->set_flashdata('info','Profil berhasil diupdate.');
+
+		    if($ava != '')
+		    	unlink('uploads/avatar/'.$ava);
+
 		    redirect('ucp/profil','refresh');
 		}
 		else

@@ -44,7 +44,22 @@
                            
                            <?php echo $artikel->isi; ?>
                            <div class="clearfix"></div>
+                        </div>                        
+
+                        <div class="comments">
+                        <ul class="comment-list">
+                          <li class="comment">
+                          <div class="comment-author">Penulis:</div>
+                            <a class="pull-left" href="<?php echo site_url('penulis/profil/'.$penulis->username); ?>">
+                              <img class="avatar" src="<?php if($penulis->avatar != '') echo site_url('uploads/avatar/'.$penulis->avatar); else echo site_url('uploads/avatar/default.png'); ?>">
+                            </a>
+                            <div class="comment-author"><a href="<?php echo site_url('penulis/profil/'.$penulis->username); ?>"><?php echo $penulis->nama; ?></a></div>
+                            <p>&nbsp;<?php echo '"'.$penulis->biodata.'"'; ?></p>
+                          </li>
+                        </ul>
                         </div>
+
+                        <hr/>
 
                         <div class="post-foot well">
                            <!-- Social media icons -->
@@ -59,6 +74,7 @@
                         </div>
                         
                         <hr/>
+
                         <div class="comments">
                         <div class="fb-comments" data-href="<?php echo site_url('artikel/baca/'.$artikel->artikel_id.'/'.$artikel->url); ?>" data-numposts="10" data-width="750"></div>
                         </div>

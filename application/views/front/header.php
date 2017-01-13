@@ -4,11 +4,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <!-- Title and other stuffs -->
-  <title><?php if(isset($title)) echo $title.' | '; ?>Greatnesia.com - Wonderful Indonesia!</title>
+  <title><?php if(isset($title)) echo $title.' | '; ?>Greatnesia.com - Indonesia Zamrud Khatulistiwa!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Greatnesia, Informasi positif dari masyarakat untuk Indonesia Hebat!">
-  <meta name="keywords" content="">
-  <meta name="author" content="">
+  <meta name="keywords" content="indonesia, hebat, informasi, positif, masyarakat, cerita, alam, budaya, bangga">
+  <meta name="author" content="Fauzan Azmi">
 
   <!-- Stylesheets -->
   <!-- Bootstrap -->
@@ -33,7 +33,7 @@
   <![endif]-->
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="<?php echo base_url(); ?>front/img/favicon/favicon.png">
+  <link rel="shortcut icon" href="<?php echo base_url(); ?>icon.png">
 </head>
 <body>
   <!-- Sliding panel starts-->
