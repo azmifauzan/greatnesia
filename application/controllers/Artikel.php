@@ -19,6 +19,7 @@ class Artikel extends CI_Controller
 		$data['lain'] = $this->arm->getTopArtikel($jumlain,$id);
 		$data["quote"] = $this->arm->getRandomQuote();
 		$data["penulis"] = $this->arm->getUserDetil($data["artikel"]->creator);
+		$data["footer"] = "yes";
 		$this->load->view('front/artikel_view',$data);
 	}
 }
