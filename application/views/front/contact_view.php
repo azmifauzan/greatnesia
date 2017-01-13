@@ -29,7 +29,7 @@
                         <!-- Post one -->
                         <div class="entry">
                           <h2>Hubungi Kami</h2>
-                          <p></p>                          
+                          <p>Saran, kritik, pertanyaan dan lain sebagainya dapat disampaikan kepada kami melalui email : greatnesia (at) gmail (dot) com. <br/>Atau dapat juga disampaikan melalui facebook page dan twitter kami.</p>                          
                           <div class="clearfix"></div>
                         </div>                       
                         

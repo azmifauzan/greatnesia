@@ -32,20 +32,22 @@ class Usermodel extends CI_Model
         return $this->db->count_all_results();
     }
     
-    public function updateData($u,$nama,$web,$bio,$img)
+    public function updateData($u,$nama,$web,$bio,$img,$fb,$tw)
     {
         $data = array(
             'nama' => $nama,
             'website' =>$web,
             'biodata' => $bio,
-            'avatar' => $img
+            'avatar' => $img,
+            'facebook' => $fb,
+            'twitter' => $tw
         );
         
         $this->db->where('username',$u);
         return $this->db->update('user',$data);
     }
     
-    public function updateDataWithPass($u,$nama,$web,$bio,$pass,$img)
+    public function updateDataWithPass($u,$nama,$web,$bio,$pass,$img,$fb,$tw)
     {
         $data = array(
             'nama' => $nama,
@@ -53,6 +55,8 @@ class Usermodel extends CI_Model
             'biodata' => $bio,
             'avatar' => $img,
             'password' => MD5($pass),
+            'facebook' => $fb,
+            'twitter' => $tw
         );
         
         $this->db->where('username',$u);

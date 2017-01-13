@@ -42,6 +42,20 @@
 						</div> <!-- /controls -->
 					</div>
 					<div class="control-group">											
+						<label class="control-label" for="fb">Facebook</label>
+						<div class="controls">
+							<input type="text" class="input-medium span3" id="fb" name="fb" value="<?php echo $user->facebook; ?>" placeholder="https://www.facebook.com/Greatnesia">
+							<?php echo form_error('fb','<p class="help-block" style="color:red;">','</p>'); ?>
+						</div> <!-- /controls -->
+					</div>
+					<div class="control-group">											
+						<label class="control-label" for="tw">Twitter</label>
+						<div class="controls">
+							<input type="text" class="input-medium span3" id="tw" name="tw" value="<?php echo $user->twitter; ?>" placeholder="https://twitter.com/greatnesia">
+							<?php echo form_error('twitter','<p class="help-block" style="color:red;">','</p>'); ?>
+						</div> <!-- /controls -->
+					</div>
+					<div class="control-group">											
 						<label class="control-label" for="website">Biodata</label>
 						<div class="controls">
 							<textarea rows="4" name="biodata"><?php echo $user->biodata; ?></textarea>

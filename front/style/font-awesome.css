@@ -538,3 +538,12 @@ ul.icons li [class*=" icon-"] {
 .icon-github-alt:before           { content: "\f113"; }
 .icon-folder-close-alt:before     { content: "\f114"; }
 .icon-folder-open-alt:before      { content: "\f115"; }
+
+.pull-left2 {
+  float: left;
+  margin-right: 25px;
+}
+[class^="icon-"].pull-left2,
+[class*=" icon-"].pull-left2 {
+  margin-right: .3em;
+}

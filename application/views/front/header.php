@@ -71,7 +71,7 @@
           <div class="logo">
             <div class="logo-image">
               <!-- Image link -->
-              <a href="index.html"><i class="icon-user blue"></i></a>
+              <a href="<?php echo base_url(); ?>"><img style="margin-top:25px;" src="<?php echo site_url('icon.png'); ?>" /></a>
             </div>
             <div class="logo-text">
               <h1><a href="<?php echo site_url('home'); ?>">Great<span class="lightblue">Nesia</span></a></h1>

@@ -30,7 +30,7 @@
                            
                            <!-- Meta details -->
                            <div class="meta">
-                              <i class="icon-calendar"></i><?php echo date('d M Y',strtotime($artikel->tgl_dibuat)); ?><i class="icon-user"></i> <?php echo $artikel->creator; ?> <i class="icon-folder-open"></i> <a href="<?php echo site_url('home/kategori/'.$artikel->kategori_id.'/'.url_title($artikel->nama,'-',TRUE)); ?>"><?php echo $artikel->nama; ?></a>
+                              <i class="icon-calendar"></i><?php echo date('d M Y',strtotime($artikel->tgl_dibuat)); ?><i class="icon-user"></i> <a href="<?php echo site_url('penulis/profil/'.$artikel->creator); ?>"><?php echo $artikel->creator; ?></a> <i class="icon-folder-open"></i> <a href="<?php echo site_url('home/kategori/'.$artikel->kategori_id.'/'.url_title($artikel->nama,'-',TRUE)); ?>"><?php echo $artikel->nama; ?></a>
                               <span class="pull-right"><span class='st_facebook_hcount' displayText='Facebook'></span><span class='st_twitter_hcount' displayText='Tweet'></span><span class='st__hcount' displayText=''></span></span>
                            </div>
                            

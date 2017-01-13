@@ -32,6 +32,8 @@ class Profil extends CI_Controller
 	    
 	    $nama = $this->input->post('nama');
 	    $web = $this->input->post('website');
+	    $fb = $this->input->post('fb');
+	    $tw = $this->input->post('tw');
 	    $bio = $this->input->post('biodata');
 	    $pass = $this->input->post('password');
 	    $username = $this->session->userdata('username');
@@ -65,9 +67,9 @@ class Profil extends CI_Controller
 		    }
 		
 		    if($pass == "")
-			$this->usm->updateData($this->session->userdata('username'),$nama,$web,$bio,$image["file_name"]);
+			$this->usm->updateData($this->session->userdata('username'),$nama,$web,$bio,$image["file_name"],$fb,$tw);
 		    else
-			$this->usm->uodateDataWithPass($this->session->userdata('username'),$nama,$web,$bio,$pass,$image["file_name"]);
+			$this->usm->uodateDataWithPass($this->session->userdata('username'),$nama,$web,$bio,$pass,$image["file_name"],$fb,$tw);
 		    
 		    $this->session->set_flashdata('info','Profil berhasil diupdate.');
 

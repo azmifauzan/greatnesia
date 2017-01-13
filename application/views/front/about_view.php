@@ -1,7 +1,6 @@
 <?php $this->load->view('front/header'); ?>
 
 <!-- Page heading -->
-  <!-- Give background color class on below line (bred, bgreen, borange, bviolet, blightblue, bblue) -->
   <div class="page-heading blightblue">
     <div class="container">
       <div class="row">
@@ -29,7 +28,8 @@
                         <!-- Post one -->
                         <div class="entry">
                           <h2>Tentang Kami</h2>
-                          <p></p>                          
+                          <p><i>Stories of Optimistic - Sanguine - Positive to be Greater Indonesia.</i></p>
+                          <p>Greatnesia, berawal dari keprihatinan kami terhadap berita yang beredar dimedia online dan media sosial, dimana setiap harinya selalu saja diisi dengan berita seputar kejahatan, keprihatinan, kejelekan, politik dan berita jelek lainnya. Sangat jarang sekali, kalaupun ada porsinya hampir dibawah 10% yang menyajikan ataupun menyebarkan berita positif. Untuk itulah kami bermaksud untuk membuat greatnesia.com ini sebagai wadah dan penyeimbang berita dan informasi positif di Indonesia khususnya dan didunia pada umumnya. Semoga dengan adanya wadah ini, dapat menjadi pembangkit semangat dan pemicu motivasi bagi yang membacanya.</p>                          
                           <div class="clearfix"></div>
                         </div>                       
                         
