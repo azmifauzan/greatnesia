@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"base",
+				"base_url"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
 				"a",
 				"ava"
 			],
@@ -72,26 +80,18 @@
 	"buffers":
 	[
 		{
-			"file": "application/controllers/Penulis.php",
+			"file": "application/views/front/footer.php",
 			"settings":
 			{
-				"buffer_size": 1238,
+				"buffer_size": 2191,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/models/front/Artikelmodel.php",
+			"file": "application/controllers/Artikel.php",
 			"settings":
 			{
-				"buffer_size": 1690,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/front/home_view.php",
-			"settings":
-			{
-				"buffer_size": 3721,
+				"buffer_size": 580,
 				"line_ending": "Windows"
 			}
 		}
@@ -141,19 +141,26 @@
 	],
 	"file_history":
 	[
-		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/penulis_view.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/Penulis.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/profil_view.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/penulis_view.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/sidebar.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/faq_view.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/contact_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/ucp/Profil.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/models/Usermodel.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/about_view.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/artikel_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/header.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/adminpanel/Artikel.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/home_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/models/front/Artikelmodel.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/home_view.php",
+		"/D/dev/laravel/htdocs/greatnesia.com/front/style/font-awesome.css",
+		"/D/dev/laravel/htdocs/greatnesia.com/front/style/style.css",
+		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/adminpanel/Artikel.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/ucp/Artikel.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/admin/publish_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/Rss.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/Artikel.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/artikel_view.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/front/style/style.css",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/models/front/Homemodel.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/admin/artikeledit_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/models/admin/Infomodel.php",
@@ -162,17 +169,13 @@
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/artikelpending_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/Daftar.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/daftar_view.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/models/Usermodel.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/ucp/Login.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/login_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/models/front/Rssmodel.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/models/Infomodel.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/footer.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/contact_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/artikeledit_view.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/faq_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/Home.php",
-		"/D/dev/laravel/htdocs/greatnesia.com/application/views/front/sidebar.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/controllers/adminpanel/Quote.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/admin/quote_view.php",
 		"/D/dev/laravel/htdocs/greatnesia.com/application/views/admin/quoteadd_view.php",
@@ -237,7 +240,7 @@
 	],
 	"find":
 	{
-		"height": 46.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -251,6 +254,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pull-left",
 			"*/\n",
 			"			\n",
 			"mattblackmenu",
@@ -281,19 +285,49 @@
 			[
 				{
 					"buffer": 0,
-					"file": "application/controllers/Penulis.php",
+					"file": "application/views/front/footer.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1238,
+						"buffer_size": 2191,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								446,
-								446
+								2172,
+								2172
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 283.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/controllers/Artikel.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 580,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								524,
+								524
 							]
 						],
 						"settings":
@@ -305,66 +339,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "application/models/front/Artikelmodel.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1690,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1518,
-								1518
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 599.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "application/views/front/home_view.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3721,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1694,
-								1694
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 374.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]
