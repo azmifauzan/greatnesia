@@ -12,7 +12,8 @@ class Usermodel extends CI_Model
             'username' => $us,
             'password' => MD5($ps),
             'email' => strtolower($em),
-            'nama' => $nm
+            'nama' => $nm,
+            'tgl_daftar' => date('Y-m-d H:i:s'),
         );
 
         return $this->db->insert('user',$data);

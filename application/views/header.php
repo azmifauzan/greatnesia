@@ -18,6 +18,8 @@
     
     <link href="<?php echo base_url(); ?>css/pages/dashboard.css" rel="stylesheet">    
 
+    <link href="<?php echo base_url(); ?>css/dropzone.css" rel="stylesheet">
+
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -114,30 +116,38 @@
 	
 	<ul id="main-nav" class="nav nav-tabs nav-stacked">
 		
-	  <li <?php if($menu == 'Home') echo 'class="active"'; ?>>
+		<li <?php if($menu == 'Home') echo 'class="active"'; ?>>
 		  <a href="<?php echo site_url('ucp/home'); ?>">
 			  <i class="icon-home"></i>
 			  Dashboard 		
 		  </a>
-	  </li>
-	  
-	  <li <?php if($menu == 'Notifikasi') echo 'class="active"'; ?>>
+		</li>
+
+		<li <?php if($menu == 'Notifikasi') echo 'class="active"'; ?>>
 		  <a href="<?php echo site_url('ucp/notif'); ?>">
 			  <i class="icon-comment"></i>
 			  Notifikasi	
 			  <?php if($urnotif > 0) : ?><span class="label label-warning pull-right"><?php echo $urnotif; ?></span><?php endif; ?>
 		  </a>
-	  </li>
-	  
-	  <li <?php if($menu == 'Artikel') echo 'class="active"'; ?>>
+		</li>		
+	</ul>		
+	<hr />
+
+	<ul id="main-nav" class="nav nav-tabs nav-stacked">
+		<li <?php if($menu == 'Artikel') echo 'class="active"'; ?>>
 		  <a href="<?php echo site_url('ucp/artikel'); ?>">
 			  <i class="icon-book"></i>
 			  Artikel	
 		  </a>
-	  </li>
-	</ul>	
-	
-	<hr />
+		</li>
+		<li <?php if($menu == 'Gambar') echo 'class="active"'; ?>>
+		  <a href="<?php echo site_url('ucp/gambar'); ?>">
+			  <i class="icon-picture"></i>
+			  Gambar	
+		  </a>
+		</li>
+	</ul>
+	<hr/>
 	
 	<ul id="main-nav" class="nav nav-tabs nav-stacked">	  
 	  <li <?php if($menu == 'Poin') echo 'class="active"'; ?>>
