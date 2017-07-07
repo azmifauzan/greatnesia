@@ -111,7 +111,10 @@
 					</div>
 				</div>
 			</fieldset>
+
+			<div class="g-recaptcha" data-sitekey="6LfK8BEUAAAAAKr2cTiTGzLpJWyYR_8Ug7jbSyda"></div>
 			
+			<br/>
 			<div class="pull-right">
 				<input class="btn btn-warning btn-large" type="submit" name="daftar" value="Daftarkan Saya" style="width: 150px; height: 40px;" />
 			</div>
@@ -130,9 +133,8 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="./js/jquery-1.7.2.min.js"></script>
-
-
 <script src="./js/bootstrap.js"></script>
+<script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&hl=id'></script>
 
   </body>
 </html>

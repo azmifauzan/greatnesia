@@ -23,7 +23,7 @@
   <!-- PrettyPhoto -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>front/style/prettyPhoto.css">
   <!-- Custom style -->
-  <link href="<?php echo base_url(); ?>front/style/style.css" rel="stylesheet">
+  <link href="<?php echo base_url(); ?>front/style/style3.css" rel="stylesheet">
   <!-- Responsive Bootstrap -->
   <link href="<?php echo base_url(); ?>front/style/bootstrap-responsive.css" rel="stylesheet">
   

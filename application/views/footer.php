@@ -23,6 +23,7 @@
 <script src="<?php echo base_url(); ?>js/excanvas.min.js"></script>
 
 <script src="<?php echo base_url(); ?>js/bootstrap.js"></script>
+<script src="<?php echo base_url(); ?>js/dropzone.js"></script>
 
   </body>
 </html>
