@@ -39,9 +39,6 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`admin_id`, `username`, `password`, `nama`, `email`, `last_login`) VALUES
-(1, 'fauzan', '595d275ad04a4d9a526716390042c1d4', 'Fauzan', 'azmifauzan@gmail.com', '2016-08-04 07:47:09');
-
 -- --------------------------------------------------------
 
 --
@@ -387,11 +384,6 @@ CREATE TABLE `user` (
 --
 -- Dumping data for table `user`
 --
-
-INSERT INTO `user` (`username`, `password`, `email`, `tgl_daftar`, `nama`, `website`, `biodata`, `jenis_member`, `status`, `ip`, `avatar`, `notifikasi`, `sent`, `poin`, `facebook`, `twitter`) VALUES
-('fauzan', '595d275ad04a4d9a526716390042c1d4', 'azmifauzan@gmail.com', '2016-08-11', 'Fauzan', 'http://www.azmifauzan.net', 'Don''t worry be Happy!', 1, '', '', '6833bda4b108e8fce1570724063821ac.jpg', 1, 0, 0, '', ''),
-('greaters', '26d55f2b896a8e3263ed67ebde6722dc', 'greatnesia@gmail.com', '2017-01-03', 'Greaters', 'http://www.greatnesia.com', 'Berbagi itu Indah', 1, '', '', NULL, 1, 0, 26, '', ''),
-('frozen', '595d275ad04a4d9a526716390042c1d4', 'frozen@gmail.com', '0000-00-00', 'Friza', '', 'Hidup adalah Perjuangan', 1, 'active', '', NULL, 1, 0, 3, '', '');
 
 --
 -- Indexes for dumped tables
